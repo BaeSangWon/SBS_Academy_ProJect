@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin과 position</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .margin_wrap{
+            border: 5px solid red;
+        }
+
+        .box{
+            width: 250px;
+            height: 250px;
+            background-color: gold;
+        }
+
+        .margin_box:nth-child(1){
+            margin-top: 250px;
+        }
+
+        .margin_box:nth-child(2){
+            background-color: lightblue;
+        }
+
+        .position_wrap{
+            border: 5px solid green;
+        }
+
+        .position_box:first-child{
+            position: relative;
+            top: 250px;
+        }
+
+
+        .position_box:last-child{
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="position_wrap">
+        <div class="box position_box"></div>
+        <div class="box position_box"></div>
+    </div>
+
+    <div class="margin_wrap">
+        <div class="box margin_box"></div>
+        <div class="box margin_box"></div>
+        <!-- .margin_box*2 + tab -->
+    </div>
+
+    
+    
+</body>
+</html>

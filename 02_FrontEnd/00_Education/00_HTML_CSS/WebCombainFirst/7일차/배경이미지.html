@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .bg{
+            width: 300px;
+            height: 500px;
+            background-color:darkcyan;
+            background-image: url("bc.png");
+            background-repeat: no-repeat;
+        }
+
+        .position, .size{
+            text-align: center;
+            line-height: 500px;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+
+        .position:first-child{
+            background-position: 100px 100px;
+        }
+
+        .position:nth-child(2){
+            background-position: bottom;
+        }
+        
+        .position:nth-child(3){
+            background-position: left;
+        }
+        
+        .position:nth-child(4){
+            background-position: right;
+        }
+        
+        .position:last-child{
+            background-position: center;
+        }
+
+        .size:first-child{
+            background-size: auto;
+        }
+        
+        .size:nth-child(2){
+            background-size: cover;
+        }
+        
+        .size:nth-child(3){
+            background-size: contain;
+        }
+        
+        .size:nth-child(4){
+            background-size: 200px 400px;
+        }
+        
+        .size:last-child{
+            background-size: 50% 100%;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h2>1. image, repeat-x</h2>
+    <div class="bg"></div>
+    
+
+    <h2>2. position</h2>
+    <div class="position_wrap">
+        <div class="bg position">top</div>
+        <div class="bg position">bottom</div>
+        <div class="bg position">left</div>
+        <div class="bg position">right</div>
+        <div class="bg position">center</div>
+    </div>
+
+    <h2>3. size</h2>
+    <div class="size_wrap">
+        <div class="bg size">auto</div>
+        <div class="bg size">cover</div>
+        <div class="bg size">contain</div>
+        <div class="bg size">px</div>
+        <div class="bg size">%</div>
+    </div>
+    
+
+    <!-- 
+        -. 이미지 관련 태그
+           1. img tag
+              -. 반응형 작업 할 때 배율에 맞게 줄어듬
+              -. 원본 비율을 해치지 않고 그대로 유지
+
+           2. background-image
+              -. 배경이미지를 넣을 때 쓰는 속성
+              -. height 필수  / 없으면 출력 X  
+              ==> 어떤 요소에 배경이미지를 넣으면 padding 영역을 포함해서 배경이미지 채움
+
+           ------------ background-image 사용 속성-----------------------
+           
+           1. background-image
+              -. 1-1) background-image: url("저장한 경로 지정.확장자");
+              ==> 이미 저장된 이미지를 불러 올 때
+              ==> 단축키 : ctrl + space 후 이미지 파일 선택
+
+              -. 1-2) background-image: url("이미지 주소 링크");
+              ==> 웹사이트에서 이미지 주소 복사 후 붙여넣기
+
+           2. background-repeat 
+              -. 2-1) background-repeat : 배경이미지 반복 속성
+              ==> 기본값 : background-repeat: repeat;
+              ==> 이미지가 영역을 반복하면서 모두 채움
+              
+              -. 2-2) background-repeat: repeat-x;
+              ==> 이미지가 width만큼 반복 배열
+              
+              -. 2-3) background-repeat: repeat-y;
+              ==> 이미지가 height만큼 반복배열
+              
+              -. 2-4) background-repeat: no-repeat;
+              ==> 이미지 반복 x (가장 많이 사용)
+
+           3. background-position
+              -. 3-1)  background-position : 배경이미지 위치 조정
+              ==> background-position : 좌표 좌표;
+              -. ex) background-position : top center; 
+              
+              -. 3-2)  background-position : Xpx Ypx
+                 -. ex) background-position : 100px 100px; 
+              
+              -. 3-3)  background-position : X% Y%
+                 -. ex) background-position : 10% 10%
+
+           4. background-size : 배경 크기 조정
+              -. 4-1) background-size : auto;
+              ==> 기본값, 이미지 원래 크기 그대로 출력
+
+              -. 4-2) background-size : cover;
+              ==> 배경 지역(영역)이 이미지로 완전히 덮히도록 이미지를 가능한 크게 표시함
+              ==> 이미지 일부 잘릴 수 있음
+
+
+              -. 4-3) background-size : contain;
+              ==> 이미지의 비율을 유지하면서 배경영역을 채움
+
+              -. 4-4) background-size : X Y;
+              ==> px, %로 사이즈 조정 가능
+
+            -->
+            
+        </body>
+</html>

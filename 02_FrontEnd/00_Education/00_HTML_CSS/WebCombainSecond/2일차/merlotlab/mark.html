@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul,li{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: underline;
+            color: initial;
+        }
+
+
+        .right_top_menu{
+            display: flex;
+        }
+
+        .right_top_menu > li{
+            padding: 0 10px;
+        }
+
+        .right_top_menu a{
+            position: relative;
+        }
+
+        .right_top_menu a::after{
+            content: "";
+            display: inline-block;
+            width: 0%;
+            height: 50%;
+            background-color: gold;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: all .3s;
+        }
+
+        .right_top_menu span{
+            position: relative;
+            z-index: 30;
+        }
+
+        .right_top_menu a:hover::after{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <ul class="right_top_menu">
+        <li>
+            <a href="#">
+                <span>보도자료</span>
+                <div class="box"></div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span>공지사항</span>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

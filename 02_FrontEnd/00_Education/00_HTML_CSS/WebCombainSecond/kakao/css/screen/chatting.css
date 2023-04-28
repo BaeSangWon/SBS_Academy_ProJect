@@ -1,0 +1,120 @@
+/* .chat_list_wrap{
+    padding: 0 25px;
+}
+
+.chat_list_wrap > a{
+    display: flex;
+    align-items: center;
+} */
+
+/* .chat_list{
+    width: 100%;
+    display: flex; 
+    gap:20px;
+    align-items: center;
+}
+
+.chat_img{
+    width: 70px;
+    height: 70px;
+    border-radius: 25px;
+    background: lightgray url(../../img/mimoticon_2.png) no-repeat center / cover;
+}
+
+.chat_message > h4{
+    font-size: 18px;
+    color: #000;
+}
+
+.chat_message > p{
+    font-size: 14px;
+    color: grey;
+} */
+
+/* .chat_alert{
+    position: relative;
+} */
+
+
+/* .chat_alert > p{
+    font-size: 14px;
+    color: grey;
+    opacity: .7;
+} */
+
+/* .alert_1{
+    width: 30px;
+    height: 30px;
+    background-color: tomato;
+    border-radius: 50%;
+    color: #fff; */
+    /* position: absolute; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.chat_main{
+    padding: 0 25px;
+}
+
+.chat_main > a{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat_profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.chat_profile > figure{
+    width: 60px;
+    height: 60px;
+    background: lightgray url(../../img/mimoticon_5.png) no-repeat center / cover;
+    border-radius: 20px;
+}
+
+.chat_txt{
+    color: #333;
+}
+
+.chat_txt > h4{
+    font-size: 22px;
+}
+
+
+.chat_txt > p{
+    font-size: 14px;
+    opacity: .7;
+}
+
+
+.chat_alert{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat_alert > p{
+    font-size: 14px;
+    color: #333;
+    opacity: .7;
+}
+
+
+.badge{
+    width: 30px;
+    height: 30px;
+    background-color: tomato;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4일차 정리</title>
+    <style></style>
+</head>
+<body>
+    <!-- 
+
+        여백
+        1. 외부
+        - margin
+
+        2. 내부
+        - padding
+
+        4가지 방향으로 설정 가능
+
+        위/아래/좌/우
+
+        축약버전으로 적는게 일반적
+        margin : 0 0 0 0;
+        -> 네가지의 여백값이 모두 다르게 적용되는 경우
+
+        margin : top 0 bottom;
+        -> 위,아래 여백은 다르고 좌,우 여백은 같은경우
+
+        margin : 0(top/bottom) 0(left/right);
+        -> 위,아래여백도 같고 좌,우 여백도 같은 경우
+
+        margim : 0;
+        -> 네가지의 여백값이 모두 같은 경우
+
+        **padding도 동일**
+
+        margin을 이용한 중앙 정렬방법
+
+        margin : 0 auto;
+
+        0 -> 위,아래 여백값 자유롭게 지정가능
+        auto -> 가로크기를 계산해서 중앙 정렬
+        **width 필수**
+
+
+        ----------------------------------------------------
+
+        css속성
+        1. width = 가로값;
+        2. height = 세로값;
+
+        3. background-color = 배경색;
+        4. color = 폰트의 색상;
+
+        **css에서 컬러를 다루는 방법**
+        - 색상명 적어주기 
+        ex) red;
+
+        - #HEX
+        ex) #000(검은색) / #fff(흰색)
+
+        - rgb
+        ex) rgb(0,0,0) / rgb(255,255,255)
+
+        5. border = 테두리;
+        5-1) border-width : 테두리의 가로크기(두께);
+        5-2) border-color : 테두리의 색상
+        5-3) border-style : 테두리의 스타일 / 가장 많이 쓰는 속성 : solid(실선)
+        **반드시 위 세가지 속성이 모두 적혀야지만 border 적용 가능**
+
+        6. text-align = 글씨의 가로 정렬;
+        6-1) text-align : center;
+        => 글자가 중앙 정렬됨
+
+        7. line-height = 행간(문장과 문장 사이)조절;
+
+        **일반적으로 6,7번 속성을 함께 사용하여 글자를 중앙 정렬함**
+        text-align : center;
+        line-heihgt : 글자가 속해있는 부모의 높이값px;
+
+
+        ----------------------------------------------------
+
+
+        태그안에 태그 중첩 가능
+
+        <div class="out_box">
+            <div="middle_box">
+                <div="in_box"></div>
+            </div>
+        </div>
+
+        out_box = 부모 태그
+        middle_box = 자식태그
+        in_box = 자손 태그
+
+        <div class="out_box">
+            <div="in_box"></div>        = 형제태그
+            <div="in_box"></div>
+        </div>    
+        ----------------------------------------------------
+
+
+        html -------------selector------------- css
+
+        1. tag
+        2. id
+        3. class
+
+        적용 우선 순위(level)
+        id > class > tag
+
+        보통 일반적으로 퍼블리싱
+        => class
+
+        개발
+        => id
+
+
+
+
+
+
+
+
+
+
+
+
+
+     -->
+</body>
+</html>

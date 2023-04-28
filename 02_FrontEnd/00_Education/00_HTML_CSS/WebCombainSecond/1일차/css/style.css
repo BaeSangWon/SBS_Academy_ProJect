@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* PC에 적용할 값은 default로 설정하고 모바일과 테블릿에만 적용해주는 것을 추천 */
+
+@media all and (min-width:1024px){
+    .box{
+        width: 300px;
+        height: 300px;
+        background-color: gold;
+    }
+}
+/* pc */
+
+@media all and (min-width:768px) and (max-width:1023px){
+    .box{
+        width: 300px;
+        height: 300px;
+        background-color: green;
+        border-radius: 50%;
+    }
+}
+/* tab */
+
+@media all and (max-width:767px){
+    .box{
+        width: 300px;
+        height: 300px;
+        background-color: salmon;
+    }
+}
+/* mobile */

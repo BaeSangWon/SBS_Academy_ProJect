@@ -1,0 +1,219 @@
+/* .chat_room_wrap{
+    width: 100%;
+    height: 100%;
+    background-color: #abc1d1;
+}
+
+.chat_top_wrap{
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+} */
+
+/* .chat_center_wrap{
+    width: 100%;
+    display: flex;
+} */
+
+/* .chat_center_wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.chat_center_wrap > figure{
+    width: 50px;
+    height: 50px;
+    background: salmon url(../../img/mimoticon_4.png) no-repeat center / cover;
+    border-radius: 20px;
+}
+
+.chat_bottom_wrap{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+.chat_bottom_wrap > input[type="text"]{
+    width: 90%;
+    height: 90%;
+    border: 1px solid gray;
+    border-radius: 20px;
+    position: relative;
+    
+}
+
+.fa-face-smile{
+    position: absolute;
+    right:80px;
+}
+
+.fa-arrow-up{
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+    border: 1px solid gray;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+} */
+
+.chat_room_wrap{
+    background-color: #abc1d1;
+    height: 300vh;
+    
+}
+
+.chat_header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    font-size: 25px;
+}
+
+.chat_con{
+    width: 33%;
+}
+
+.chat_con:first-child i{
+    color: #000;
+}
+
+.chat_con:nth-child(2) h2{
+    text-align: center;
+    
+}
+
+.chat_con:nth-child(3){
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fa-bars{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.chattings{
+    padding: 100px 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date{
+    padding: 15px;
+    background-color: #92a4b2;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.message_1{
+    /* width 값을 넣어줌으로써 컨텐츠가 왼쪽 기준으로 정렬하게 된다 */
+    width: 100%;
+    display: flex;
+} 
+
+.m_profile{
+    width: 50px;
+    height: 50px;
+    background: url(../../img/mimoticon_3.png) no-repeat center / cover;
+}
+
+.m_info{
+    display: flex;
+    align-items: flex-end;
+}
+
+.m_bubble{
+    padding: 13px;
+    background-color: #fff;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    margin-right: 5px;
+}
+
+.m_time, .m_time_2{
+    font-size: 14px;
+}
+
+.message_2{
+    width: 100%;
+    display: flex;
+    /* 
+        width: 100%;를 적용해줘야 속성이 제대로 반영됨
+        ※ width 값 반영 전까진 해당 컨텐츠의 크기만큼만 영역 차지
+    */
+    justify-content: flex-end;
+}
+
+.m_info_2{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+.m_bubble_2{
+    background-color: var(--mainColor);
+    padding: 13px;
+    border-radius: 15px;
+    border-top-right-radius: 0;
+    margin-left: 5px;
+}
+
+.reply{
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    padding: 5px 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reply_con:first-child{
+    width: 30px;
+}
+
+.reply_con:last-child{
+    /* 플러스 아이콘 영역 30px을 제외한 모든 영역 차지 */
+    flex: 1;
+    position: relative;
+}
+
+.reply_con:last-child input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 25px;
+}
+
+.reply_wink{
+    position: absolute;
+    top: 15px;
+    right: 50px;
+}
+
+.reply_con:last-child button{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--mainColor);
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}

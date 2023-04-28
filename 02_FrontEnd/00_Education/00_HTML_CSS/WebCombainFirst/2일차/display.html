@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+</head>
+<body>
+    <!-- 
+        -. 태그의 종류(성질, 요소)
+           -. block
+              -. h태그, p태그
+              -. 줄바꿈
+              -. 여백값을 가짐
+
+           -. inline
+              -. strong , mark , i 등..
+              -. 줄바꿈 x (한줄로 태그가 진행)
+              -. 여백값 x
+
+        ※ block 요소가 inline 요소보다 우선 순위 높음
+        ※ inline 요소가 block 요소를 감쌀 수 없음
+        ※ 요소끼리 중첩은 가능하나 p > p 불가
+           ex1) <p> 태그 내부 <strong> 태그 존재 가능
+                <strong> 태그 내부 <p> 태그 존재 불가
+
+           ex2) <strong> 태그 내부 <i> 태그 존재 가능 (inline 요소끼리 중첩 가능)         
+
+           ex3) <p> 태그 내부에 <p> 태그 존재 불가  (block 요소끼리 중첩 안되는 예외사항)
+               
+
+     -->
+     <!-- <h3>2023</h3>
+     <h3>02</h3>
+     <h3>14</h3>
+     <b>2023</b>
+     <b>02</b>
+     <b>14</b> -->
+     <p>
+      <span style="font-size: 50px; color: red;">Lorem</span> ipsum dolor sit amet consectetur, adipisicing elit.<br/> 
+      Impedit soluta porro odio minima <a href="https://www.naver.com/" target="_blank">error</a> ea dignissimos debitis!<br/> 
+      Unde enim ipsa illum hic ex! Assumenda neque tenetur iure placeat autem vitae.
+    </p>
+
+
+    <img src="cat1.jfif" alt="고양이 사진"/>
+
+    <a href="https://www.naver.com/" target="_blank">
+      <img src="./img/cat2.jfif" alt="고양이 사진 2"/>
+      </a>
+
+   <!-- 
+       -. CSS  
+          -. cascading style sheet
+          -. 특정 태그에 스타일을 입혀주는 역할
+
+       -. CSS 적용방법
+          1) inline 스타일 (줄바꿈 x)
+             -. span 태그 
+                -. 그룹을 특정짓거나 묶어줄 때 사용
+                -. 단순 꾸밈 요소를 넣을 때 사용
+
+             -. a 태그 = anchor 
+                -. <a 속성="속성값"></a>
+                -. a 태그의 속성 2가지
+                   -. href="이동할 주소"  ★필수 속성
+                   -. target="_blank" : 새창으로 이동할 주소 열람  ★선택 속성 
+                      target="_self" : 현재창에서 이동할 주소 열람
+
+             -. img 태그
+                -. img 태그 속성 2가지
+                   -. scr="이미지주소"  
+                   -. alt="이미지에 대한 설명" ★필수 속성
+                      -. <img src="cat1.jfif" alt="고양이사진">
+                      -. 스크린 리더기가 화면에서 이미지를 설명할 경우
+                      -. 이미지가 유실 될 경우를 대비해서 이미지 설명을 적어줌
+                      -. 이미지가 유실되지 않을 경우에는 기본적으로 보이지 않음
+
+                -. 화면 사이즈 비율에 따라 적용된다      
+
+                -. 이미지 삽입 방법 2가지 
+                   -. 웹 사이트에서 이미지 주소 복사 후 src 에 붙여넣기
+                   -. 이미지 저장 후 저장된 폴더 경로 지정 후 불러오기 
+                      -. ../ , ./(현재경로) , 단축키 Ctrl + Space : 현재 경로 파일 지정 
+                      ex1) 현재 경로 <img src="cat1.jfif"/>
+                      
+          2) 내부스타일
+          3) 외부스타일
+    -->
+
+</body>
+</html>

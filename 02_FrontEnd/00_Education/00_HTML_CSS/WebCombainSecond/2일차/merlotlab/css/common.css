@@ -1,0 +1,30 @@
+/* 
+:root
+
+1. 색상 설정
+- 주조색, 보조색, 강조색
+- 기본 색상 설정(#fff)
+
+2. 폰트 설정
+- font-weight
+*/
+
+:root{
+    --mainColor : #583cf2;
+    --btnColor : #1e3a8b;
+    --whiteColor : #fff;
+    --blackColor : #222;
+    --bold : 700;
+    --kor : 'Noto Sans KR';
+    --eng : 'Titillium Web';
+}
+
+.inner{
+    max-width: 1340px;
+    /* max-width 기준은 별도로 없음 */
+    width: 100%;
+    padding: 0 20px;        
+    /* 브라우저에 딱 붙는 것을 방지하기 위함  */
+    
+    margin: 0 auto;
+}

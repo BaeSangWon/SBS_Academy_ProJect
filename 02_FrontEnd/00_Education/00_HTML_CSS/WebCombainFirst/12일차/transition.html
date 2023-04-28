@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: gold;
+            transition-duration: 1s;
+            /* 소수점 가능, 0.5에서 0 생략가능 */
+        
+            transition-property: all;
+        }
+
+        .box:hover{
+            background-color: salmon;
+            border-radius: 50%;
+        }
+
+        .transition_box{
+            width: 100px;
+            height: 50px;
+            background-color: teal;
+            color: #fff;
+            line-height: 50px;
+            text-align: center;
+            margin-bottom: 10px;
+            transition-duration: 2s;
+            transition-property: width;
+        }
+
+        .transition_wrap:hover > .transition_box{
+            width: 500px;
+        }
+
+        .transition_box:first-child{
+            transition-delay: 3s;
+            transition-timing-function: ease; 
+            /* 기본값 / 느리게 시작 점점 빨라짐 느려지면서 종료 */
+        }
+
+        .transition_box:nth-child(2){
+            transition-timing-function:linear;
+            /* 시작부터 종료까지 일정한 속도로 진행 */
+        }
+        
+        .transition_box:nth-child(3){
+            transition-timing-function:ease-in;
+            /* 느리게 시작 */
+        }
+
+        .transition_box:nth-child(4){
+            transition-timing-function:ease-out;
+            /* 일정한 속도로 시작해서 점점 느려지면서 종료 */
+        }
+        
+        .transition_box:nth-child(5){
+            transition-timing-function:ease-in-out;
+            /* 느리게 시작, 느리게 종료 */
+        }
+        
+        .transition_box:last-child{
+            transition-timing-function:cubic-bezier(0.96, 0.15, 0, 1.19);
+            /* 커스텀마이징 옵션
+               검사창에서 옵션 조정을 통해 사용함 */
+        }
+
+        </style>
+</head>
+<body>
+
+    
+    <div class="box"></div>
+
+    <h2>timing</h2>
+    <div class="transition_wrap">
+        <div class="transition_box">ease</div>
+        <div class="transition_box">linear</div>
+        <div class="transition_box">ease-in</div>
+        <div class="transition_box">ease-out</div>
+        <div class="transition_box">ease-in-out</div>
+        <div class="transition_box">cubic</div>
+    </div>
+
+
+    <!-- 
+        -. transition / 변화
+        ==> 객체의 속성을 서서히 변화시키는 속성
+        ==> 객체의 변화가 일정시간 걸쳐서 일어나도록 하는 것
+
+        -. transition 속성
+        1. transition-duration
+        ==> 변화 지속 시간
+        ==> 단위 : s / ms
+        ==> 1s = 1000ms
+        ==> 값을 지정하지 않는 경우 기본 값이 0s 가 적용되어 시각적으로 변화 확인 불가
+        ==> hover상태에 적용하게 되면 부드럽게 변화가 일어나지 않으므로 반드시 기본값에 적용할 것
+
+        2. transition-property
+        ==> transition을 적용시킬 속성을 정함
+        ==> transition-property : all;
+        
+        3. transition-timing-function
+        ==> transition의 진행 속도를 정함
+
+        4. transition-delay
+        ==> transition의 시작시간을 연기함
+
+     -->
+    
+</body>
+</html>

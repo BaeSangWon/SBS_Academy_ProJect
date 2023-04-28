@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12일차 과제 -1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap{
+            width: 100%;
+        }
+
+        header{
+            width: 1600px;
+            height: 200px;
+            background-color: gray;
+            margin: 0 auto;
+        }
+
+        .side_wrap{
+            width: 1200px;
+            height: 100%;
+            background-color: orange;
+            margin-left: 200px;
+        }
+
+        .left_box{
+            width: 110px;
+            height: 110px;
+            background-color: salmon;
+            float: left;
+            margin-top: 45px;
+            text-align: center;
+            line-height: 110px;
+            border: 2px solid #000;
+        }
+
+        .left_box:first-child{
+            border-right: none;
+        } 
+
+        .center_box{
+            width: 220px;
+            height: 100%;
+            background-color: burlywood;
+            float: left;
+            border-right: 2px solid #000;
+            text-align: center;
+            line-height: 200px
+        }
+
+        .right_box{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            float: left;
+            border: 2px solid #000;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .right_box{
+            border-left: none;
+        }
+
+        .right_box:last-child{
+            border-top: none;
+            border-bottom: none;
+        }  
+
+        /* -----------------header_end--------------------- */
+
+        section{
+            width: 1200px;
+            height: 1000px;
+            background-color: lightgreen;
+            margin: 0 auto;
+
+        }
+
+        .in_wrap{
+            width: 1000px;
+            height: 800px;
+            background-color: violet;
+            margin: 100px auto;
+            float: left;
+        }
+
+        .in_wrap > .box_1{
+            width: 600px;
+            height: 800px;
+            background-color: yellow;
+            float: left;
+        }
+    
+        .in_wrap > .box_1 > .box_2{
+            width: 500px;
+            height: 800px;
+            background-color: bisque;
+        }
+        
+        .in_wrap > .box_3{
+            width: 400px;
+            height: 500px;
+            background-color:grey;
+            float: left;
+        }
+       
+        .in_wrap > .box_3 > .box_4{
+            width: 400px;
+            height: 400px;
+            background-color: blue;
+        }
+
+        .in_wrap > .box_3 > .box_4 > .box_5{
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            float: left;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        ul{
+            width: 200px;
+            height: 1000px;
+            background-color: lightskyblue;
+            float: left;
+        }
+
+        li{
+            list-style: none;
+            width: 100%;
+            height: 200px;
+            border: 2px solid #000;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        li:first-child , li:nth-child(2), li:nth-child(3), li:nth-child(4) {
+            border-bottom: none;
+        }
+        
+        /* -----------------section_end--------------------- */
+
+        footer{
+            width: 1600px;
+            height: 200px;
+            background-color: lightseagreen;
+            margin:0 auto;
+        }
+
+       /* -----------------footer_end--------------------- */
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <header>
+            <div class="side_wrap">
+                <div class="left_box"><h3>로고</h3></div>
+                <div class="left_box"><h3>채용포털</h3></div>
+                <div class="center_box">1</div>
+                <div class="center_box">2</div>
+                <div class="center_box">3</div>
+                <div class="center_box">4</div>
+                <div class="right_box">회원가입</div>
+                <div class="right_box">로그인</div>   
+            </div> 
+        </header>
+        <!-- header_end -->
+
+        <section>
+            <div class="in_wrap">
+               <div class="box_1">
+                    <div class="box_2">1</div>
+               </div>
+               <div class="box_3">
+                    <div class="box_4">
+                        <div class="box_5">메뉴1</div>
+                    </div>
+               </div>
+            </div>
+            <ul class="in_right_wrap">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </section>
+        <!-- section_end -->
+
+        <footer></footer>
+        <!-- footer_end -->
+
+
+
+
+    </div>
+    
+</body>
+</html>

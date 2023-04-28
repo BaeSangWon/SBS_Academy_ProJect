@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box_1{
+            width: 300px;
+            height: 300px;
+            background-color: aquamarine;
+            float: left;
+        }
+
+        .box_2{
+            width: 300px;
+            height: 300px;
+            background-color: gold;
+            float: left;
+        }
+
+        .box_3{
+            width: 600px;
+            height: 300px;
+            background-color: green; 
+            clear:both;    
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box_1"></div>
+    <div class="box_2"></div>
+    <div class="box_3"></div>
+
+
+    <!-- 
+        -. float
+           -. 태그를 마치 떠 있는 것과 같은 상태로 만들어서 왼쪽과 오른쪽으로 정렬하는 속성
+           -. float을 적용한 요소는 문서의 흐름상에서 벗어난 상태
+           -. 레이아웃을 무너뜨릴 수 있음
+           -. float속성을 활용하여 레이아웃 정리가 끝났다면, 반드시 해지해줘야 함 
+           -. float 사용 해지
+              -. 1) clear:both
+                    -. float한 요소 바로 다음에 나오는 요소에게 적용
+
+     -->
+</body>
+</html>

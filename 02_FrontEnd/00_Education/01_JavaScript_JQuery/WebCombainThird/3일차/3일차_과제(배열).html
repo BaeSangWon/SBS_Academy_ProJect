@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3일차 과제 - 배열</title>
+</head>
+<body>
+    <script>
+        let animals= ["Aardvark","Albatross","Alligator","Alpaca","Ant","Ape","Armadillo","Donkey","Baboon","Badger","Barracuda","Bat","Bear","Beaver","Bee","Bison","Cat","Caterpillar","Cattle","Chamois","Cheetah","Chicken","Chimpanzee","Chinchilla","Chough",
+                      "Clam","Cobra","Cockroach","Cod","Cormorant","Dugong","Dunlin","Eagle","Echidna","Eel","Eland","Elephant","Elk","Emu","Falcon","Ferret","Finch","Fish","Flamingo","Fly","Fox","Frog","Gaur", "Gazelle","Gerbil","Giraffe","Grasshopper",
+                      "Heron","Herring","Hippopotamus","Hornet","Horse","Kangaroo","Kingfisher","Koala","Kookabura","Moose","Narwhal","Newt","Nightingale","Octopus","Okapi","Opossum", "Quail","Quelea","Quetzal","Rabbit", "Raccoon","Rail","Ram","Rat","Raven",
+                      "Red deer","Sandpiper","Sardine","Sparrow","Spider","Spoonbill","Squid","Squirrel","Starling","Stingray","Tiger","Toad","Whale","Wildcat","Wolf","Worm","Wren","Yak","Zebra"];
+
+        // 1) 어레이에 마지막 아이템 “Zebra” 제거하기
+        animals.pop();
+        console.log(animals);
+
+        // 2) 주어진 어레이에 “Dog” 추가하기
+        animals.push('Dog');
+        console.log(animals);
+
+        // 3) 주어진 어레이에 “Mosquito”,“Mouse”,“Mule” 추가하기
+        animals.push('Mosquito','Mouse','Mule' );
+        console.log(animals);
+        console.log('');
+        
+        // 4) 해당 어레이에는 "Human"이 있는가?
+        console.log(animals.includes('Human'));
+        
+        // 5) 해당 어레이에는 “Cat” 이 있는가?
+        console.log(animals.includes('Cat'));
+        console.log('')
+
+        // 6) "Red deer"을 "Deer"로 바꾸시오
+        // console.log(animals[77]);
+        console.log(animals.indexOf('Red deer')); // 'Red deer' 인덱스 위치(값) 확인
+        animals[animals.indexOf('Red deer')] = "Deer"
+        // animals[77] = 'Deer'
+        console.log(animals[77]);
+        console.log('');
+
+        // 7) "Spider"부터 3개의 아이템을 기존 어레이에서 제거하시오
+        // console.log(animals[81], animals[82], animals[83], animals[84]);
+        animals.splice(animals.indexOf("Spider"),3);
+        // animals.splice(81, 3);
+        console.log(animals);
+        console.log('');
+
+        // 8) "Tiger"이후의 값을 제거하시오
+        // console.log(animals[84], animals[85], animals[86], animals[87], animals[88], animals[89], animals[90], animals[91], animals[92], animals[93], animals[94], animals[95]);
+        animals.splice(animals.indexOf("Spider"));
+        console.log(animals);
+        // animals.splice(84);
+        // console.log(animals[84], animals[85], animals[86], animals[87], animals[88], animals[89], animals[90], animals[91], animals[92], animals[93], animals[94], animals[95]);
+        console.log('');
+
+        // 9) "B"로 시작되는 아이템인 "Baboon"부터 "Bison"까지 가져와 새로운 어레이에 저장하시오
+        // console.log(animals[8],animals[9],animals[10],animals[11],animals[12],animals[13],animals[14],animals[15]);
+        // let new_animals = [animals[8],animals[9],animals[10],animals[11],animals[12],animals[13],animals[14],animals[15]];
+        // console.log(new_animals);
+        let newList = animals.slice(animals.indexOf("Baboon"), animals.indexOf("Bison") + 1);
+        console.log(newList);
+
+    </script>
+</body>
+</html>

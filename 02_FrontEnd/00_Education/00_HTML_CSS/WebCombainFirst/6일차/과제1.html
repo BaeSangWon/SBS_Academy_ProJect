@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제 1</title>
+    <style>
+         *{
+            margin:0;
+            padding:0;
+        }
+
+        .box_1{
+            width: 500px;
+            height: 700px;
+            border: 10px solid #000;
+        }
+
+        ul, li{
+	        list-style: none;
+        }
+
+
+        ul > li:first-child{
+            width: 500px;
+            height: 100px;
+            font-family: "궁서체";
+            font-size: 30px;
+            font-weight: bold;
+            background-color: red;
+            text-align: center;
+            line-height: 100px;
+            
+        }
+        
+        ul > li:nth-child(2){
+            width: 500px;
+            height: 100px;
+            font-family: "궁서체";
+            font-size: 30px;
+            font-weight: bold;
+            background-color:orange;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        ul > li:nth-child(3){
+            width: 500px;
+            height: 100px;
+            font-family: "궁서체";
+            font-size: 30px;
+            font-weight: bold;
+            background-color:yellow;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        ul > li:nth-child(4){
+            width: 500px;
+            height: 100px;
+            font-family: "궁서체";
+            font-size: 30px;
+            font-weight: bold;
+            background-color:green;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        ul > li:nth-child(5){
+            width: 500px;
+            height: 100px;
+            font-family: "궁서체";
+            font-size: 30px;
+            font-weight: bold;
+            background-color:blue;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        ul > li:nth-child(6){
+            width: 500px;
+            height: 100px;
+            font-family: "궁서체";
+            font-size: 30px;
+            font-weight: bold;
+            background-color:navy;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        ul > li:last-child{
+            width: 500px;
+            height: 100px;
+            font-family: "궁서체";
+            font-size: 30px;
+            font-weight: bold;
+            background-color:purple;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        -. 공통 속성 묶음
+     
+           1) .box_1 > li{
+                width: 500px;         ※ %단위로 맞출때 부모의 width 크기와 동일하게 적용해주면 된다
+                height: 100px;        ※ 부모값만 조정하면 자식값은 자동으로 조정되는 장점
+                text-align: center;
+                line-height: 100px;
+                font-size: 30px;
+                font-weight: bold;
+
+           2) .box_1 > li:nth-child(n): 으로 사용 가능     
+     -->
+
+    <div class="box_1">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+        </ul> 
+    </div>
+</body>
+</html>

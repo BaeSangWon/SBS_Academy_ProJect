@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱태그</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <div class="wrap">
+        <header>
+            <h1 class="logo">
+                <a herf="#">
+                    <!-- # : 임시링크 지정 -->
+                    <img src="logo.jpg" alt="회사로고"/>
+                </a>
+            </h1>
+            <nav>
+                <ul class=""menu_wrap">
+                    <li>
+                        <a href="#">메뉴</a>
+                    </li>    
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="main_01"></div>
+            <div class="main_02"></div>
+        </main>
+        <section class="section_1">
+            <figure>
+                <img src="dog.jpg" alt="강아지사진"/>
+            </figure>
+        </section>
+        <footer></footer> -->
+    </div>
+
+
+    <!-- 
+    -. 시멘틱태그
+       -. 웹 사이트의 구조를 설계하기 위한 태그
+       -. 의미가 있는 태그
+       -. 사이트의 구조 파악을 용이하기 위한 용도
+
+    -. 시멘틱태그를 사용하는 이유
+       -. 1. 검색엔진 최적화 
+             -. 검색엔진이 태그의 목적에 부합하게 설계되어 있는 구조의 사이트에서
+                더욱 효율적으로 정보를 파악할 수 있어서 검색 결과 노출에 유리함
+
+       -. 2. 웹 접근성
+             -. 스크린리더기와 같은 환경에서 웹 접근성과 사용성 향상
+
+       -. 3. 유지보수의 용이성
+             -. 많은 div 태그의 사용으로 관리가 어려워지는 문제점에서 벗어나
+                태그의 이름만으로 어떤 영역인지 바로 확인 가능
+                특정 영역의 태그 특성에 맞는 업 구분하여 진행하기 좋음
+    
+    -. 시멘틱태그의 종류
+       -. 1. header
+       <header></header>
+       ==> 페이지의 제목, 소개
+       ==> 로고
+       ==> header 태그 안에는 h1~h6에 해당하는 하나의 제목이 필요함
+           ※ 통상적으로 로고를 h1태그에 담아서 작업
+
+       -. 2. nav
+       <nav></nav>
+       ==> 목차, 메뉴, 리스트 등 다른 페이지로 이동을 위한 링크 공간 표현
+           ※ 통상적으로 header안에 사용
+
+       -. 3. aside 
+       <aside></aside>   
+       ==> 간접적으로 문서와 과ㅐ용을 나타냄
+       ==> 사이드바
+
+       -. 4. main
+       <main></main>
+       ==> 지배적인 콘텐츠 영역을 나타낼 때 사용
+       ==> html 문서의 주된 내용을 나타낼 때 사용
+
+       -. 5. section
+       <section></siction>
+       ==> 페이지의 일부분을 지정
+       ==> 같은 테마를 가진 여러개의 콘텐츠를 그룹화
+       ==> 항상 제목이 있는 것이 일반적
+
+       -. 6. figure
+       <figure></figure>
+       ==> 그림, 차트 등을 감싸는 시멘틱태그
+
+       -. 7. footer
+       <footer></footer>
+       ==> 바닥글
+       ==> 저작권정보, 사업자 정보, 주소 등
+
+</body>
+</html>

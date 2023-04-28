@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5일차 과제 - 반복문</title>
+</head>
+<body>
+    <script>
+        
+        // 문제 1) 구구단 (for문)
+         for(let dan = 2 ; dan < 10 ; dan++){
+             console.log("<" + dan + "단 시작!!" + ">")
+             for(let num = 1 ; num < 10 ; num++){
+                 console.log(dan + " " + "x" + " " + num + " " + "=" + " " + dan * num)    
+             }
+             console.log("------------------------------")
+         }
+
+        console.log("");
+
+        // 문제 2) 구구단 (while문)
+        let dan = 2;
+        let num = 1;
+
+        while(dan < 10){
+            num = 1
+            console.log("<" + dan + "단 시작!!" + ">")    
+            while(num < 10){
+                console.log(dan + " " + "x" + " " + num + " " + "=" + " " + dan * num)
+                num++
+            }
+            dan++ 
+            console.log("------------------------------")        
+        }
+       
+
+        // 문제 3) 8 'X' 8 '=' 64 의 형식이 아니라 8X8=64 의 형식으로 출력
+        // 쉼표(,) 연산자를 사용하면 별도의 객체로 반환
+        // => console.log(dan, "+" , num , "=" , dan * num) ==> 8 'x' 8 '=' 64 
+
+        // 플러스(+)를 사용하면 문자열끼리 연결하여 새로운 문자열로 반환
+        // => console.log(dan + "+" + num + "=" + dan * num) ==> 8x8=64 
+
+    </script>
+</body>
+</html>

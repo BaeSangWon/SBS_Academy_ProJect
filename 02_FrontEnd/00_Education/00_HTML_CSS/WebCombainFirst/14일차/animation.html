@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            background-color: salmon;
+            animation-name: move;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-out;
+        }
+
+        .box:hover{
+            animation-play-state: paused;
+        }
+
+        @keyframes move {
+            from{
+                transform: translateY(0);
+            }
+            50%{
+                transform: scale(.5);
+            }
+
+            to{
+                transform: translateY(200px);
+                background-color: gold;
+                border-radius: 50%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+
+
+    <!-- 
+        -. css animation + keyframe
+        ==> 애니메이션을 나타내는 css 스타일과 애니메이션의 중간상태를 나타내는 keyframe으로 구성 
+        ==> transition보다 규모가 더 크고 복잡하며, 다양한 움직임 구현 가능
+        
+        -. animation 속성
+        1. animation-name
+        ==> 애니메이션 이름 설정
+
+        <유효한 이름>
+        -. 단순 단어 : name, move 등
+        -. 언더바 : name_name;
+        -. 하이픈 : name-name;
+
+        <사용 불가한 이름>
+        -. 특수문자 : %name, *name
+        -. 첫글자로 숫자가 나오는 경우 : 1name
+        ※ 첫번째 글자로 불가한 것이고, 두,세번째로 적는것은 가능함
+
+        ==> 애니메이션의 이름이 있어야 호출이 가능하기 때문에 항상 이름을 제일 먼저 적어줄 것!
+
+        2. animation-duration
+        ==> 애니메이션 재생 지속 시간
+        ==> 애니메이션을 한번 재생하는데 걸리는 시간 설정
+        ==> transition-duration과 유사한 효과
+        ==> animation-duration:0 , animation-duration 적지 않을 시 애니메이션 재생 불가
+
+        3. animation-iteration-count
+        ==> 애니메이션의 재생 횟수 설정
+        ==> 숫자
+        ==> 기본값 : 1
+        ==> infinite : 애니메이션 무한 반복(가장많이 사용하는 옵션)
+
+        4. animation-direction
+        ==> 애니메이션 재생 방향 설정
+
+        ※ from - to => 순방향
+           to - from => 역방향
+        
+        4-1) normal
+        ==> 기본값 / 애니메이션을 순방향 재생
+        ==> 한번 재생이 끝나면 첫번째 프레임부터 다시 시작
+
+        4-2) reverse
+        ==> 애니메이션 역방향 재생
+        ==> 한번 재생이 끝나면 마지막 프레임부터 다시 시작
+
+        4-3) alternate
+        ==> 0 -> 100 -> 0 
+        ==> 순방향 시작, 역방향과 순방향을 번갈아가며 재생
+        ==> 사용성 가장 높음
+
+        4-4) alternate-reverse
+        ==> 100 -> 0 -> 100
+        ==> 역방향 시작, 순방향과 역방향을 번갈아가며 재생
+
+        5. animation-play-state
+        ==> 애니메이션 재생 상태 설정
+        - running
+        - paused
+        ==> hover 이벤트와 결합해서 사용함
+
+        6. animation-timing-function
+        ※ transtion 사용방법과 동일
+
+     -->
+
+    
+</body>
+</html>

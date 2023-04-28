@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정리</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 500px;
+            height: 500px;
+            background-color: salmon;
+            /* 단독요소를 가운데 정렬할 경우 */
+            margin: 0 auto;
+        }
+
+        .out_box{
+            width: 500px;
+            height: 500px;
+            background-color: gold;
+            /* flex 사용 시 width, heigth 값 변화에 상관 없이 중앙 정렬 가능 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .in_box{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            /*  
+            ※ margin 으로 중앙 정렬 시 부모요소도 같이 영향을 받음
+            margin: 150px auto;          
+            */
+        }
+
+        .container{
+            display: flex;
+        }
+
+    </style>
+</head>
+    <!-- 
+        1. 중앙 정렬
+
+        - margin
+        ex) inner 
+        ==> height 값 x (내부 컨텐츠 높이에 자동 설정 되도록)
+        ==> float : left, margin : auto 혼용 사용 불가
+        ==> width 확인 (block 요소이기 때문에 width 없을 경우 화면을 가득 채움)
+
+        - flex
+        ==> tag > tag 중앙 정렬 시 사용하기 좋음
+        ==> container(부모)에 display : flex; 적용 시 안쪽에 있는 item(자식)의 display가 변경되는 경우가 있으니 확인하고 작업할 것!
+        
+        - position
+        ==> 요소끼리 겹치는 경우에만 사용
+        ==> relative(부모), absolute(자식)
+        ==> relative 는 필요한 경우에만 적절히 사용
+        ==> absolute된 자식 요소를 잡아주는 경우
+        ==> 일부 레이아웃 조정을 위해서 사용하는 경우 (메를로랩의 맵 위치 지정)
+
+        2. height
+        ==> inner, section의 경우 height 값 x 권장 
+        ==> padding으로 부피감 효과를 줌으로써 height 대체 가능
+        
+        3. width
+        - 00px; , calc(100% - 100px); ※calc 사용 시 연산자 사이에 여백 필수
+        - 단위 : %, vw, em, rem  
+        - max-width / width / margin : 0 auto => inner
+        ==> grid.guide
+        ==> pc : 1200 ~ 1800px
+        ==> 1000px 이하로 inner 사용 하지 않는 것을 권장
+
+        4. 미디어쿼리
+        PC 
+        @media all and (min-width:1024px){}
+
+        tab
+        @media all and (mix-width:768px) and (max-width:1023px){}
+        
+        Mobile
+        @media all and (max-width:767px){}
+
+        ==> 3개 중 하나를 기본 값(default)으로 잡고 작업하는 것이 좋음
+
+        5. :root 
+        ==> common.css
+        ==> reset.css
+
+        :root{
+            --mainColor : #5452f;
+            --whiteColor :#fff;
+            --eng : 'Noto Sans'
+        }
+
+        color : var(--mainColor);
+
+        6. em, rem
+        ==> 기준 : font-size
+        ==> root / rem **
+        ==> em / 개별div
+        ==> width, height, padding, margin, font-size ... (px를 사용하는 모든 요소에 사용 가능)
+
+        7. flex, grid
+        ==> 실용도 : flex(8) : grid(2)
+    -->
+
+    <div class="box"></div>
+
+    <div class="out_box">
+        <div class="in_box"></div>
+    </div>
+
+    <div class="container">
+        <span class="item">1</span><span class="item">2</span><span class="item">3</span><span class="item">4</span><span class="item">5</span><span class="item">6</span><span class="item">7</span>
+    </div>
+
+<body>
+    
+</body>
+</html>

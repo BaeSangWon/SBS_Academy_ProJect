@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .svg{
+            width: 300px;
+            height: 300px;
+            background: url(img/bear.svg) no-repeat center / cover;
+        }
+
+        .svg_canvas{
+            background-color: lightblue;
+        }
+
+        /* 포토샵 또는 일러스트에서의 테두리 속성 적용 */
+        ellipse{
+            stroke: red;
+            /* 테두리 */
+            stroke-width: 10;
+        }
+
+        path{
+            stroke: #000;
+            stroke-width: 5;
+
+            /* 선 내부 채우기를 투명하게 하는 속성 */
+            fill: transparent;
+        } 
+
+    </style>
+</head>
+<body>
+
+    <!-- #1. img tag -->
+    <img src="img/bear.svg" alt="bear">
+
+    <!-- #2. background-image -->
+    <div class="svg"></div>
+
+    <!-- svg 작성할 수 있는 영역(도화지) -->
+    <svg width="600" height="500" class="svg_canvas"> 
+
+        <!-- 
+            색상 지정 없을 경우 기본 검정색 
+            fill : 색상 변경
+            x: x축 시작점
+            y: y축 시작점
+        -->
+        <rect x="10" y="30" width="200" height="100" fill="salmon"></rect>
+        <!-- 일반 사각형 -->
+
+        <circle cx="450" cy="150" r="30" fill="rgba(0,0,0,.5)"></circle>
+        <!-- 
+            원형
+            cx = center x (원의 정중앙을 기준으로 x축)
+            cy = center y (원의 정중앙을 기준으로 y축)  
+            r = radius = 반지름 / 원의 크기 결정
+         -->
+
+        <rect x="50" y="170" rx="10" width="100" height="100" fill="orange"></rect>
+        <!-- 꼭지점의 반지름이 둥근 사각형 -->
+
+        <ellipse cx="200" cy="200" rx="100" ry="50" fill="green"></ellipse>
+        <!-- 타원 -->
+
+        <line x1="10" x2="400" y1="30" y2="300" stroke="blue" stroke-width="10"></line>
+        <!-- 
+            직선
+            일직선을 그리려고 하는 경우 x값만 필요하지만 최상단에 선이 정렬되기 때문에
+            y축으로 일직선을 그리려면 y1, y2를 동일한 값을 적용해줄 것
+        -->
+
+        <path d="M 300 200 L 500 100 H 50 V 300 Z"></path>
+        <!-- 
+            자유그리기 = path
+
+            M : path 시작 위치
+            L : 직선
+            H : 수평선 (X 위치만 필요)
+            V : 수직선 (Y 위치만 필요)
+            Z : 마무리
+         -->
+
+         <path d="M 50 400 C 50 400, 200 200, 500 250"></path>
+         <!-- 
+            커브선
+            1. M : 커브선 시작점으로 이동
+            2. C : 선의 시작점 지정, 커브가 그려질 위치(고점 선택), 끝나는 점 지정
+          -->
+
+    </svg>
+
+    <svg id="_레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 383.16 78.05">
+        <defs>
+            <style>.cls-1 {fill: #fff;stroke: #000;stroke-miterlimit: 10;}</style>
+        </defs>
+        <path class="cls-1" d="m.29,46.92 s103.03-73.08,210.86,5.49S382.71.22,382.71.22"/>
+    </svg>
+
+    <!-- 
+        jpg, png, gif / svg
+
+        svg
+
+        => 확장 가능한 벡터 그래픽
+        => 웹페이지에서 벡터 표준 = svg
+        => ui / 아이콘, 그래프
+        => css, js 조작 가능
+
+        => 장점) 확대해도 절대 깨지지 않고 늘어나지 않음 
+
+        => 단점) 모양이 복잡하고 개체수가 많을수록 성능 저하
+
+        => 벡터 → 일러스트 / 비트맵 → 포토샵
+     -->
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #menu_2:checked~#menu_3{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        -. input
+        ==> 사용자 입력 태그
+        ==> 회원가입, 설문조사, 검색창 등등..
+        ==> inline 요소
+        ==> 단독태그
+     -->
+
+    TEXT : <input type="text"/>
+    <!-- 한줄의 기본 텍스트 박스 -->
+    <br/>
+    
+    COLOR : <input type="color"/>
+    <!-- 컬러 픽업창 생성 -->
+    <br/>
+
+    SEARCH : <input type="search" placeholder="검색어를 입력하세요."/>
+    <!-- 검색어 입력창 -->
+    <!-- placeholder : 미리보기, 텍스트, 글자를 미리 넣어두고 글을 적으면 사라짐 -->
+    <input type="submit" value="검색"/>
+    <!-- 양식을 제출할때 사용(로그인, 검색창, 게시판 등..) -->
+    <!-- value : 미리 설정해놓은 값, 클릭 및 입력해도 글자가 지워지지않고 살아있음 -->
+    <br/>
+
+    TEL : <input type="tel">
+    <!-- 전화번호 입력창 -->
+    <br/>
+
+    PW : <input type="password">
+    <!-- 비밀번호 입력창 -->
+    <br/>
+
+    E-MAL : <input type="email">
+    <!-- 이메일 입력창 -->
+    <br/>
+
+    <textarea cols="30" rows="10"></textarea>
+    <!-- 여러줄의 텍스트 박스 -->
+    <br/>
+
+    <input type="time">
+    <!-- 시간 출력 -->
+    <input type="date">
+    <!-- 날짜 출력 -->
+    <input type="week">
+    <!-- 주 단위 표현 -->
+    <br/>
+
+    <select>
+        <option>1번옵션</option>
+        <option>2번옵션</option>
+        <option>3번옵션</option>
+    </select>
+    <br/>
+
+    <input type="email" placeholder="이메일 아이디를 입력하세요">@
+    <select>
+        <option>---이메일 주소 선택----</option>
+        <option>naver.com</option>
+        <option>gmail.com</option>
+        <option>daum.net</option>
+    </select>
+
+    <br/><br/>
+
+    <h4>설문조사</h4>
+    <p>수업 만족도 참여 조사</p>
+    <input type="radio" name="search" id="tab_1">
+    <label for="tab_1">만족</label>
+    <!-- 반드시 id로 연결(class 연결시 동작 x) -->
+
+    <input type="radio" name="search" id="tab_2">
+    <label for="tab_2">보통</label>
+
+    <input type="radio" name="search" id="tab_3">
+    <label for="tab_3">불만족</label>
+    <!-- 
+        -. radio 버튼
+        ==> 한번 체크되면 해제 불가
+        ==> 설문조사에 주로 쓰임
+        ==> 여러개 중에서 하나만 선택하게 만들고 싶다면 그룹 작업 필수
+           
+           -. name="" : radio버튼을 하나의 그룹으로 묶어주는 역할
+
+        -. label 태그
+        ==> input 태그와 연결해서 사용
+        ==> input과 연결해주기 위해서 id 사용
+        ※class는 사용 불가
+        ==> <input id="text_1/>
+        ==> <label for"text_1></label>
+     -->
+     <br/><br/>
+
+     <h4>사이드 메뉴</h4>
+     <input type="checkbox" id="menu_1"/>
+     <label for="ment_1">사이다</label>
+     
+     <input type="checkbox" id="menu_2"/>
+     <label for="ment_1">콜라</label>
+     
+     <input type="checkbox" id="menu_3"/>
+     <label for="ment_1">환타</label>
+     <!-- 
+        -. check box
+        ==> 선택 후 해제 가능
+        ==> 다중옵션 선택 시 사용
+        ==> name으로 그룹화 작업해도 사용 불가
+
+      -->
+
+    
+    
+</body>
+</html>

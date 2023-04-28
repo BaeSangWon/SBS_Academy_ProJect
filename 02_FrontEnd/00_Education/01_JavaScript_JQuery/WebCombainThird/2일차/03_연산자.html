@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자(Operator)</title>
+</head>
+<body>
+    <h1>연산자(Operator)</h1>
+    <textarea cols="150" rows="60">
+
+        연산자 : + - × ÷ 등등등 값들을 가지고 할 수 있는 다양한 연산자들이 존재한다.
+
+        기본 연산자
+            순서  연산자      사용의 예       설명
+                1.    -     :   C = -A          A 값이 양수이면 음수로, 음수이면 양수로 변환
+                2.    -     :   C = A - B       A에서 B를 뺸 차를 C에 저장. 뺼셈 연산
+                3.    +     :   C = A + B       A와 B의 합를 C에 저장. 덧셈 연산
+                4.    *     :   C = A * B       A와 B의 곱를 C에 저장. 곱셈 연산
+                5.    /     :   C = A / B       A를 B로 나는 몫을 C에 저장. 나눗셈 연산
+                6.    %     :   C = A % B       A를 B로 나누었을 떄 나머지를 C에 저장. 나머지 연산
+                7.    ++    :   C = ++A         A 값에 1을 던한 값을 C에 저장. 전위 증가
+                8.    --    :   C = --A         A 값에 1을 뺀 값을 C에 저장. 전위 감소
+                9.    ++    :   C = A++         A 값에 1을 던한 값을 C에 저장. 후위 증가
+                10.   --    :   C = A--         A 값에 1을 뺀 값을 C에 저장. 후위 감소
+
+            관계 연산자
+            순서  연산자      사용의 예       설명
+                1.    ==    :   A == B          A와 B의 값이 같은지 비교 (동등비교연산자)
+                2.    ===   :   A === B         A와 B의 값뿐만 아니라 자료형도 같은지 비교 (일치연산자)
+                3.    !=    :   A != B          A와 B의 값이 다른지 비교
+                4.    !==   :   A !== B         A와 B의 값뿐 아니라 자료형도 다른지 비교
+                4.    >     :   A > B           A가 B보다 큰지 비교
+                5.    >=    :   A >= B          A가 B보다 크거나 같은지 비교
+                6.    <     :   A < B           A가 B보다 작은지 비교
+                7.    <=    :   A <= B          A가 B보다 작거나 같은지 비교
+
+            논리 연산자
+            순서  연산자      사용의 예       설명
+                1.    &&    :   A && B          AND 연산, A와 B 둘 다 참일 때 참을 출력
+                2.    ||    :   A || B          OR 연산, A와 B 둥 중에 하나만 참이면 참을 출력
+                3.    !     :   !A              NOT 연산, A가 참이면 거짓, 거짓이면 참을 출력
+
+    </textarea>
+</body>
+    <script>
+        let number = 10;
+        console.log(++number);
+
+        let a = 111;
+        let b = "111";
+        console.log(a == b);
+        console.log(a === b);
+
+    </script>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover_menu_과제</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: initial;
+        }
+
+        /* reset */
+
+        .menu_wrap, .menu_wrap_2 , .menu_wrap_3{
+            width: 1200px;
+            background-color: lightskyblue;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .menu_wrap > li , .menu_wrap_2 > li, .menu_wrap_3 > li{
+            width: 15%;
+            height: 60px;
+            background-color: lightgrey;
+            position: relative;
+        }
+
+        .menu_wrap > li > a, .menu_wrap_2 > li > a , .menu_wrap_3 > li > a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .menu_wrap > li span{
+            /* width: 0%;
+            height: 5px;
+            background-color: blue;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transition: all .2s linear; 
+            border-bottom: 3px solid #000;  */
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 5px;
+            opacity: 0;
+            /* scale : 중앙을 기준으로 움직임 효과 적용 가능 */
+            transform: scaleX(0);
+            transition: all .3s;
+            background-color: hotpink;
+        }
+
+        .menu_wrap > li:hover span{
+            /* left: 0; 
+            width: 100%; */
+            opacity: 1;
+            transform: scaleX(1);
+        } 
+
+        /* menu_wrap hover event_end */
+
+        .menu_wrap_2 > li span{
+            /* width: 100%;
+            height: 5px;
+            position: absolute;
+            top: 50%;
+            transition: all .2s linear;  */
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: lightseagreen;
+            transition: all .3s;
+            transform: scale(1,0);
+            /* 가로는 적용된 width 값을 유지하고 세로는 0 */
+        }
+
+        .menu_wrap_2 a{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 999;
+        } 
+
+        .menu_wrap_2 > li:hover span{
+            /* top: 0;
+            height: 100%;
+            background-color: rgba(238,130,238,.5) */
+            transform: scale(1,1);
+        } 
+
+        /* menu_wrap_2 hover event_end */
+
+        .menu_wrap_3 > li span{
+            /* width: 0%;
+            height: 5px;
+            background-color: blue;
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            transition: all .1s linear; 
+            border-bottom: 3px solid #000;  */
+            width: 100%;
+            height: 5px;
+            background-color: salmon;
+            position: absolute;
+            left: 0;
+            bottom: 50%;
+            transition: all .3s;
+            transform: scale(0,0);
+            opacity: 0;
+        }
+
+        .menu_wrap_3 > li:hover span{
+            /* left: 0; 
+            top: 55px;
+            width: 100% */
+            opacity: 1;
+            transform: scale(1,1);
+            bottom: 0;
+        }
+    
+    </style>
+</head>
+<body>
+    
+    <ul class="menu_wrap">
+        <li>
+            <a href="#">menu1<span></span></a> 
+        </li>
+        <li>
+            <a href="#">menu2<span></span></a> 
+        </li>
+        <li>
+            <a href="#">menu3<span></span></a> 
+        </li>
+        <li>
+            <a href="#">menu4<span></span></a> 
+        </li>
+        <li>
+            <a href="#">menu5<span></span></a> 
+        </li>
+        <li>
+            <a href="#">menu6<span></span></a> 
+        </li>      
+    </ul>
+
+
+    <ul class="menu_wrap_2">
+        <li>
+            <span></span>
+            <a href="#">menu1</a> 
+        </li>
+        <li>
+            <span></span>
+            <a href="#">menu2</a> 
+        </li>
+        <li>
+            <span></span>
+            <a href="#">menu3</a> 
+        </li>
+        <li>
+            <span></span>
+            <a href="#">menu4</a> 
+        </li>
+        <li>
+            <span></span>
+            <a href="#">menu5</a> 
+        </li>
+        <li>
+            <span></span>
+            <a href="#">menu6</a> 
+        </li>     
+    </ul>
+
+    <ul class="menu_wrap_3">
+        <li>
+            <a href="#">menu1<span></span></a> 
+        </li>
+        <li>
+            <a href="#">menu2<span></span></a> 
+        </li>
+        <li>
+            <a href="#">menu3<span></span></a> 
+        </li>
+        <li>
+            <a href="#">menu4<span></span></a> 
+        </li>
+        <li>
+            <a href="#">menu5<span></span></a> 
+        </li>
+        <li>
+            <a href="#">menu6<span></span></a> 
+        </li>
+    </ul>
+
+</body>
+</html>

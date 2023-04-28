@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pattern</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        svg{
+            width: 500px;
+            height: 500px;
+            background-color: #ddd;
+        }
+
+        .patten-rect{
+            fill: url(#pattern);
+        }
+    </style>    
+</head>
+<body>
+    <svg>
+        <defs>
+            <!-- 참조 -->
+            <!-- viewBox="0 0 100 100" id="pattern" x="0" y="0" width="0.1" height="0.1">
+                 circle 100 x 100 사이즈로 10개를 viewBox에 채우겠다는 뜻 
+            -->
+            <pattern viewBox="0 0 100 100" id="pattern" x="0" y="0" width="0.1" height="0.1">
+                <circle cx="50" cy="50" r="50" fill="hotpink"></circle>
+                <!-- defs 내부에 참조형태로 존재하기 때문에 시각적으로 표현되지 않음 -->
+            </pattern>
+        </defs>
+
+        <rect class="patten-rect" x="0" y="0" width="100%" height="100%"></rect>
+
+    </svg>
+    <!-- 
+        pattern
+
+        width="0.1"
+        height="0.1"
+
+        1 = 100%
+        0.1 = 1/10
+
+        1/10의 크기로 10개씩 넣겠다
+
+        [패턴 출력 방법]
+
+        1. cx, cy, r 조절
+        => 초기값 : 50
+        => 변경값 : 25
+
+        2. pattern width, height 조절
+
+        3. pattern viewBox 설정
+        => 출력하고 싶은 패턴의 갯수를 뷰박스 상대적인 크기로 동일하게 설정
+     -->
+</body>
+</html>

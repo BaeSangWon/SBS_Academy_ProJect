@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+
+ul{
+    list-style: none;
+}
+
+/* reset */
+
+
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #eee;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+}
+
+.logo > a{
+    font-size: 30px;
+}
+
+/* 클래스 이름이 지정되지 않은 input 설정 */
+.search_form > input[type="text"]{
+    border: none;
+    padding: 8px 0;
+
+    /* 16px * 0.3 = 4.8px */
+    border-radius: 0.3rem;
+
+    /* 16px * 0.8 = 12.8px */
+    font-size: 0.8rem;
+}
+
+.search_form > input[type="submit"]{
+    border: none;
+    background-color: gold;
+    width: 4rem;
+    padding: 0.5rem 0;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+/* header_end */
+
+
+.menu_wrap{
+    width: 100%;
+    display: flex;
+    grid-area: menu;
+}
+
+
+.menu_wrap > li{
+    width: 25%;
+    background-color: gold;
+    transition: all .5s;
+}
+
+.menu_wrap > li > a{
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.menu_wrap > li:hover{
+    background-color: crimson;
+    width: 35%;
+}
+
+.menu_wrap > li:hover a{
+    color: #fff;
+}
+
+/* menu_wrap_end */
+
+.main_con{
+    background-color: lightblue;
+    padding: 15px;
+    grid-area: main;
+}
+
+.card_list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card_item{
+    /* 소수점 이하 3자리까지만 반영됨 */
+    width: 33.333%;
+
+    /* card_item 자식(item) 요소를 flex-item으로 만들어 주고, flex-item에 flex-basis , flex-grow 옵션을 적용하기 위한 선행작업 */
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    /* background-color: salmon; */
+    margin-bottom: 30px;
+}
+
+.card_img img{
+    display: none;
+}
+
+/* 백그라운드 이미지 스타일이 반영된 클래스명(card_img)을 호출하여 css 적용  */
+.card_img{
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: lightgrey;
+}
+
+.card_desc{
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    /* flex-grow: 1; */
+    flex: 1 1 auto;
+    /* flex-grow:1 , flex-shirnk:1, flex-basis:auto */
+}
+
+/* main_con_end */
+
+.side{
+    padding: 15px;
+}
+
+.side_1{
+    background-color: darkgray;
+    grid-area: side_1;
+}
+
+.todo_item::before{
+    content: "💕";
+}
+
+/* side_1_end */
+
+.side_2{
+    background-color: #333;
+    color: #fff;
+    grid-area: side_2;
+}
+
+.messge_item{
+    width: 100%;
+    display: flex;
+    /* user_photo에 width, height 값이 지정되어 있기 때문에 중앙정렬 가능  */
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+
+.user_photo{
+    /* 
+        width, height를 지정해줘도 이미지가 나오지 않는 경우 이미지 사이즈에 비해 이미지를 담는 영역을 작게 설정하였기 때문 
+        background-repeat, background-position, background-size 옵션을 넣어줘야 정상적으로 반영 됨
+    */
+    width: 50px;
+    height: 50px;
+    background-color: gold;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 5px;
+}
+
+
+/* side_2_end */
+
+
+footer{
+    padding: 30px 0;
+    text-align: center;
+    grid-area: footer;
+}
+
+/* default = tab, mobile */
+
+/* pc 사이즈 설정 */
+@media all and (min-width:1024px){
+
+    .wrap{
+        display: grid;
+        grid-template-columns: 20% 1fr 20%;
+        grid-template-areas: 
+        'header header header'
+        'menu menu menu'
+        'side_1 main side_2'
+        'footer footer footer';
+    }
+
+}
+
+/* tab 사이즈 설정 */
+@media all and (min-width:768px) and (max-width:1023px){
+    .card_item{
+        width: 50%;
+    }
+}
+
+/* mobile 사이즈 설정 */
+@media all and (max-width:768px){
+    .card_item{
+        width: 100%;
+    }
+}

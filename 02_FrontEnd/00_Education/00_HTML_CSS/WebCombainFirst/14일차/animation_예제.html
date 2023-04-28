@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제-1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap{
+            width: 300px;
+            height: 300px;
+            background-color: salmon;
+            animation-name: move;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        .wrap:hover{
+            animation-play-state: paused;
+        }
+
+        @keyframes move {
+            from{
+                
+            }
+            50%{
+                transform: translate(300px,300px) rotate(180deg) skew(45deg);
+                background-color: yellow; 
+            }
+
+            to{
+                transform: translate(600px,0) rotate(360deg);
+                background-color: gold;
+                border-radius: 50%;
+            }
+        }
+
+
+        .one_box{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border-radius: 50%;
+            position: relative;
+            top:0;
+            left: 100px;
+            animation-name: ball;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in;
+        }
+
+        @keyframes ball {
+            from{
+                top:0;
+                
+            }
+            95%{
+                width: 100px;
+            }
+            to{
+                top:300px;
+                width: 115px;
+                height: 90px;     
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap"></div>
+    <div class="one_box"></div>
+
+    
+</body>
+
+
+
+</html>

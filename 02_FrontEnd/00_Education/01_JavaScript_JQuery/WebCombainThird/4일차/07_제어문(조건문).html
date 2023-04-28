@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문(if)</title>
+</head>
+<body>
+    <h1>조건문(if)</h1>
+    <textarea cols="150" rows="50">
+        1. 조건문 if, if ~ else
+        - 영어 if의 뜻과 거의 흡사하다. '만약 ~라면 ~하겠다'
+        - if가 필요한 이유는 여러가지의 케이스마다 실행하고자 하는 내용을 달리하기 위해서 필요한 문법이다
+        
+        2. if문의 사용
+        - if(조건){
+            조건이 참(true)이라면 실행할 코드
+        }
+
+        - 조건이 true 라면 중괄호 안으로 들어와 코드를 실행한다. 이 중괄호 영역을 if블럭 또는 if절 이라고 한다
+        - 조건이 참(true)인지 거짓(false)인지에 따라서 실행이 될 수도 있고, 아닐 수도 있다
+
+        - if(조건){
+            조건이 참(true)일 경우 실행할 코드
+        } else {
+            조건이 거짓(false)일 경우 실행할 코드
+        }
+
+        - 조건이 true 라면 if 다음의 중괄호 안으로 들어와서 코드를 실행하고, false 라면 else 다음의 중괄호 안으로 들어와 코드를 실행한다
+        - if 다음의 중괄호 영역을 if절 또는 if블럭이라고 하고, else 다음의 중괄호 영역을 else절 또는 else블럭 이라고 한다
+        - 조건이 참(true)이라면 if절을, 거짓(false)라면 else절을 실행한다. 즉, 둘 중 하나는 반드시 실행한다
+
+        - if(조건1){
+            조건 1이 참(true)이라면 실행할 코드
+        } else if(조건2){
+            조건 2가 참(true)이라면 실행할 코드
+        } else {
+            조건1, 조건2가 모두 거짓(false)이라면 실행할 코드
+        }
+        
+        - 조건 1이 true 라면 첫번째 중괄호 안으로 들어가서 코드를 실행하고, false 라면 다음 조건 2로 넘어간다
+        - 조건 2가 true 라면 두번째 중괄호 안으로 들어가서 코드를 실행하고, false 라면 넘어간다
+        - 조건 1, 2가 모두 false 라면 else 다음의 중괄호로 들어가 실행한다
+
+        3. 조건문의 중첩사용
+        - if(조건1){
+            if(조건1-1){
+                조건 1과 1-1이 모두 참(true)일 때 실행할 코드
+            } else {
+                조건 1은 참(true), 조건 1-1은 거짓(false)일 때 실행할 코드
+            }
+        } else if(조건2){
+            조건 2가 참(true)일 떄 실행할 코드들
+        } else {
+            if(조건3){
+                조건1, 조건2가 모두 거짓(false), 조건3은 참(true)일 때 실행할 코드
+            } else {
+                조건1, 조건2, 조건3이 모두 거짓(false)일 때 실행할 코드
+            }
+        }
+
+        - 조건문 안에 다른 조건문을 넣어서 여러가지 조건을 충족할 때 실행할 코드를 작성할 수 있다
+
+    </textarea>
+    <script>
+        let number = -7;
+        if(number == 0){
+            console.log("number은 0입니다")
+        }
+    </script>
+</body>
+</html>

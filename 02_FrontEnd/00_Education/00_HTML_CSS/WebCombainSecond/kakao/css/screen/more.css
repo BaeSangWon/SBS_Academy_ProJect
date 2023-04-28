@@ -1,0 +1,114 @@
+
+/* .wrap{
+    height: 300vh;
+
+}
+
+.more_top_wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: gold;
+} */
+
+.more_main{
+    padding: 0 25px;
+}
+
+.user_info{
+    display: flex;
+    align-items: center;
+}
+
+.user_info > figure{
+    width: 80px;
+    height: 80px;
+    background: url(../../img/mimoticon_1.png) no-repeat center / cover;
+}
+
+.user_component{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user_component_txt h4{
+    font-size: 25px;
+}
+
+.user_component_txt p{
+    opacity: .7;
+}
+
+.user_bubble > .fa-message{
+    font-size: 25px;
+}
+
+.icon_list{
+    padding: 0 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon i{
+    font-size: 35px;
+}
+
+.icon span{
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.suggestion{
+    padding: 40px 25px; 
+    border-top: 1px solid var(--grayColor);
+    margin-top: 50px;
+}
+
+.suggestion p{
+    margin-bottom: 30px;
+    opacity: .7;
+}
+
+.suggestion_icons{
+    display: flex;
+    gap: 25px;
+}
+
+.s_icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.s_icon span{
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: .7;
+}
+
+.icon_box{
+    width: 60px;
+    height: 60px;
+    background-color: var(--mainColor);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon_box i{
+    color: #fff;
+    font-size: 25px;
+}
+

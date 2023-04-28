@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방앗간화장품</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: initial;
+        }
+
+        /* ----- 초기화 영역 ------ */
+
+        .inner{
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* ----- 공통 영역 ----- */
+
+        header{
+            width: 100%;
+            height: 100px;
+            position:fixed ;
+            top: 0;
+            left: 0;
+        }
+
+        header > .inner{
+        /* 공통속성을 적용하되 특정영역에만 지정하고 싶을 경우 */
+            max-width: 1200px;
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu_wrap{
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+            /* width 값 필수 */
+        }
+
+        /* .menu_wrap > li{
+            margin-left: 20px;
+        } */
+
+        /* ----- header_end ----- */
+
+        .section_1{
+            /* height or padding 값 필수 */
+            width: 100%;
+            height: 830px;
+            background-image: url(img/main_visual.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* ----- section_1_end ----- */
+
+        .section_2{
+            width: 100%;
+            height: 900px;
+            background-color: #f8f8f8;
+            padding-top: 150px;
+        }
+
+        .main_txt{
+            font-size: 30px;
+            text-align: center;
+            /* div 내부에 텍스트가 존재할 경우 flex 사용 추천 */
+            text-transform: uppercase;
+            /* 소문자 변환 : lowcase
+               대문자 변환 : uppercase
+            */
+            margin-bottom: 20px;
+        }
+
+        .con_box_wrap{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .con_box{
+            width: 50%;
+            padding: 10px;
+            position: relative;
+        }
+
+        .con_box img{
+            display: block;
+            width: 100%;
+        }
+
+        .con_box dl{
+            position:absolute;
+            bottom: 30px;
+            left: 30px;
+            color: #fff;
+        }
+
+        .con_box dt{
+            width: 100%;
+            font-size: 25px;
+            font-weight: bold; 
+            text-transform: uppercase;
+        } 
+
+        .con_box dd{
+            width: 100%;
+            font-size: 15px;
+        } 
+
+       
+        /* ----- section_2_end ----- */
+
+        .section_3{
+            width: 100%;
+            padding: 50px 0 100px;
+        }
+
+        .center_box_wrap{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .center_box{
+            width: 33%;
+            margin-bottom: 30px;
+        }
+
+        .center_box > a{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center_box dl{
+            text-align: center;
+        }
+
+        .center_box dt{
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .center_box dd{
+            opacity: .7;
+        }
+        
+        .center_box img{
+            display: block;
+            width: 100%;
+            transition: all .5s;
+        }
+
+        .center_box:hover img{
+            opacity: .5;
+        }
+
+       /* ----- section_3_end ----- */
+      
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="img/logo.png" alt="헤더 로고"/>
+                    </a>
+                </h1>
+                <ul class="menu_wrap">
+                    <li>
+                        <a href="#">BRAND STROY</a>
+                    </li>
+                    <li>
+                        <a href="#">PRODUCT</a>
+                    </li>
+                    <li>
+                        <a href="#">NEWS</a>
+                    </li>
+                    <li>
+                        <a href="#">MEDIA</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- header_end -->
+
+        <section class="section_1"></section>
+        <!-- 태그명.(선택자)선택자명 + tab -->
+        <!-- section_1_end -->
+
+        <section class="section_2">
+            <div class="inner">
+                <p class="main_txt">
+                    welcome to <b>bangagan</b>
+                    <!-- 단순강조 : b / 경고문 : strong -->
+                </p>
+                <div class="con_box_wrap">
+                    <div class="con_box">
+                        <a href="#">
+                            <img src="img/section_2_con_1.jpg" alt="섹션 2번 이미지1"/>
+                                <dl>
+                                    <dt>eunyul</dt>
+                                    <dd>자연에서 찾은 천연 원료의 힘 건강한 아름다움</dd>
+                                </dl> 
+                            </p>
+                        </a>
+                    </div>
+                    <div class="con_box">
+                        <a href="#">
+                            <img src="img/section_2_con_2.jpg" alt="섹션 2번 이미지2"/>
+                            <p class="con_txt">
+                                <dl>
+                                    <dt>maybona</dt>
+                                    <dd>평범한 일상을 특별하게 만들어 줄 당신만의 브랜드</dd>
+                                </dl> 
+                            </p> 
+                        </a>
+                    </div>
+                    <div class="con_box">
+                        <a href="#">
+                            <img src="img/section_2_con_3.jpg" alt="섹션 2번 이미지3"/>
+                            <p class="con_txt">
+                                <dl>
+                                    <dt>chaldduk</dt>
+                                    <dd>선조들의 피부 관리 노하우에서 영감을 얻다</dd>
+                                </dl> 
+                            </p> 
+                        </a>
+                    </div>
+                    <div class="con_box">
+                        <a href="#">
+                            <img src="img/section_2_con_4.jpg" alt="섹션 2번 이미지4"/> 
+                            <p class="con_txt">
+                                <dl>
+                                    <dt>clean & fresh</dt>
+                                    <dd>편견은 지우고 개성은 살려 나를 가장 나답게!</dd>
+                                </dl> 
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section_2_end -->
+
+        <secton class="section_3">
+            <div class="inner">
+                <p class="main_txt">
+                    new <b>items</b>
+                </p>
+                <div class="center_box_wrap">
+                    <div class="center_box">
+                        <a href="#">
+                            <img src="img/prd_1.jpg" alt="섹션 3번 이미지1"/>
+                            <dl>
+                                <dt>나이아신아마이드 솔루션 시트 마스크</dt>
+                                <dd>피부를 깔끔하게 케어</dd>
+                            </dl>  
+                        </a>
+                    </div>         
+                    <div class="center_box">
+                        <a href="#">
+                            <img src="img/prd_2.jpg" alt="섹션 3번 이미지2"/> 
+                            <dl>
+                                <dt>히알루로닉 솔루션 시트 마스크</dt>
+                                <dd>피부를 촉촉하게!</dd>
+                            </dl>  
+                        </a>
+                    </div>         
+                    <div class="center_box">
+                        <a href="#">
+                            <img src="img/prd_3.jpg" alt="섹션 3번 이미지3"/>
+                            <dl>
+                                <dt>햄프시드 솔루션 시트 마스크</dt>
+                                <dd>피부 보호막 형성</dd>
+                            </dl>   
+                        </a>
+                    </div>         
+                    <div class="center_box">
+                        <a href="#">
+                            <img src="img/prd_4.jpg" alt="섹션 3번 이미지4"/>
+                            <dl>
+                                <dt>콜라겐 솔루션 시트 마스크</dt>
+                                <dd>피부의 탄력 저하 개선</dd>
+                            </dl>   
+                        </a>
+                    </div>         
+                    <div class="center_box">
+                        <a href="#">
+                            <img src="img/prd_5.jpg" alt="섹션 3번 이미지5"/>
+                            <dl>
+                                <dt>알로에 베라 솔루션 시트 마스크</dt>
+                                <dd>민감한 피부를 진정!</dd>
+                            </dl>   
+                        </a>
+                    </div>         
+                    <div class="center_box">
+                        <a href="#">
+                            <img src="img/prd_6.jpg" alt="섹션 3번 이미지6"/>
+                            <dl>
+                                <dt>벌꿀 마스크팩</dt>
+                                <dd>피부를 윤기있고 건강하게</dd>
+                            </dl>   
+                        </a>
+                    </div>         
+            </div>
+        </secton>
+        <!-- section_3_end -->
+    </div>
+
+    
+</body>
+</html>

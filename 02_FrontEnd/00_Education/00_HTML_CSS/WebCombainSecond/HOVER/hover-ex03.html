@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover_menu</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: initial;
+        }
+
+        .menu_wrap{
+            width: 1200px;
+            background-color: lightskyblue;
+            margin: 30px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .menu_wrap > li{
+            width: 15%;
+            height: 60px;
+            background-color: lightgrey;
+            /* text-align: center;
+            line-height: 60px; */
+            position: relative;
+        }
+
+        .menu_wrap > li > a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .menu_wrap > li span{
+            /* span의 부모요소에 display:flex를 적용해줘서 inline 요소인 sapn에 width, height, margin 등 적용 가능 */
+            width: 0%;
+            height: 5px;
+            background-color: blue;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transition: all .3s; 
+        }
+
+        .menu_wrap > li:hover span {
+            width: 100%;
+        } 
+
+    </style>
+</head>
+<body>
+
+    <ul class="menu_wrap">
+        <li>
+            <a href="#">menu1<span></span></a> 
+        </li>
+        <li>
+            <a href="#">menu2<span></span></a> 
+        </li>
+        <li>
+            <a href="#">menu3<span></span></a> 
+        </li>
+        <li>
+            <a href="#">menu4<span></span></a> 
+        </li>
+        <li>
+            <a href="#">menu5<span></span></a> 
+        </li>
+        <li>
+            <a href="#">menu6<span></span></a> 
+        </li>
+        
+    </ul>
+
+    
+</body>
+</html>

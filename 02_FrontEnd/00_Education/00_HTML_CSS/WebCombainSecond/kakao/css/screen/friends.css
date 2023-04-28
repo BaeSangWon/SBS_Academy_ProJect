@@ -1,0 +1,230 @@
+.top_wrap{
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: salmon; */
+}
+
+.top_wrap > h1{
+    font-size: 30px;
+}
+
+.friend_icon > span{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+/* i 태그의 경우 width, height 값 적용으로 이미지 사이즈를 키우는 방식이 아닌 font-size를 통해 크기를 조정 */
+.friend_icon i{
+    font-size: 22px;
+    transition: all .5s;
+}
+
+
+/* 계속적으로 동작을 유지해야할 경우 애니매이션 사용 */
+.friend_icon .fa-gear:hover{
+    animation: rotateSetting 1s linear infinite;
+}
+
+@keyframes rotateSetting {
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+.find_friends{
+    display: block;
+    background-color: #fafafa;
+    padding: 15px 0;
+    text-align: center;
+    color: rgba(0,0,0,.5);
+    font-size: 15px;
+}
+
+.profile{
+    padding: 15px 25px;
+    
+}
+
+.user_profile{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--grayColor);
+    padding-bottom: 25px;
+}
+
+.user_profile_img{
+    width: 70px;
+    height: 70px;
+    border-radius: 25px;
+    background: lightgray url(../../img/mimoticon_4.png) no-repeat center / cover;
+}
+
+.user_profile > h4{
+    font-size: 22px;
+    margin-left: 10px;
+
+    /* 
+        글자 사이(자간) 간격 조정 옵션 
+        영문 폰트의 경우 해당 옵션 자주 사용
+    */
+    letter-spacing: -3px;
+}
+
+.friends_list_wrap{
+    padding: 0 25px;
+}
+
+.friends_list_wrap > p{
+    font-size: 14px;
+    opacity: .7;
+    margin-bottom: 20px;
+}
+
+.friends_profile{
+    display: flex;
+    align-items: center;
+}
+
+.friends_profile_img{
+    width: 55px;
+    height: 55px;
+    background: lightgray url(../../img/mimoticon_3.png) no-repeat center / cover;
+    border-radius: 18px;
+    margin-right: 8px;
+}
+
+.friend_list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.friends_num{
+    opacity: .7;
+    font-size: 15px;
+}
+
+.bottom_nav{
+    width: 100%;
+    padding: 20px 50px;
+    background-color: #f9f9fa;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid var(--grayColor);
+}
+
+.nav_list{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.nav_list i{
+    font-size: 25px;
+    color: #2e363e;
+}
+
+.nav_btn{
+    /* 
+        position: relative;
+        top:50px;
+    */
+    transform: translateY(50px);
+    opacity: 0;
+    animation: showBtns .3s ease-in-out forwards;
+}
+
+.nav_btn:nth-child(2){
+    animation-delay: .2s;
+}
+
+.nav_btn:nth-child(3){
+    animation-delay: .5s;
+}
+
+.nav_btn:nth-child(4){
+    animation-delay: .8s;
+}
+
+@keyframes showBtns {
+    from{}
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+.nav_btn a{
+    position: relative;
+}
+
+.nav_btn:nth-child(2) span{
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+}
+
+.alert{
+    width: 30px;
+    height: 30px;
+    background-color: tomato;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    animation: alertRotate 2s ease-in-out infinite;
+}
+
+@keyframes alertRotate{
+    50%{
+        transform: translateY(-5px) rotateY(360deg);
+    }
+}
+
+.splash{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--mainColor);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 130px;
+    /* 
+        ※animation-fill-mode
+        => 애니메이션이 끝난 후 처음(from)으로 돌아가느냐, 끝난 상태를 유지하느냐 결정하는 속성
+        
+        1) none : 별도의 옵션 지정 x
+        2) forwards : 애니메이션 키 프레임이 100%(to)에 도달했을 때 마지막 키프레임 유지
+        3) backwards : 애니메이션 스타일을 애니메이션이 시작되기 전의 상태로 적용
+        
+    */
+    animation: hideSplash 0.3s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes hideSplash {
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+        /* 레이아웃에 영향을 주지 않고 요소를 없애주는 속성  */
+        visibility: hidden;
+        
+    }
+    
+}
+

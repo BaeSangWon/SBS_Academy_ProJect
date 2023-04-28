@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상대단위</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html{
+            font-size: 16px;
+        }
+
+        /* root */
+
+
+        .box_1{
+            font-size: 20px;
+            /* 1em = 20px */
+            width: 10em;
+            height: 10em;
+            /* 각 10 * 20 = 200px  */
+            background-color: gold;
+        }
+
+        .box_2{
+            /* 1rem = 16px */
+            width: 10rem;
+            height: 10rem;
+            /* 각 160px로 계산 */
+            background-color: salmon;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box_1"></div>
+    <div class="box_2"></div>
+
+    <!-- 
+        절대단위 vs 상대단위
+
+
+        절대단위
+        ==> px
+
+
+        상대단위
+        ==> 어떤 기준에 따라서 유동적으로 바뀔 수 있는 단위
+        ==> %, vh, vw
+
+        -----------------------------------------------------------
+        
+        em , rem
+
+        [공통점]
+        ==> css font-size를 기준으로해서 결정되는 상대단위
+
+        [차이점]
+        ==> 어디에 있는 font-size 속성인지에 따라 차이가 발생
+        ==> em = 해당 단위가 사용되고 있는 요소의 font-size
+        ==> rem = 최상위 요소의 font-size / 최상위 요소 = html
+
+        ex)
+
+        html {
+            font-size : 16px
+        }
+
+        0.5rem = 16px * 0.5 = 8px
+        1rem = 16 * 1 = 16px
+        2rem = 16 * 2 = 32px
+        3rem = 16 * 3 = 48px
+
+        width, height, margin, padding, font-size .... 모두 사용 가능
+
+
+
+     -->
+    
+</body>
+</html>

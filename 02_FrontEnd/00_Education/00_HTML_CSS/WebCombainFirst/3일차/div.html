@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>div</title>
+    <style>
+        /*css 주석*/
+
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: blueviolet;
+        }
+
+        h2{
+            color: red;
+        }
+
+        #w_day{
+            color:black
+        }
+
+        .box_2{
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+        }
+        
+        /*
+        -. css에서 html 태그 스타일 적용하는 방법
+           1. 스타일을 적용할 태그를 css에 불러옴
+           2. 중괄호 안에 스타일 적어둠
+           3. 하나의 스타일 부여가 끝났다면 반드시 ; 으로 마무리 
+
+           -. 선택자
+              -. html----선택자(selector)----- css
+              -. 선택자의 종류
+                 1) tag선택자 
+                    -. 태그명을 css에 불러서 적용함
+                       ex) h2{스타일}
+
+                 2) id선택자
+                    -. <태그 id="선택자명"></태그> 
+                    -. css에서 선택하는 방법
+                       -. #선택자명{스타일}
+                    -. 개발자가 주로 사용
+                    -. 같은 id명 중복 사용 불가
+                    -. 추후 오류 방지를 위해 선택자명을 중복사용 금지하도록 약속
+                    -. id 선택자의 우선순위가 더 높음
+
+                 3) class선택자
+                    -. <태그 class="선택자명"></태그>
+                    -. css에서 선택하는 방법
+                       -. .선택자명(스타일)
+                    -. 퍼블리셔
+                    -. 깉은 클래스면 중복가능
+                    -. 퍼블리싱의 효율을 높이기 위해 주로 사용   
+              
+              -. 선택자의 우선순위
+                 -. id선택자 > class선택자 > tag선택자
+                 -. 동일한 선택자를 기준으로는 마지막에 쓰여진 선택자가 우선 적용됨
+
+           태그{
+                width: 100px;
+                height: 100px;
+                background-color:gold;
+
+           }
+
+           ※괄호
+           () : 소괄호
+           {} : 중괄호
+           [] : 대괄호
+ 
+         */
+    </style>
+</head>
+<body>
+    <h2 id="w_day">수요일</h2>
+    <h2 id="s_day">일요일</h2>
+    <div class="box_1"></div>
+    <div class="box_2"></div>
+    <!-- 
+        ※ h - 제목 / p - 문단 / a - 링크 / ul, ol, dl - 목록
+
+        -. div = division (분할)
+           -. 레이아웃을 나누는데 사용
+           -. css와 연동하여 쓰임
+           -. block 요소의 대표적인 태그 (inline 요소의 대표적인 태그 : span 태그)
+
+           ※ css = 태그에 스타일을 부여함
+           ※ css 를 다루는 방법
+           1. lnline 스타일 (현재는 잘 사용하지 않음)
+              -. html과 css가 분리되지 않아서 사용하기 불편
+              -. 유지보수 어려움
+
+           2. 내부스타일
+              -. html의 head에 css 선언
+
+
+           3. 외부스타일  
+
+
+
+     -->
+</body>
+</html>

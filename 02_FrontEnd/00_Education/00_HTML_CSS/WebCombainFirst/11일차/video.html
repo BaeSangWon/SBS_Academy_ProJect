@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오태그</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .section_1{
+            width: 100%;
+            height: 1500px;
+            background-color: salmon;
+        }
+
+        .section_1 > video{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            /* fill = cover 둘다 사용 가능 */
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <section class="section_1">
+        <video autoplay muted loop>
+            <source src="video/test_video.mp4">
+        </video>
+    </section>
+    
+
+   <!-- "<iframe width="895" height="503" src="https://www.youtube.com/embed/CIM0Q2kLo6U" title="일상의 고민 없이 1초 만에 잠들 수 있도록 도와줍니다 🎶 깊은 수면 음악, 명상 음악, 진정 음악 #15" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>" -->
+
+    <!-- 
+        -. 웹사이트에 동영상 게시하기
+
+           1. iframe
+           ==> 유투브에서 동영상 추출할 때 사용
+           
+           [사용방법]
+           유투브에서 원하는 동영상 클릭 -> 소스코드 복사 -> vscode에 붙여넣기
+           *vscode = visual studio code
+
+           ※ 동영상 게시자가 동영상을 내리거나 비공개 처리한 경우 재생 불가 
+
+           2. video
+
+           [사용방법]
+           <video>
+                <source src="비디오소스.mp4"/>
+           </video>
+           ==> 위 방법으로만 설정 시, 자동 재생 안됨
+           ==> 비디오 태그에 autoplay, muted(음소거), loop(반복) 설정
+           
+           ==> 비디오태그를 원하는 크기에 맞추고 싶을 때는
+           object-fit : fill / cover 사용
+
+
+     -->
+    
+</body>
+</html>

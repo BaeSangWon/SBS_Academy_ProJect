@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input_예제</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .input-box{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            animation: move 3s linear infinite alternate;
+            
+        }
+
+        @keyframes move {
+            from{
+                transform: translate(0,0);
+            }
+            to{
+                transform: translate(100px,200px);    
+            }
+        }
+        
+        #stop:checked~.input-box{
+            animation-play-state: paused;
+        }
+
+        
+
+        
+
+
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="stop"/>
+    <label for="stop">멈춤</label>
+    <div class="input-box"></div>
+    
+    
+</body>
+</html>

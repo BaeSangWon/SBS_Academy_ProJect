@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6일차 과제 - 반복문 응용</title>
+</head>
+<body>
+    <script>
+        // 문제 1) 1부터 100까지 더하는 for문을 만들고 그 결과를 출력해보자.
+
+        let sum = 0;
+
+        for(let num = 1 ; num < 101 ; num++){
+            console.log(num + " " + "+" + " " + sum + " " + "=" + " " + (sum + num))  
+            sum += num   
+        }
+        console.log("1부터 100까지의 합 : " + sum)  
+
+        console.log("")
+
+        let num1 = 1
+        let sum1 = 0
+        while(num1 < 101){
+            sum1 += num1
+            num1++
+        }
+        console.log(sum1)
+
+        console.log("")
+
+        // 문제 2) 1부터 100까지 홀수만 출력해보자.
+
+        for(let num = 1 ; num < 101 ; num++){
+            if((num % 2) == 1){
+                console.log(num)
+            }  
+        }
+
+        console.log("")
+
+        for(let num2 = 1 ; num2 < 101 ; num2 = num2 + 2){
+            console.log(num2)
+        }
+
+        console.log("")
+
+        //  문제 3) 1부터 50까지 369의 결과를 프린트해보자.
+
+        for(let i = 1; i < 51 ; i++){
+            let stringValue = i.toString()
+            let result = ""
+            for(let j = 0; j < stringValue.length; j++){
+                if(stringValue[j] == "3" || stringValue[j] == "6" || stringValue[j] == "9"){
+                    result += "짝"
+                }
+                console.log(result.length > 0 ? result : i)
+            }
+        }
+
+
+        //  for(let num = 1 ; num < 51 ; num++){
+  
+        //    if((num % 10) == 3 || (num % 10) == 6 || (num % 10) == 9){
+        //         console.log("짝")
+        //         continue
+        //     }
+        //     if((num / 10) >= 3 || (num / 10) == 6 || (num / 10) == 9){
+        //          console.log("짝")
+        //          continue
+                
+        //     }
+        //      console.log(num)
+        //  } 
+        
+        //  console.log("")
+
+        //  let j = 31;
+        //  let k = j / 10;
+        //  console.log(k)
+        //  if(k == 3){
+        //     console.log("몫은" + k)
+        //  }else{
+        //     console.log("왜 실행안하니?")
+        //  }
+
+         // 문제 4) 주어진 숫자가 소수이면 ture 아니면 false를 출력하는 프로그램을 짜세요.
+
+         let prime_num = 13
+         let isPrime = true
+
+         if(prime_num === 1){
+            isPrime = false
+         }
+         for(let i = 2; i < prime_num; i++){
+            if(prime_num % i ==0){
+                isPrime = false
+            }
+         }
+         if(isPrime){
+            console.log("소수입니다")
+         }else {
+            console.log("소수아닙니다")
+         }
+
+        //  let prime_num = 13
+        //  if(prime_num < 2){
+        //     console.log(false)
+        //  }
+        //  if(prime_num == 2){
+        //     console.log(true)
+        //  }
+
+        //  for(let i = 2 ; i < prime_num ; i++){
+        //     if(prime_num % i == 0){
+        //         console.log(false)
+        //     }
+        //     console.log(true)
+        //  }
+         
+
+        
+    </script>
+</body>
+</html>

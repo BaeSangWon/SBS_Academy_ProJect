@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록태그</title>
+</head>
+<body>
+    <!-- 
+      -. 목록태그의 종류
+
+         -. 목록 + 아이템
+
+        1. 순서가 있는 목록
+           -. ol = order list (block 요소)
+
+        2. 순서가 없는 목록
+           -. ul = unoder list (block 요소)
+           -. 메뉴를 구성할 때 많이 사용됨
+           -. 자식태그로 반드시 li만 올 수 있음(li : list item) 
+               <부모태그>
+                  <자식태그><자식태그/>
+                                 <부모태그>      
+           -. li는 ol, ul 내부에서만 유효한 태그 , 단독 사용 불가
+              -. al 내부에 있을 때는 순서를 출력
+              -. ul 내부에 있을 때는 maker 출력
+
+        3. 설명목록 = 정의목록
+           -. dl = definition list
+           -. dt = definition term = 정의되는 용어의 제목
+           -. dd = definition description = 정의되는 제목에 대한 설명
+           ※ dt, dd 태그는 dl 내부에서만 유효한 태그 , 단독 사용 불가
+           ※ dl 태그 내부에 하나의 dt, 여러개의 dd로 구성 가능
+
+     -->
+     <h3>체육대회 달리기 순위</h3>
+     <ol> 
+        <li>철수</li>
+        <li>짱구</li>
+        <li>유리</li>
+     </ol>
+
+     <h3>오늘의 점심 메뉴</h3>
+     <ul>
+      <li>햄버거</li>
+      <li>
+         <a href="https://www.naver.com/" target="_blank">피자</a>     
+      </li>
+     </ul>
+
+
+     <dl>
+         <dt>Html 이란?</dt>
+         <dd>웹 페이지를 구성하기 위한 기초 문법</dd>
+         <dd>hyper test markup language</dd>
+     </dl>
+</body>
+</html>

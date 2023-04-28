@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position 과제</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ------------------- 초기화-------------------- */
+
+        .absolute_wrap{
+            width: 800px;
+            height: 800px;
+            background-color: darkgray;
+            border: 10px solid #000;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        li{
+            width: 100px;
+            height: 100px;
+            list-style: none;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+
+        .absolute_wrap > li:first-child{
+            background-color: red;
+        }
+
+        .absolute_wrap > li:nth-child(2){
+            background-color: orange;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            z-index: 999999;
+
+        }
+
+        .absolute_wrap > li:nth-child(3){
+            background-color: yellow;
+            position: absolute;
+            top: 60px;
+            left: 60px;
+        }
+        
+        .absolute_wrap > li:nth-child(4){
+            background-color: green;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+            
+        .absolute_wrap > li:nth-child(5){
+            background-color: blue;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        
+        .absolute_wrap > li:nth-child(6){
+            background-color: navy;
+            position: absolute;
+            bottom:0;
+        }
+        
+        .absolute_wrap > li:nth-child(7){
+            background-color: purple;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            margin-top: -50px;
+            margin-right: -50px;
+        }
+
+        .absolute_wrap > li:last-child{
+            background-color: salmon;
+            position: absolute;
+            top: 0;
+            right: 50%;
+            margin-right: -50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <ul class="absolute_wrap">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+
+
+    
+</body>
+</html>

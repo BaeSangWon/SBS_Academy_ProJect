@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+</head>
+<body>
+    <h1>변수(Variable)</h1>
+    <textarea cols="150" rows="50">
+
+        1. 변수 ?
+        ==> Variable
+        ==> let, var 라는 키워드를 통해서 선언
+        ==> let 변수의 이름 = 변수에 담을 내용
+        ==> 변수의 이름은 id와 같다. 유니크한 값이어야 한다. 중복이 안된다
+        
+        2. 변수 상세
+        ==> 변수에는 어떠한 값이든 넣을 수 있다
+        ==> 변수의 이름을 호출해서 사용할 수 있다
+        ==> 변수 생성자의 이름과 호출시의 이름이 같아야 한다
+
+        3. 키워드의 차이점
+        ==> let, var, const : 변수가 최초에 선언될 때에 한번만 사용되는 키워드
+        ==> let, var : 단순 변수 선언시에 사용되는 키워드
+                       이 후 변수의 값을 바꿀때에는 '변수이름 = 바꿀 내용'으로 재할당하여 사용가능하다
+        ==> const : 상수의 선언에 사용되는 키워드
+                    let, var와 다르게 고정이 필요한 값을 선언할 때 사용된다
+                    한번 선언하면 재할당 불가
+
+        4. 자바스크립트에서만 사용?
+        ==> 변수는 모든 프로그래밍 언어에서 사용되는 개념
+        ==> 언어별 선언 및 사용 방식의 차이
+
+        5. 변수의 선언 방법
+        ==> var 변수이름 = 변수에 저장할 내용
+        ==> let 변수이름 = 변수에 저장할 내용
+        ※ 통상적으로 var보다 let을 더 많이 사용한다
+
+        6. 변수와 상수의 차이점
+        ==> 변수는 값의 재할당 가능하나 상수는 불가능
+        ==> 상수는 초기 선언 시 무조건 값을 지정해주는 것이 좋다
+
+        7. 변수와 상수의 이름 규칙
+        ==> 시작은 영문 또는 언더바(_) 또는 $로 시작
+        ==> 두번째 부터 숫자 가능
+        ==> 대소문자 구분
+        ==> 고유로 지정된 키워드는 사용 불가능
+
+        7-1) 변수와 상수의 이름 관례
+        ==> 의미 없는 이름 사용하지 않기
+        ==> 너무 추상적인 이름은 좋지 않다
+        ==> 모든 변수의 이름은 카멜케이스(camelCase) 또는 스네이크케이스(Snake_case) 또는 파스칼(VariableNameValue)을 사용하기
+        ==> 상수의 이름은 대문자만 사용
+    </textarea>
+</body>
+    <script>
+        // console.log(5 + 5)
+        // console.log(5 * 5)
+        // console.log(5 - 5)
+        // console.log(5 / 5)
+
+        /* 
+        아메리카노 :  4000, 라떼 : 4500
+        쿠키 : 3000 , 카푸치노 : 4500
+        */ 
+
+        let americano = 4000;
+        let latte = 4500;
+        let capucino = 4500;
+        let cookie = 3000;
+
+        americano = 4500;
+
+        console.log(americano * 3 + cookie * 2);
+        console.log(americano * 2 + latte * 2 + cookie * 2);
+        console.log(americano * 2 + latte * 5 + cookie * 2);
+        console.log(americano * 2 + capucino * 7 + cookie * 3);
+
+        const CUP = 10000;
+        const cup = 5000;
+        console.log(CUP + americano);
+        console.log(cup + americano);
+
+        let x = 55;
+        let y = 37;
+        let z = x + y;
+
+        console.log(z);
+
+        x = 100;
+
+        console.log(z)
+
+    </script>
+</html>

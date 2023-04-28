@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정리</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+       [글자 관련 태그]
+       - 제목태그
+       => h1 ~ h6
+       => h1 가장 큼, h6 가장 작음  
+       => h1 는 logo 담아줄 때 주로 사용
+
+       - 문단태그
+       => p
+       => 문단에서 줄바꿈 <br/> , <br>
+
+       - span
+       => inline요소
+       => width, height, margin 적용 불가
+       => 부분적으로 꾸밈요소를 줄때 주로 사용
+       => 줄바꿈 없이 요소를 정렬하고 싶을 때
+
+       - strong / b
+       => strong >>> b
+       => strong : 경고 및 주의사항
+       => b : 단순강조
+
+       - i, em
+       => 글자 기울임
+       => css) font-style : italic; 대체 가능
+
+       - mark
+
+       - small
+       -------------------------------------------------------------------
+       [display / 태그의 성질, 요소]
+    
+       - block
+       => 여백값, 줄바꿈 O
+       => div
+       => 시멘틱태그
+
+       - lnline
+       => 여백값, 줄바꿈 X
+       => span 
+
+       => block 요소의 우선 순위가 inline 요소보다 높음
+       => inline > lnline O
+       => block > block O
+       => p > p X
+
+
+       - inline-block
+       => inline + block
+       => inline 요소처럼 한 줄로 태그가 전개, block 요소처럼 width, height 적용 가능
+       => 불필요(알수 없는 값)한 여백이 생기는 문제로 레이아웃 작성에는 추천하지 않음
+
+       - flex
+       => container, item
+       => container = 부모, item = 자식
+       => 부모에게 적용하는 속성, 자식에게 적용하는 속성
+       => 부모요소에게 display:flex;
+       => 가로축 : justify-content
+       ** 간혹 space-between 적용 안되는 경우 flex-container에 width값 있는지 확인할 것!**
+
+       => 세로축 : alingn-items
+       ** 간혹 alingn-item:center 적용 안되는 경우 flex-container에 hight값 있는지 확인할 것!**
+       ------------------------------------------------------------------
+       [이미지 관련]
+       
+       - img tag
+       => <img src="이미지.jpg" alt="이미지설명"/>
+       => 단독태그
+       => inline
+       => 브라우저의 크기를 줄여도 자신의 크기값 유지함
+
+       - bacground-image / css
+       => 필수 조건 : height , padding
+       => background : url() repeat position / size;
+       => backgruond : url() no-repaet top center;
+          *사이즈가 생략된 경우 가져온 원본이미지 사이즈 유지
+       ------------------------------------------------------------------
+       [video]
+       1. 유튜브 / iframe
+
+
+       2. video, source
+       <video autoplay muted loop>
+            <source src="비디오소스">
+       </video>     
+       object-fit : fill / cover 사용
+       ------------------------------------------------------------------
+       [position]
+       => 좌표 : top, left, right, bottom
+       
+       1. 상대값
+       - relataive
+       => 본인 위치를 기준으로 움직임
+       
+       2. 절대값
+       - alsolute
+       => 부모요소에 relataive가 있는 요소를 기준으로 움직임
+       => 만약, 부모요소에 relataive 가 없는 경우 브라우저 최상단을 기준으로 움직임
+       => 위, 아래 요소들과 상호작용 X
+       => 문서상에서 독립되어 있음
+       
+       - fixed
+       => top_btn, header 고정
+       => 브라우저 전역을 기준으로 함
+       
+       - sticky
+       => 윈도우의 스크롤 값에 반응하여 고정되는 속성
+       ------------------------------------------------------------------
+       [변화, 변형 속성]
+       
+       transition 
+       => 변화를 일정시간에 걸쳐서 일어나게 만듬
+
+       transition-duration : 1s;
+       transition-duration : 1000ms; (1s = 1000ms)
+
+       transition-property : all;
+
+       timing-function : ease(기본값) / linear / cubic-bier
+
+       ===> transition : propetry duration timing-function delay;
+
+       transform / 변형
+       => 객체를 기울이거나 왜곡하거나 배율을 조정하는 등 모형을 변형할 때 사용
+       
+       ++ transition 동반 필수!!!
+
+       transform : scale();
+       => 배율 조정
+       => 기본값 : 1 / 더 작게 0.00 소수점 / 더 크게 1.5
+
+       transform : rotate(90deg);
+       => 단위 : deg
+
+       transform : translate(X,Y);
+       => px, %
+
+       position:absolute;
+       top : 50%
+       left : 50%
+
+       - 명확한 width, height를 알고 있는 경우;
+       margin-left : -(width/2)px;
+       margin-top : -(height/2)px;
+
+       - 크기 값이 불분명한 경우;
+       transform: translate(-50%, -50%);
+       **추천** 
+
+
+
+
+
+
+
+
+       ------------------------------------------------------------------
+    -->
+</body>
+</html>

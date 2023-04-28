@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 과제</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        /* -----초기화 영역----- */
+
+
+        header{
+            width: 100%;
+            height: 200px;
+            background-color: gray;
+        }
+
+        .in_header{
+            width: 1200px;
+            height: 100%;
+            background-color: salmon;
+            margin: 0 auto;
+        }
+
+        .logo_box{
+            width: 220px;
+            height: 100%;
+            background-color: gold;
+            float: left;
+        }
+
+        .logo_box > *{
+            width: 110px;
+            height: 110px;
+            background-color: red;
+            text-align: center;
+            line-height: 110px;
+            float: left;
+            margin-top: 50px;
+        }
+
+        .logo_box > .logo{
+            border-right: 1px solid #000;
+        }
+
+        .menu_wrap{
+            width: 880px;
+            height: 100%;
+            background-color: aqua;
+            float: left;
+        }
+
+        .menu_wrap > li{
+            width: 220px;
+            height: 100%;
+            background-color: bisque;
+            text-align: center;
+            line-height: 200px;
+            float: left;
+            border-right: 1px solid #000;
+        }
+
+        .join_box{
+            width: 100px;
+            height: 100%;
+            background-color: blue;
+            float: left;
+        }
+
+        .join_box > *{
+            width: 100%;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .join_box > .join:first-child{
+            border-bottom: 1px solid #000;
+        }
+
+        /* -----header_end----- */
+
+
+
+        section{
+            width: 100%;
+        }
+
+        .in_section{
+            width: 1200px;
+            height: 1000px;
+            background-color: lightgray;
+            margin: 0 auto;
+        }
+
+
+        .left_wrap{
+            width: 1000px;
+            height: 800px;
+            background-color: lightseagreen;
+            margin-top: 100px;
+            float: left;
+        }
+
+        .in_left{
+            width: 500px;
+            height: 100%;
+            background-color: lightsalmon;
+            float: left;
+            /* display: inline-block; */
+        }
+
+        .in_right{
+            width: 400px;
+            height: 100%;
+            background-color: lightskyblue;
+            float: right;
+        }
+
+        .right_top{
+            width: 100%;
+            height: 500px;
+            background-color: lightgoldenrodyellow;
+        }
+
+        .top_con{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+
+        .right_bottom{
+            width: 100%;
+            height: 250px;
+            background-color: blueviolet;
+            margin-top: 50px;
+        }
+
+        .right_wrap{
+            width: 170px;
+            height: 100%;
+            background-color: aqua;
+            float: right;
+        }
+
+        .right_wrap > li{
+            width: 100%;
+            height: 200px;
+            background-color: pink;
+            border-bottom: 1px solid #000;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .right_wrap > li:last-child{
+            border-bottom: none;
+        }
+
+        /* -------section_end-------- */
+
+
+        footer{
+            width: 100%;
+            height: 100px;
+            background-color: darkgray;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="in_header">
+                <div class="logo_box">
+                    <h1 class="logo">로고</h1>
+                    <div class="recruit">채용포털</div>
+                </div>
+                <ul class="menu_wrap">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+                <div class="join_box">
+                    <div class="join">회원가입</div>
+                    <div class="join">로그인</div>
+                </div>
+            </div>
+            <!-- in_header_end -->
+        </header>
+        <!-- header_end -->
+
+
+        <section>
+            <div class="in_section">
+                
+                <div class="left_wrap">
+                    <div class="in_left">1</div>
+                    <div class="in_right">
+                        <div class="right_top">
+                            <div class="top_con">메뉴1</div>
+                        </div>
+                        <div class="right_bottom"></div>
+                    </div>
+                </div>
+                <!-- left_wrap_end -->
+
+                <ul class="right_wrap">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+                <!-- right_wrap_end -->
+
+            </div>
+            <!-- in_section_end -->
+        </section>
+        <!-- section_end -->
+
+
+        <footer></footer>
+        <!-- footer_end -->
+    </div>
+</body>
+</html>

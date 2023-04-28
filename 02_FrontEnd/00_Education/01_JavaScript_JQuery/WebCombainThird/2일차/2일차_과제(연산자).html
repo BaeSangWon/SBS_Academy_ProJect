@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2일차 과제 - 연산자</title>
+</head>
+<body>
+    
+
+    <script>
+        // 문제 1) 나이 계산기
+        const BIRTH_YEAR = 1985;
+        let year = 2023;
+        let age = year - BIRTH_YEAR + 1;
+
+        console.log(age);
+
+        // 문제 2) 음료 칼로리 계산기
+        let expresso = 10;
+        let milk = 170;
+        let chocolate_syrup = 50;
+        let whipped_cream = 60;
+
+        let americano_cal = expresso;
+        let latte_cal = expresso;
+        let mocca_cal = expresso + chocolate_syrup + milk;
+        let whipped_mocca_cal = expresso + chocolate_syrup + milk + whipped_cream;
+
+        console.log(americano_cal);
+        console.log(latte_cal);
+        console.log(mocca_cal);
+        console.log(whipped_mocca_cal);
+    </script>
+</body>
+</html>

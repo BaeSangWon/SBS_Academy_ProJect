@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 고정</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            height: 50000000px;
+        }
+
+        .box{
+            width: 300px;
+            height: 1000px;                             
+            background-color: gold;
+            float:left;
+            text-align: center;
+            line-height: 1000px;
+            font-size: 40px;
+            font-weight: bold;
+            background-image: url("bc.png");
+        }
+
+        .basic{
+            margin-right: 30px;
+            background-attachment: scroll;
+        }
+
+        .fixed{
+            background-attachment:fixed;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box basic">scroll</div>
+    <div class="box fixed">fixed</div>
+
+    <!-- 
+        -. background-attachment : 배경이미지 고정
+           -. 1) background-attachment: scroll;
+                 -. 기본값, 스크롤의 움직임에 따라 이미지가 보일 수 있고 안보일 수 있음
+
+           -. 2) background-attachment:fixed;
+                 -. 배경이미지 고정
+            
+
+
+     -->
+    
+</body>
+</html>

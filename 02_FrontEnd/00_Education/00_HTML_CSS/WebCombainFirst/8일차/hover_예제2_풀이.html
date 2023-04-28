@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover 예제 2</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a{
+            text-decoration: none;
+            color: initial;
+        }
+
+        .ul{
+            list-style: none;
+        }
+        /* 초기화영역 */
+
+        .wrap{
+            width: 1200px;
+            height: 100px;
+            background-color: gray;
+            margin: 0 auto;
+            /* margin: 0 auto 의 경우 width 값 필수 */
+        }
+
+        .logo{
+            width: 100px;
+            height: 50px;
+            /* hight는 되도록 px값으로 설정 */
+            background-color: coral;
+            text-align: center;
+            line-height: 50px;
+            margin: 25px;
+            float: left;
+        }
+
+        ul{
+            width: 1000px;
+            height: 50px;
+            background-color: yellow;
+            margin: 25px; 
+            float: left;
+        }
+
+       ul > li{
+            width: 184px;
+            height: 50px;
+            /* %로 사용할 경우 확실하게 값을 정할 수 있을 때 사용한다 */
+            background-color: violet;
+            float: left;
+            line-height: 50px;
+            text-align: center;
+            list-style-type: none;
+            /* list-style-type : ul, cl에서 mark 없애기 */
+       }
+
+       ul > li:first-child{
+            margin-right: 20px;
+       }
+
+       /* 클래스 지정을 통해 전체영역에 margin-right 값을 지정 후
+          가장 마지막 li에 margin-right 값을 0으로 지정하면 코드 간소화*/
+
+       ul > li:first-child:hover{
+            background-color: skyblue;
+       }
+
+       ul > li:nth-child(2){
+            margin-right: 20px;
+            
+       }
+
+       ul > li:nth-child(2):hover > a{
+            color: white;
+            /* hover 글자색 변경 */
+       }
+
+       ul > li:nth-child(3){
+            margin-right: 20px;           
+       }
+
+       ul > li:nth-child(3):hover{
+            border-radius: 30%;
+       }
+         
+      ul > li:nth-child(4){
+            margin-right: 20px;
+       }
+
+       ul > li:nth-child(4):hover{
+            background-color: blue;  
+       }
+
+       ul > li:nth-child(4):hover a{
+            color:white; 
+       }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1 class="logo">로고</h1>
+        <!-- logo를 만들때는 대부분 h1 사용 -->
+        <ul>
+            <li>
+                <a href="#">메뉴1</a>
+            </li>
+            <li>
+                <a href="#">메뉴2</a>
+            </li>
+            <li>
+                <a href="#">메뉴3</a>
+            </li>
+            <li>
+                <a href="#">메뉴4</a>
+            </li>
+            <li>
+                <a href="#">메뉴5</a>
+            </li>
+        </ul>
+        <!-- ★ ul또한 div이기 굳이 div 내부에 중첩할 필요 없음-->
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미에로화이바</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: initial;
+        }
+        /* ----- 초기화 영역 ------ */
+
+        
+        .inner{
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        /* ----- 공통 영역 ----- */
+
+
+        header{
+            width: 100%;
+            height: 200px;
+            position:fixed ;
+            top: 0;
+            left: 0;
+        }
+
+        .inner img{
+            max-width: 100%;
+            height: 50px 
+        }
+
+        .menu_wrap{
+            width: 600px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .menu_wrap a{
+            font-size: 22px;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .menu_bar{
+            display: none;
+        }
+
+        @media all and (max-width:767px){
+        .menu_wrap{
+             display: none;
+            }
+
+        .menu_bar{
+            width: 50px;
+            height: 50px; 
+            color: #fff;   
+            border: 1px solid #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }   
+        }
+
+        /* ----- header_end ----- */
+
+        .section_1{
+            width: 100%;
+            height: 900px;
+            background: url(img2/banner1.png) no-repeat center / cover;
+        }
+
+        .side_box{
+            width: 40%;
+            height: 20%;
+            position: relative;
+            top:250px;
+            left: 100px;
+        }
+
+        .side_box dt, .side_box dd{
+            font-size: 60px;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .img_box{
+            width: 35%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        figure{
+            width: 40px;
+            height: 40px;
+            border: 1px solid #fff;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        /* ----- section_1_end ----- */
+
+        .section_2{
+            width: 100%;
+            height: 600px;
+            margin-top: 100px;
+        }
+
+        .left_wrap{
+            width: 50%;
+            height: 100%;
+            margin-right: 50px;
+        }
+
+        .left_wrap > .main_txt {
+            width: 100%;
+            height: 100px;
+            font-size: 30px; 
+        }
+
+        iframe{
+            width: 100%;
+            height: 60%;
+        }
+        
+        .right_wrap{
+            width: 50%;
+            height: 100%;
+        } 
+
+        .right_wrap dt{
+            width: 100%;
+            height: 100%;
+            font-size: 25px;
+        }
+
+        .right_wrap dd{
+            width: 100%;
+            height: 100%;
+            font-size: 17px;
+            font-weight: 700;
+            opacity: .7;
+        }    
+
+        /* ----- section_2_end ----- */
+        
+        .scetion_3{
+            width: 100%;
+            height: 500px;
+            background-color: gray;
+        }
+
+        .center_left_box{
+            width: 50%;
+            height: 100%;
+            background-color: red;    
+        }
+
+        .center_left_box > p{
+            margin-bottom: 10px;
+        }
+
+        .center_wrap{
+            width: 90%;
+            height: 70px;
+            margin: 0 auto;
+            background-color: gold;
+            display: flex;
+            justify-content: space-between;   
+        }
+ 
+        .center_box{
+            height: 70%;
+            color: #fff;
+            text-align: center;
+            line-height: 35px;
+        }
+
+        .center_box:first-child{
+            width: 25%;
+            border: 1px solid orange;
+            background-color: orange;
+        }
+
+        .center_box:nth-child(2){
+            width: 35%;
+            border: 1px solid #000;
+            background-color: #000;
+        }
+
+        .center_box:last-child{
+            width: 36%;
+            border: 1px solid #000;
+            background-color: #000;
+        }
+
+
+           
+            
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="img2/logo1.png" alt="헤더로고"/>
+                    </a> 
+                </h1>
+                <ul class="menu_wrap">
+                    <li>
+                        <a href="#">미에로</a>
+                    </li>
+                    <li>
+                        <a href="#">제품소개</a>
+                    </li>
+                    <li>
+                        <a href="#">미에로 스토리</a>
+                    </li>
+                    <li>
+                        <a href="#">미에로 이벤트</a>
+                    </li>
+                    <li>
+                        <a href="#">공지사항</a>
+                    </li>
+                </ul>
+                <div class="menu_bar">▲</div>
+            </div>
+        </header>
+        <!-- header_end -->
+
+        <section class="section_1">
+            <div class="side_box">
+                <p class="main_txt">
+                    <dl>
+                        <dt>마시는 식이섬유</dt>
+                        <dd>미에로화이바</dd>
+                    </dl>   
+                </p>
+                <div class="img_box">
+                    <figure>
+                        <img src="img2/fSns01.png" alt="페이스북 아이콘">
+                    </figure>
+                    <figure>
+                        <img src="img2/fSns02.png" alt="인스타그램 아이콘">
+                    </figure>
+                    <figure>
+                        <img src="img2/fSns03.png" alt="유튜브 아이콘">
+                    </figure>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- section_1_end -->
+
+        <section class="section_2">
+            <div class="inner">
+                <div class="left_wrap">
+                    <p class="main_txt"><b>마시는 식이섬유</b><br>
+                    <img src="img2/logo.png" alt="section_2_logo">    
+                    </p>
+                    <iframe width="698" height="400" src="https://www.youtube.com/embed/J43gcDsbIKo" title="[미에로화이바] 2022 TVCF 식이섬유를 사랑하는 우리_20&#39;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="right_wrap">
+                    <p class="right_txt">
+                        <dl>
+                            <dt>미에로의 새로운 소식을 알려드립니다.</dt>
+                            <dt><span style="font-size: 40px; font-weight: 600;">미에로화이바 News</span></dt>   
+                            <dd><span style="color:red">○</span> “일상 속 미에로화이바가 필요한 순간” 미에로…</dd>
+                            <dd><span style="color:red">○</span> '미에로화이바' 새로운 TV CF 온에어 ♥</dd>
+                            <dd><span style="color:red">○</span> '미에로화이바'와 '삼성헬스' 콜라보 마케팅 …</dd>
+                            <dd><span style="color:red">○</span> '미에로화이바'와 '삼성헬스' 콜라보 마케팅 …</dd>
+                            <dd><span style="color:red">○</span> '미에로화이바'와 '포트리스M' 콜라보 마케팅…</dd>
+                            <dd><span style="color:red">○</span> 국내 최초 식이섬유음료, `미에로화이바` 출시…</dd>
+                            <dd><span style="color:red">○</span> 현대약품, 전소민과 함께한 '미에로화이바' T…</dd>
+                        </dl> 
+                    </p>
+                </div>   
+            </div>   
+        </section>
+        <!-- section_2_end -->
+        
+        <section class="scetion_3">
+            <div class="inner">
+                <div class="center_left_box">
+                    <p class="main_txt">당신이 몰랐던 식이섬유</p>    
+                    <div class="center_wrap">
+                        <div class="center_box">식이섬유란?</div>
+                        <div class="center_box">식이섬유 기능</div>
+                        <div class="center_box">식이섬유를 섭취하려면</div>
+                    </div>  
+                    <p class="bottom_txt">
+                        식이섬유란?
+                        사람의 소화효소로 분해되지 않는 성분, 몸 속의 과다한 양분흡수를 막아주고, 장의 리듬을 조절하며,음식물이 장 속에 머무는 시간을 단축시키는 등 현대 식생활에 꼭 필요한 물질로 제 7의 영양소로 주목 받고 있음
+                        
+                        
+                        ※ 출처 : 파워푸드 슈퍼푸드 사전
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- section_3_end -->
+        
+
+    </div> 
+    
+</body>
+</html>

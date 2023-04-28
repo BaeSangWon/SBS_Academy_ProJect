@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7일차 과제 - 함수 응용</title>
+</head>
+<body>
+
+    <script>
+        // 문제 1) meetAt 함수를 만들어주세요.
+        
+        // function meeAt(year, month, day){
+        //     if(day){
+        //         return year + "/" + month + "/" + day
+        //     }else if(month){
+        //         return year + "년" + month + "월"
+        //     }else if(year){
+        //         return year + "년"
+        //     }
+        // }
+
+        // console.log(meeAt(2023))
+        // console.log(meeAt(2023, 4))
+        // console.log(meeAt(2023, 4 , 20))
+
+           function meeAt(year, month, day){
+               let todayYear = year
+               let todayMonth = month
+               let todayDate = day
+
+               if(todayDate){
+                    return `${todayYear}/${todayMonth}/${todayDate}`
+               }
+               if(todayMonth){
+                    return `${todayYear}년 ${todayMonth}월`
+               }
+               if(todayYear){
+                    return `${todayYear}년`
+               }
+
+           }
+           console.log(meeAt(2021))
+           console.log(meeAt(2021, 11))
+           console.log(meeAt(2021 , 4, 21))
+        
+        console.log("")
+
+        // 문제 2) findSmallestElement 함수를 구현해 주세요.
+
+        function findSmallestElement(arr){
+            let min = arr[0]                            // arr[0]번째 값이 저장되어있기 때문에 for문에서 1번째부터 검사함
+            for(let i = 0 ; i <= arr.length; i++){
+                if(min > arr[i]){
+                    min = arr[i]       
+                 }             
+            }
+            return min           
+        }   
+
+        let arr = [100,200,3,0,2,1]
+        console.log(findSmallestElement(arr))
+
+        console.log("")
+
+
+        //  문제 3) 돈을 매개변수로 받으면 몇개의 지폐와 동전이 필요한지 최소 개수를 계산해주는 함수를 만드시오
+        
+        // function calMoney(don){
+        //     console.log("받은 돈 : " + don + "원")
+
+        //     let oman = don / 50000 
+        //     let man = (don % 50000) / 10000
+        //     let ochun = (don % 10000) / 5000
+        //     let chun = (don % 5000) / 1000
+        //     let obak = (don % 1000) / 500
+        //     let bak = (don % 500) / 100
+            
+        //     console.log("5만원" + "X" + " " + Math.floor(oman)) 
+        //     console.log("1만원" + "X" + " " + Math.floor(man))
+        //     console.log("5천원" + "X" + " " + Math.floor(ochun))
+        //     console.log("1천원" + "X" + " " + Math.floor(chun))
+        //     console.log("5백원" + "X" + " " + Math.floor(obak))
+        //     console.log("백원" + "X" + " " + Math.floor(bak))
+        // }
+        
+        // calMoney(12300)
+
+        let unit = [50000, 10000, 5000, 1000, 500, 100]
+        function changeMoney(money){
+            for(let i = 0; i < unit.length; i++){           // 1) 제공받은 돈을 unit의 0번째 값부터 순차적으로 나눈 몫을 소수점을 버리고 num에 대입
+                let num = Math.floor(money / unit[i])       // 2) 제공받은 금액에서 1)에서 대입한 num의 값과 unit의 0번째 값부터 순차적으로 곱하기 연산결과를 빼준다 
+                money = money - unit[i] * num               // ex) num = 12300 / unit = [50000, 10000, 5000, 1000, 500, 100] 
+                console.log(`${unit[i]} X ${num}`)          //     money = 12300 - (unit = [50000, 10000, 5000, 1000, 500, 100] * 0 ~ 5(unit[0]번째 값부터 각각 필요한 수량))
+            }
+        }
+
+        changeMoney(24600)
+
+    </script>
+    
+</body>
+</html>

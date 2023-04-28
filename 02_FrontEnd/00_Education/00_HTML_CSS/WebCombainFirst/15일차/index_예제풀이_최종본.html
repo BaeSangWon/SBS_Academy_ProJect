@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <title>방앗간화장품</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', 'Roboto';
+        }
+
+        :root{
+            --whiteColor : #fff;
+            --grayColor : #f8f8f8;
+            --kor : 'Noto Sans KR';
+            --eng : 'Roboto'
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: initial;
+        }
+
+        /* ----- 초기화 영역 ------ */
+
+        .inner{
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* ----- 공통 영역 ----- */
+
+        header{
+            width: 100%;
+            height: 100px;
+            position:fixed ;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        header > .inner{
+        /* 공통속성을 적용하되 특정영역에만 지정하고 싶을 경우 */
+            max-width: 1200px;
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu_wrap{
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+            /* width 값 필수 */
+        }
+
+        /* .menu_wrap > li{
+            margin-left: 20px;
+        } */
+
+        /* ----- header_end ----- */
+
+        .section_1{
+            /* height or padding 값 필수 */
+            width: 100%;
+            height: 830px;
+            background-image: url(img/main_visual.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* ----- section_1_end ----- */
+
+        .section_2{
+            width: 100%;
+            height: 900px;
+            background-color: var(--grayColor);
+            padding-top: 150px;
+        }
+
+        .main_txt{
+            font-size: 30px;
+            text-align: center;
+            /* div 내부에 텍스트가 존재할 경우 flex 사용 추천 */
+            text-transform: uppercase;
+            /* 소문자 변환 : lowcase
+               대문자 변환 : uppercase
+            */
+            margin-bottom: 20px;
+        }
+
+        .con_box_wrap{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .con_box{
+            width: 50%;
+            padding: 10px;
+            position: relative;
+        }
+
+        .con_box img{
+            display: block;
+            width: 100%;
+        }
+
+        .con_box dl{
+            position:absolute;
+            bottom: 30px;
+            left: 30px;
+            color: #fff;
+        }
+
+        .con_box dt{
+            width: 100%;
+            font-size: 25px;
+            font-weight: 700; 
+            text-transform: uppercase;
+            font-family: var(--eng);
+        } 
+
+        .con_box dd{
+            width: 100%;
+            font-size: 15px;
+        } 
+
+       
+        /* ----- section_2_end ----- */
+
+        .section_3{
+            width: 100%;
+            padding: 50px 0 100px;
+        }
+
+        .center_box_wrap{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .center_box{
+            width: 33%;
+            margin-bottom: 30px;
+        }
+
+        .center_box > a{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center_box dl{
+            text-align: center;
+        }
+
+        .center_box dt{
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .center_box dd{
+            opacity: .7;
+        }
+        
+        .center_box img{
+            display: block;
+            width: 100%;
+            transition: all .5s;
+        }
+
+        .center_box:hover img{
+            opacity: .5;
+        }
+
+       /* ----- section_3_end ----- */
+
+       .section_4{
+            width: 100%;
+            /* margin-bottom: 200px; */
+            padding-bottom: 200px;
+       }
+
+       .section_4_bg{
+            width: 100%;
+            height: 500px;
+            background: url(img/section_4_img.jpg) no-repeat 100% / cover ;
+            /* 
+            
+            background : url() repeat position / size;
+
+            */
+       }
+
+       .section_4 > .inner{
+            margin-top: -350px;
+       }
+
+       .section_4 .main_txt{
+            color: var(--whiteColor);
+       }
+
+       .section_4 iframe{
+            padding: 60px;
+            background-color: var(--whiteColor);
+            box-shadow: 8px 8px rgba(0, 0, 0, .1);
+            /* 
+            
+            box-shadow : Xpx Ypx color
+            
+            */
+       }
+       /* ----- section_4_end -----  */
+
+       .section_5{
+            width: 100%;
+            background-color:var(--grayColor);
+            /* margin-bottom: 200px; */
+            padding-bottom: 200px; 
+       }
+
+       .section_5 .main_txt{
+            font-family: var(--eng);
+       }
+
+       .n_wrap{
+            width: 100%;
+            display: flex;
+            /* justify-content 속성을 적용하기 위해선 반드시 width 값 필요 */
+            /* 단순히 가로 배치만 한다면 width 값 생략가능 */
+            justify-content: space-between;
+        }
+
+        .n_box{
+            width: 33%;
+        }
+
+        .n_wrap img{
+            display: block;
+            width: 100%;
+        }
+
+        .n_wrap dl{
+            padding: 25px;
+            text-align: center;
+        }
+
+        .n_wrap dt{
+            font-size: 20px;
+            font-weight: 600;
+
+            text-overflow: ellipsis;
+            /* 넘치는 텍스트들을 말줄임표 원으로 바꿈 */
+            white-space: nowrap;
+            /* 자동 줄바꿈 처리 */
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .n_wrap dd{
+            font-size: 17px;
+            opacity: .6;
+
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            /* 해당 영역을 box 형태로 관리함 */
+            -webkit-line-clamp: 2;
+            /* 영역 내의 컨텐츠의 최대 라인 수 결정 */
+            -webkit-box-orient: vertical;
+            /* 영역 내 정렬을 수직으로 함 */
+        }
+        /* ----- section_5_end -----  */
+
+
+        footer{
+            width: 100%;
+            background-color: #1c1c1c;
+            padding: 50px 0;
+        }
+
+        footer > .inner{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer_left_wrap{
+            width: 75%;
+            font-size: 14px;
+            /* 폰트를 별도로 지정하지않으면 16px 정도 */
+            color: var(--whiteColor);
+            opacity: .8;
+        }
+
+        .footer_right_wrap{
+            width: 15%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        /* ----- footer_end -----  */
+
+        .top_btn{
+            display: inline;
+            width: 45px;
+            height: 45px;
+            background-color: salmon;
+            color: var(--whiteColor);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position:fixed;
+            bottom: 100px;
+            right: 70px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="img/logo.png" alt="헤더 로고"/>
+                    </a>
+                </h1>
+                <ul class="menu_wrap">
+                    <li>
+                        <a href="#">BRAND STROY</a>
+                    </li>
+                    <li>
+                        <a href="#">PRODUCT</a>
+                    </li>
+                    <li>
+                        <a href="#">NEWS</a>
+                    </li>
+                    <li>
+                        <a href="#">MEDIA</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!-- header_end -->
+
+        <section class="section_1"></section>
+        <!-- 태그명.(선택자)선택자명 + tab -->
+        <!-- section_1_end -->
+
+        <section class="section_2">
+            <div class="inner">
+                <p class="main_txt">
+                    welcome to <b>bangagan</b>
+                    <!-- 단순강조 : b / 경고문 : strong -->
+                </p>
+                <div class="con_box_wrap">
+                    <div class="con_box">
+                        <a href="#">
+                            <img src="img/section_2_con_1.jpg" alt="섹션 2번 이미지1"/>
+                            <p class="con_txt">
+                                <dl>
+                                    <dt>eunyul</dt>
+                                    <dd>자연에서 찾은 천연 원료의 힘 건강한 아름다움</dd>
+                                </dl> 
+                            </p>
+                        </a>
+                    </div>
+                    <div class="con_box">
+                        <a href="#">
+                            <img src="img/section_2_con_2.jpg" alt="섹션 2번 이미지2"/>
+                            <p class="con_txt">
+                                <dl>
+                                    <dt>maybona</dt>
+                                    <dd>평범한 일상을 특별하게 만들어 줄 당신만의 브랜드</dd>
+                                </dl> 
+                            </p> 
+                        </a>
+                    </div>
+                    <div class="con_box">
+                        <a href="#">
+                            <img src="img/section_2_con_3.jpg" alt="섹션 2번 이미지3"/>
+                            <p class="con_txt">
+                                <dl>
+                                    <dt>chaldduk</dt>
+                                    <dd>선조들의 피부 관리 노하우에서 영감을 얻다</dd>
+                                </dl> 
+                            </p> 
+                        </a>
+                    </div>
+                    <div class="con_box">
+                        <a href="#">
+                            <img src="img/section_2_con_4.jpg" alt="섹션 2번 이미지4"/> 
+                            <p class="con_txt">
+                                <dl>
+                                    <dt>clean & fresh</dt>
+                                    <dd>편견은 지우고 개성은 살려 나를 가장 나답게!</dd>
+                                </dl> 
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section_2_end -->
+        <section class="section_3">
+            <div class="inner">
+                <p class="main_txt">
+                    new <b>items</b>
+                </p>
+                <div class="center_box_wrap">
+                    <div class="center_box">
+                        <a href="#">
+                            <img src="img/prd_1.jpg" alt="섹션 3번 이미지1"/>
+                            <dl>
+                                <dt>나이아신아마이드 솔루션 시트 마스크</dt>
+                                <dd>피부를 깔끔하게 케어</dd>
+                            </dl>  
+                        </a>
+                    </div>         
+                    <div class="center_box">
+                        <a href="#">
+                            <img src="img/prd_2.jpg" alt="섹션 3번 이미지2"/> 
+                            <dl>
+                                <dt>히알루로닉 솔루션 시트 마스크</dt>
+                                <dd>피부를 촉촉하게!</dd>
+                            </dl>  
+                        </a>
+                    </div>         
+                    <div class="center_box">
+                        <a href="#">
+                            <img src="img/prd_3.jpg" alt="섹션 3번 이미지3"/>
+                            <dl>
+                                <dt>햄프시드 솔루션 시트 마스크</dt>
+                                <dd>피부 보호막 형성</dd>
+                            </dl>   
+                        </a>
+                    </div>         
+                    <div class="center_box">
+                        <a href="#">
+                            <img src="img/prd_4.jpg" alt="섹션 3번 이미지4"/>
+                            <dl>
+                                <dt>콜라겐 솔루션 시트 마스크</dt>
+                                <dd>피부의 탄력 저하 개선</dd>
+                            </dl>   
+                        </a>
+                    </div>         
+                    <div class="center_box">
+                        <a href="#">
+                            <img src="img/prd_5.jpg" alt="섹션 3번 이미지5"/>
+                            <dl>
+                                <dt>알로에 베라 솔루션 시트 마스크</dt>
+                                <dd>민감한 피부를 진정!</dd>
+                            </dl>   
+                        </a>
+                    </div>         
+                    <div class="center_box">
+                        <a href="#">
+                            <img src="img/prd_6.jpg" alt="섹션 3번 이미지6"/>
+                            <dl>
+                                <dt>벌꿀 마스크팩</dt>
+                                <dd>피부를 윤기있고 건강하게</dd>
+                            </dl>   
+                        </a>
+                    </div>         
+            </div>
+        </section>
+       <!-- section_3_end -->
+            
+        <section class="section_4">
+            <div class="section_4_bg"></div>
+            <div class="inner">
+                <p class="main_txt">bangagan's movie</p>
+                <iframe width="100%" height="650" src="https://www.youtube.com/embed/QJPk1K1QF-U" title="NewJeans (뉴진스) &#39;Ditto&#39; Performance Video (Fix ver.)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>   
+        </section>
+        <!-- section_4_end -->
+
+        <section class="section_5">
+            <div class="inner">
+                <p class="main_txt"><b>bangagan news</b></p>
+                <div class="n_wrap">
+                    <div class="n_box">
+                        <a href="#">
+                            <img src="img/section5_01.jpg" alt="섹션 5번 이미지1"/>
+                            <dl>
+                                <dt>베트남 메디케어 입점 - 스킨 케어를 ...</dt>
+                                <dd>
+                                    베트남 드럭스토어의 양대산맥중 하나로 손꼽히는 메디케어에 '은율'이 2019년 입점 확정! 메디케어는 2001년에 설립된 베트남 최초의 드럭 스토어로...										</dd>
+                            </dl> 
+                        </a>
+                    </div>
+                    <div class="n_box">
+                        <a href="#">
+                            <img src="img/section5_02.jpg"섹션 5번 이미지2"/>
+                            <dl>
+                                <dt>베트남 메디케어 입점</dt>
+                                <dd>베트남 드렉스토어의 양대산맥 중 하나로 손꼽히는</dd>
+                            </dl>   
+                        </a>
+                        </div>     
+                        <div class="n_box">
+                            <a href="#">
+                                <img src="img/section5_03.jpg" alt="섹션 5번 이미지3"/>
+                                <dl>
+                                    <dt>베트남 메디케어 입점</dt>
+                                    <dd>베트남 드렉스토어의 양대산맥 중 하나로 손꼽히는</dd>
+                                </dl>  
+                            </a>
+                        </div>                
+                </div>
+            </div>
+        </section>
+        <!-- section_5_end -->
+
+        <footer>
+            <div class="inner">
+                <div class="footer_left_wrap">
+                    <b>Company</b>Bangagan Cosmetics Co., ltd. 
+                    <b>Representative</b>Im Young Sik 
+                    <b>Corporate business nuber</b>220-87-75028[사업자정보확인하기]
+                    <b>Online business number</b>제 2016-경기시흥-0089호 
+                    <b>Privacy officer</b>Bangagan cosmetic 
+                    <b>E-mail</b>bangagan@bangacos.com
+                    <b>Address</b>36-5, Geumhwa-ro, 627 beon-gil, Siheung-si, Gyeonggi-do, South Korea
+                    Copyright ⓒ Bangagan Cosmetics Co., ltd.. All Rights Reserved.
+                </div>
+                <div class="footer_right_wrap">
+                    <figure>
+                        <img src="img/fSns01.png" alt="페이스북 아이콘">
+                    </figure>
+                    <figure>
+                        <img src="img/fSns02.png" alt="인스타그램 아이콘">
+                    </figure>
+                    <figure>
+                        <img src="img/fSns03.png" alt="유튜브 아이콘">
+                    </figure>
+                </div>
+            </div>
+        </footer>
+        <!-- footer_end -->
+
+        <a href="#" class="top_btn" >↑</a>
+    </div>
+</body>
+</html>

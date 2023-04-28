@@ -1,0 +1,74 @@
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 3px;
+    /* background-color: gold; */
+}
+
+.status_bar{ 
+    width: 33%;
+}
+
+.status_bar:nth-child(2){
+    font-size: 14px;
+    text-align: center;
+}
+
+.status_bar:last-child{
+    font-size: 14px;
+
+    /* 상단 우측 끝으로 정렬을 위한 선행 작업 */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+}
+
+/* header_end */
+
+.welcome{
+    padding: 60px 0;
+    text-align: center;
+}
+
+.welcome > h1{
+    font-size: 25px;
+}
+
+.welcome > p{
+    width: 60%;
+    /* width 값이 있으므로 margin 사용 가능 */
+    margin: 20px auto 0;
+    opacity: .7;
+}
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+.login_form input{
+    border: none;
+    padding: 15px 0;
+    margin-bottom: 25px;
+}
+
+/* login_form input 안에 type="submit이 아닌 요소 선택 */
+.login_form input:not([type="submit"]){
+    border-bottom: 1px solid var(--grayColor);
+}
+
+.login_form input[type="submit"]{
+    background-color: var(--mainColor);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.login_form a{
+    font-size: 14px;
+    text-align: center;
+    color: #777;
+}

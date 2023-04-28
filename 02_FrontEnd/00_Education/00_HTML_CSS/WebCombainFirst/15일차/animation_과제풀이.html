@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제풀이</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #333;
+        }
+
+        .icon_mouse{
+            width: 30px;
+            height: 50px;
+            border: 2px solid #fff;
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 20px;
+            /* 범용성있는 사용을 위해(요소 단독배치를 위해서) */
+        }
+
+        .icon_mouse::before{
+            content: "SCROLL";
+            color: #fff;
+            font-weight: 600;
+            position: absolute;
+            left: 50%;
+            top: -30px;
+            transform: translateX(-50%);
+
+        }
+
+        .ball{
+            width: 4px;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 8px;
+            transform: translateX(-50%);
+            animation: mouse_act 1s linear infinite alternate;
+            /* animation : name duration time-function count direction */
+
+            /* animation-name: mouse_act;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; */
+        }
+
+    @keyframes mouse_act {
+        form{
+            top: 8px;
+        }
+        
+        to{
+            top: 16px;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="icon_mouse">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>

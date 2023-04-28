@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12일차 과제 -2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ------------초기화-------------- */
+
+        .wrap{
+            width: 1000px;
+            height: 600px;
+            border: 10px solid #000;
+            margin: 0 auto;
+        }
+
+        /* ------------wrap_end-------------- */
+
+        .in_box{
+            width: 20px;
+            height: 100px;
+            background-color: gray;
+            margin: 10px 0;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .in_box > h3{
+            display:none;  
+        }
+
+        .wrap:hover > .in_box > h3{
+            display: block;
+        }
+
+        /* .wrap:hover h3{
+            display: block;
+        } */
+    
+        
+        .wrap:hover > .in_box{
+            width: 100%;
+            transition-duration: 2s;
+            transition-property: width;
+            transition-timing-function: linear;
+        }
+
+        .wrap:hover > .red{
+            width: 100%;
+            background-color: red;
+        }
+
+        .wrap:hover > .yellow{
+            width: 80%;
+            background-color: yellow;
+            transition-delay: 1s;
+        }
+
+        .wrap:hover > .blue{
+            width: 70%;
+            background-color: blue;
+            transition-delay: 1.5s;
+        }
+
+        .wrap:hover > .green{
+            width: 90%;
+            background-color: green;
+            transition-delay: 2s;
+        }
+
+        .wrap:hover > .teal{
+            width: 50%;
+            background-color: teal;
+            transition-delay: 2.5s;
+        }
+
+        /* ------------in_box_end-------------- */
+
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <div class="in_box red">
+            <h3>100%</h3>
+        </div>
+        <div class="in_box yellow">
+            <h3>80%</h3>
+        </div>
+        <div class="in_box blue">
+            <h3>70%</h3>
+        </div>
+        <div class="in_box green">
+            <h3>90%</h3>
+        </div>
+        <div class="in_box teal">
+            <h3>50%</h3>
+        </div>
+    </div>
+
+
+</body>
+</html>

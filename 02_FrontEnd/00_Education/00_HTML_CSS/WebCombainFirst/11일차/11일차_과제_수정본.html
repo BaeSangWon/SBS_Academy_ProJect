@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11일차 과제 수정본</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 10000px;
+        }
+
+        /* --------------------------------초기화--------------------------------- */
+
+        .wrap{
+            margin: 0 auto;
+        }
+
+        .box{
+            background-color: red;
+        }
+
+        /* ----------------모든 태그를 감싸는 box , 상단 red 박스 3개 end------------ */
+
+        .left_wrap{
+            width: 100px;
+            height: 200px;
+            position:absolute;
+            top: 30px;
+            left: 30px;
+        }
+
+        /* ------------------------------상단 왼쪽 red box end----------------------------------------- */
+
+        .center_wrap{
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            right:50%;
+            margin-right: -150px;
+        }
+
+        h4{
+            position: absolute;
+            top: 200px;
+            /* center_wrap의 height 끝지점에 텍스트가 위치해야해서 center_wrap의 height크기와 동일하게 적용 */
+            right:50%;
+            margin-right: -76px;
+            /* 검사(f12) 창을 통해 해당 텍스트 사이즈가 152.27로 확인되어  /2의 값을 마이너스(-) 적용  */    
+
+        }
+
+        /* -----------------------------상단 가운데 red box end----------------------------------------- */    
+       
+        .res{
+            position: absolute;
+            top: 100px;
+            right: 10px; 
+        }
+
+        /* -----------------------------상단 오른쪽 red box end----------------------------------------- */ 
+
+        .out-wrap{
+            width: 1400px;
+            height: 740px;
+            background-color: gray; 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -370px;
+            margin-left: -700px;
+             
+        }
+
+        .link, .in-box{
+            list-style: none;
+            width: 327.5px;
+            height: 327.5px;
+            background-color: lightgreen;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 327.5px;
+            font-weight: bold;
+            float: left;
+            margin-right: 30px;
+            text-decoration: none;
+            /* 링크 설정된 텍스트 밑줄 제거 속성 */
+        }
+
+        .in-box:nth-child(4), :last-child{
+            margin-right: 0;
+            margin-bottom: 85px;
+            /* in-wrap의 height 값(740) - 위,아래 li 요소의 height 값(327.5 * 2) 
+               즉, 740 - (327.5 x 2) = 740 - 655 = 85 */
+        }
+
+        /* -----------------------------중앙 box end----------------------------------------- */
+
+        .btn{
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            position:fixed;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            line-height: 50px;
+            border: 3px solid #000;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box left_wrap"></div>
+        <div class="box center_wrap"></div>
+        <h4>share the Experience</h4>
+        <!-- 텍스트를 div 외부로 적용해줘야해서 형제라인에 텍스트 태그 사용 -->
+        <div class="box right_wrap"></div>
+        <b class="res">RESERVATION</b>
+        <!-- 글자를 줄바꿈 없이 굵게 적용하기 위해 b태그 사용 -->
+
+        <div class="out-wrap">
+            <a class="link" href="https://www.naver.com/" target="_blank">ABOUT</a>
+            <!-- 새창에서 네이버 링크 팝업 -->
+            <div class="in-box">NEWS</div>
+            <div class="in-box">GALLERY</div>
+            <div class="in-box">CONTACT</div>
+            <div class="in-box"></div>
+            <div class="in-box"></div>
+            <div class="in-box"></div>
+            <div class="in-box"></div>
+        </div>
+        
+        <a class="btn" href="#">top</a>
+        
+    </div>
+        
+    
+</body>
+</html>

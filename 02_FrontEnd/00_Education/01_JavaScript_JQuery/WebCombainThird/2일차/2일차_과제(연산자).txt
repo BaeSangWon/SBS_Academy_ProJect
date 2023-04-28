@@ -1,0 +1,23 @@
+숙제 1)
+나이 계산기를 만들어 봅시다
+
+내가 태어난 년도를 저장할 수 있는 상수와 현재 년도를 저장할 수 있는 변수를 선언
+두개의 값을 가지고 내 나이를 저장할 수 있는 변수 생성
+그 변수를 콘솔에 출력할 수 있는 코드 작성
+
+
+숙제 2)
+음료 칼로리 계산기
+
+expresso = 10
+milk = 170
+chocolate_syrup = 50
+whipped_cream = 60
+
+
+americano = espreo
+latte = espresso + milk
+mocca = espresso + chocolate_syrup + milk
+whipped mocca =  espresso + chocolate_syrup + milk + whipped_cream 이라고 했을 대
+
+각 음료의 칼로리를 출력할 수 있는 코드 작성

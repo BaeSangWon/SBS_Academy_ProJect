@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중지(break) / 생략(continue)</title>
+</head>
+<body>
+    <h1>중지(break) / 생략(continue)</h1>
+    <textarea cols="150" rows="50">
+
+        제어문을 보다 효율적으로 사용하는 방법
+        
+        1. break : 중지
+        - 현재 내가 속해 있는 반복문 {} 를 탈출한다
+        - 전체적인 반복 횟수에 영향을 미친다
+
+        2. continue : 생략
+        - 조건검사 or 증감연산으로 이동한다
+        - 전체적인 반복 횟수에 영향을 미치지 않는다
+
+        3. 반복문 무한루프
+        - for문, while문의 경우 무한루프가 존재한다
+        - 말 그대로 중지되는 것 없이 계속 반복하게 되는 것을 말한다
+        - 반복의 조건이 true라면 무한루프라고 한다
+        - break 키워드와 함께 사용되어진다
+        - for문보다는 while에서 더 많이 사용되어진다
+        - 예외처리에서도 사용되어진다. (적극적인 예외처리)
+
+
+    </textarea>
+    
+</body>
+    <script>
+        // let num = 1
+        // let search = false
+
+        // while(num < 100){
+        //     if(((num % 5) == 0) && ((num % 7) == 0)){
+        //         search = true
+        //         break
+        //     }
+        //     num++
+        // }
+        // if(search){
+        //     console.log("찾는 정수 : " + num)
+        // }else {
+        //     console.log("찾는 정수가 없습니다")
+        // }
+
+        
+        // let number = 0
+        // let count = 0
+
+        // while(number < 100){
+        //     number++
+        //     if(((number % 5) != 0) || ((number % 7) != 0)){
+        //         continue
+        //     }
+        //     count++
+        //     console.log(number)
+        // }
+
+        // console.log("count : " + count)
+
+        let natNum = 1
+        while(true){
+            if(((natNum % 6) == 0) && ((natNum % 14) == 0)){
+                break
+            }
+            natNum++
+        }
+        console.log(natNum)
+
+    </script>
+</html>

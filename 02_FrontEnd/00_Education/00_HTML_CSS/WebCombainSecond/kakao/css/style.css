@@ -1,0 +1,25 @@
+@import url(reset.css);
+
+/* screen */
+@import url(./screen/login.css);
+@import url(./screen/friends.css);
+@import url(./screen/mobile_only.css);
+@import url(./screen/chatting.css);
+@import url(./screen/chatting_room.css);
+@import url(./screen/more.css);
+
+
+
+/* 
+    [css 연결 및 폴더 관리]
+
+    css / screen(화면) 폴더 생성
+
+    css (root folder)
+    - reset.css
+    - style. css
+
+    screen folder
+    - login.css
+
+*/

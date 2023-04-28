@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제풀이</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color: initial;
+        }
+
+        /* --------초기화 영역---------- */
+
+        header{
+            width: 100%;
+            /* block 요소이지만 오류 방지를 위해 width값 지정 */
+            height: 300px;
+            position: relative;
+            background-color: li;
+
+        }
+
+        .side_box{
+            width: 100px;
+            height: 200px;
+            /* position: absolute;
+            top: 30px;
+            left: 30px; */
+
+            /* position --> margin 대체방법 */
+            margin: 30px 0 0 30px;
+            float: left;
+            background-color: salmon;
+        }
+
+        .center_box{
+            width: 300px;
+            height: 200px;
+            background-color: salmon;
+            position: absolute;
+            left: 50%;
+            top: 0; 
+            /* 좌표값은 항상 2개를 사용 */
+            /* margin: 0 auto; 와 float는 같이 사용 불가 */
+            margin-left: -150px;
+            text-align: center;
+            line-height: 437px;
+        }
+
+        .reserv{
+            /* position --> margin 대체방법 */
+            float: right;
+            margin: 100px 50px 0 0;
+
+            /* position: absolute;
+            top: 100px;
+            right: 50px; */
+            font-size: 25px;
+        }
+
+        section{
+            width: 100%;
+        }
+
+        .in_section{
+            width: 1400px;
+            height: 740px;
+            background-color: gray;
+            margin: 0 auto;
+        }
+
+        .top_wrap{
+            width: 100%;
+        }
+
+        .circle{
+            width: 342.5px;
+            height: 342.5px;
+            background-color: lightgreen;
+            border-radius: 50%;
+            float: left;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 342.5px;
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
+
+        .circle:nth-child(4), .circle:nth-child(8){
+            margin-right: 0;
+        }
+
+        /* ------------section_end------------------- */
+
+        .top_btn{
+            display: inline-block;
+            padding: 100px 100px;
+            border: 3px solid #000;
+            border-radius: 50%;
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+        }
+
+        .top_btn:hover{
+            background-color: salmon;
+            border: 3px solid salmon;
+            color: #fff;
+        }
+
+        /* 
+        
+        margin: 0 auto와 float은 함께 사용 불가
+        
+        */
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="side_box"></div>
+            <div class="center_box">
+                <h4>Share the Experience</h4>
+            </div>
+            <div class="reserv">RESERVATION</div>
+        </header>
+        <!-- header_end -->
+
+        <section>
+            <div class="in_section">
+                <ul class="top_wrap">
+                    <div class="circle">ABOUT</div>
+                    <div class="circle">NEWS</div>
+                    <div class="circle">GALLERY</div>
+                    <div class="circle">CONTACT</div>
+                </ul>
+                <ul class="bottom_wrap">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </ul>
+            </div>
+        </section>
+        <!-- section_end -->
+
+        <a href="#" class="top_btn">TOP</a>
+        
+    </div>
+
+    
+</body>
+</html>

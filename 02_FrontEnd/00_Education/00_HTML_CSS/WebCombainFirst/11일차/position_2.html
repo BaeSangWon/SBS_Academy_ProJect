@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.top_btn{
+    width: 50px;
+    height: 50px;
+    background-color: salmon;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+
+}
+
+.btn{
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 80px;
+    right: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+
+.btn_top{
+    display: inline-block;
+    padding: 50px 50px;
+    background-color: gold;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50px;
+    right: 80px;
+}
+
+.btn_top:hover{
+    background-color: pink;
+    color: #fff;
+}
+
+/* body{
+    height: 10000px;
+} */
+
+.wrap{
+    width: 300px;
+    height: 150px;
+    background-color: gray;
+    overflow: scroll;
+
+}
+
+.static_box{
+    width: 200px;
+    height: 100px;
+    background-color: teal;
+    text-align: center;
+    line-height: 100px;
+}
+
+.sticky_box{
+    width: 200px;
+    height: 100px;
+    background-color: gold;
+    text-align: center;
+    line-height: 100px;
+    position: sticky;
+    top:0;
+
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="static_box">static_box</div>
+        <div class="sticky_box">sticky_box</div>
+        <div class="static_box">static_box</div>
+    </div>
+
+    
+    <!-- <div class="top_btn">
+        <a href="#">↑</a>
+    </div> -->
+
+    <!-- <button class="btn">
+        <a href="#">버튼</a>
+    </button> -->
+    <!-- 글자가 무조건 중앙 정렬됨 -->
+
+    <!-- <a href="#" class="btn_top">top</a> -->
+    <!-- inline 요소 : 본인의 크기만큼만 영역 지정가능 , width값 지정 불가 -->
+
+    <!-- 
+        -. position 속성**
+           -. 1. static**
+           ==> position 속성의 기본값
+           ==> 좌표값의 영향 받지 않음
+           ==> 요소를 문서의 흐름에 맞게 배치
+
+           -. ★★2. relative**
+           ==> 자신이 원래 있어야 할 자리를 기준으로 상대적으로 위치 값 변경 (상대값)
+
+           -. ★★3. absolute**
+           ==> 절대값
+           ==> 앞, 뒤에 나오는 태그와 상호작용 x
+           ==> 부모태그에 relative가 있는 아이를 찾아서 계속해서 상단으로 움직임
+           ==> relative가 없는 경우, 브라우저 상단을 기준으로 움직임
+
+           -. 4. fixed
+           ==> 고정속성
+           ==> 주로 웹 페이지에서 header, top_btn을 고정할 때 사용
+           ==> 절대값
+
+           -. 5. sticky
+           ==> 사용시, 스크롤 필요함
+           ==> 스크롤에 반응하여 스티커처럼 붙어서 내려옴
+
+           fixed / sticky
+
+
+     -->
+    
+</body>
+</html>

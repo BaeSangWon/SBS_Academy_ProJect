@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소</title>
+    <style>
+
+        div{
+            background-color: aqua;
+            width: 500px;
+            height: 500px;
+            
+        }
+
+        span{
+            background-color: blueviolet;
+            width: 500px;
+            height: 500px;
+        }
+
+        .change_display{
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div>안녕하세요</div>
+    <span>반갑습니다</span>
+    <span class="change_display">반갑습니다</span>
+
+
+
+    <!--
+        -. 요소 = display
+           1. block
+              -. 대표 : div
+              -. width, height, 여백값 적용 가능
+
+           2. inline
+              -. 대표 : span
+              -. width, height, 여백값 적용 불가 (단 padding(내부여백)은 적용됨)
+        
+           3. inline-block
+              -. 인라인 요소의 성질과 블럭 요소의 성질을 모두 가짐
+              -. block 처럼 width, height, margin이 적용 되면서 inline 요소처럼 한줄로 정렬됨
+
+      -->
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-item</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .item{
+            /* width: 200px;
+            height: 200px;
+            background-color: salmon; */
+            padding: 5px;
+            border: 3px solid #000;
+            background-color: lightblue;
+            border-radius: 5px;
+
+            /* 크기값이 없는 요소의 경우 설정한 px로 크기를 변경한다 */
+            flex-basis: 100px;
+
+            /* 0 이상의 숫자만 넣으면 적용됨 */
+            flex-grow: 1;
+        }
+
+        .container{
+            display: flex;
+            background-color: gold;
+            border: 3px solid #000;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .item:first-child{
+            flex-grow: 1;
+        }
+
+        .item:nth-child(2){
+            flex-grow: 2;
+        }
+        
+        .item:nth-child(3){
+            flex-grow: 1;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item">1111</div>
+        <div class="item">2</div>
+        <div class="item">33333333333</div>
+    </div>
+
+
+    <!-- 
+
+        flex-item에 적용하는 속성
+
+        1. flex-basis
+        ==> flex-item들의 크기 설정
+        (flex-direction : row / width)
+        (flex-direction : column / height)
+        ==> flex-item의 기본 크기 점유
+        ==> 사용단위 : px, %, auto(기본값), em, rem
+
+        2. flex-grow
+        ==> 유연하게 늘리기
+        ==> flex-basis의 크기보다 더 커질 수 있는지 결정하는 속성
+        ==> 사용단위 : 0 ~ 숫자 (0 이상의 숫자)
+        ==> 비율
+        ==> flex-basis를 제외한 여백 부분을 flex-grow에 지정된 숫자 비율로 나눠가짐
+            ※ flex-basis를 지정하지 않은 경우 내부요소의 크기를 제외한 여백을 지정한 비율로 나눠가짐
+
+        3. flex-shirink
+        ==> 유연하게 줄이기
+        ==> flex-basis의 크기보다 더 작아질 수 있는지 결정하는 속성
+        ==> 사용단위 : 0 ~ 숫자
+        ==> 0보다 큰 값이 셋팅 = 유연한 박스
+        ==> 0 셋팅 = 고정폭이 정해진 박스
+            ※ flex-basis가 있을 경우 설정된 크기를 보장해준다
+
+        4. flex
+        ==> flex-basis, flex-grow, flex-shirink 축약
+        ==> flex : grow shrink basis;
+
+        ==> flex : 1;
+        ==> flex-grow : 1; flex-shirink : 1; flex-basis : 0%;
+
+        ==> flex : 1 1 auto;
+        ==> flex-grow : 1; flex-shirink : 1; flex-basis : auto;
+
+     -->
+</body>
+</html>

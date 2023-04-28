@@ -1,0 +1,28 @@
+            문제 1)
+            유저가 입력하는 숫자가 0인지, 음수인지 양수인지 판단하는 프로그램을 만들어보시오.
+
+            문제 2)
+            나는 대학교 교수다. 레포트 점수에 따라서 등급을 매기는 프로그램을 만들어보시오.
+            90 ~ 100     : A
+            80 ~ 89      : B
+            70 ~ 79      : C
+            60 ~ 69      : D
+            less than 59 : F
+
+            문제 3)
+            한 지원자가 우리회사에 지원을 했다. 지원자가 사용가능한 스킬은 배열에 제공이 된다.
+            let skills = ['HTML','CSS','JavaScript','React']
+            JavaScript와 React 둘 다 할줄 안다면 "합격!" JavaScript와 React 둘 중 하나만 할 줄 안다면 "예비!"
+            둘 다 할 줄 모른다면 "탈락!"을 보여주는 프로그램을 짜보자.
+
+            input : 스킬값에 포함될 내용들
+            output : 그에 따른 출력될 내용
+
+            input : let skills = ["HTML","CSS","Javascript","React"]
+            output : 합격 
+
+            input : let skills = ["HTML","CSS","Javascript"] 
+            output : 예비 
+
+            input : let skills = ["HTML","CSS"] 
+            output : 탈락

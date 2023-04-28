@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여러가지의 선택자들</title>
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .box, .box_2{
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+
+        .txt_wrap > p{
+            font-size: 30px;
+            font-weight: bold;
+            color:green;
+        }
+
+        .txt_wrap span{
+            font-size: 10px;
+            color: red;
+        }
+
+        ul > li:first-child{
+            font-family: "궁서체";
+            font-size: 30px;
+            color: red;
+        }
+
+        ul > li:nth-child(2){
+            background-color: burlywood;
+        }
+        
+        ul > li:last-child{
+            font-size: 80px;
+        }
+        
+        ul > li:nth-child(2n){
+            color: aqua;
+        }
+
+        ul > li:first-of-type{
+            background-color: gold;
+        }
+
+        ul > li:last-of-type{
+            background-color: yellowgreen;
+        }
+
+        ul > li:nth-of-type(5){
+            background-color: brown;
+        }
+
+        h1 + h2{
+            color: red;
+        }
+
+        h1 ~ h2{
+            color: blue;
+        }
+        
+        .info > span:first-child::after{
+            content: "";
+            width: 2px;
+            height: 20px;
+            background-color: red;
+            display: inline-block;
+        }
+
+        </style>
+</head>
+<body>
+    <!-- 그룹선택자-->
+    <div class="box"></div>
+    <h1></h1>
+    <p class="text"></p>
+    <div class="box_2"></div>
+
+    <!-- 자식, 자손선택자 -->
+    <div class="txt_wrap">
+        <p>자식태그</p>
+        <div>
+            <span>자손태그</span>
+        </div>
+    </div>
+    <!-- 
+
+     -->
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <!-- 
+            li($)*n개 + tab key
+         -->
+
+    </ul>
+    <!-- 구조 선택자 -->
+
+    <h1>점심메뉴</h1>
+    <h2>피자</h2>
+    <h2>돈까스</h2>
+    <h2>햄버거</h2>
+    <!-- 형제선택자 -->
+    
+    <div class="info">
+        <span>주식회사 : 픽톤</span>
+        <span>대표 : 이병훈</span>
+    </div>
+    <!--가상 선택자 / bofore, after-->
+
+
+<!-- 
+
+    .클래스명 + tap		: div 자동완성	
+    태그명앞글자 + tap	: 태그 자동완성
+    태그명앞글자.클래스명 + tap : 태그 class:클래스명 자동완성
+
+    -. 선택자의 종류
+       1. tag
+
+       2. id
+
+       3. class
+
+       -------------------- id, class 만 유일하게 태그에 직접 적용 가능한 선택자 --------------
+
+       4. 전체선택자(*)
+          -. 주로 브라우저에 내장된 기본 여백값 제거 시 사용
+          -*{
+            margin:0;
+            padding:0;
+          }
+
+       5. 그룹선택자(,)
+          -. 동일한 스타일이 적용될 태그들을 ,로 구분하여 그룹으로 스타일 적용
+
+       6. 자식, 자손 선택자
+          -.6-1) 자식선택자 (>)
+                 -. 계층구조 안에서 바로 아래에 오는 자식 요소만 선택
+                 -. 선택자와 선택자는 '>' 로 구분
+                 -. 선택자 1 > 선택자 2 : 선택자 1번 바로 아래에 오는 선택자 2번 선택함
+                 -. 부모선택자 > 자식선택자 (자식선택자 < 부모선택자 x)
+
+          -.6-2) 자손선택자 (공백)
+                 -. 계층구조에서 하위에 오는 모든 자손 요소 선택
+                 -. 선택자와 선택자는 공백으로 구분
+                 -. 선택자 1 선택자 2 : 선택자 1의 자손 중 선택자 2에 해당하는 모든 요소 선택
+                    -. 상위계층인 자식태그를 포함하여 스타일을 반영함
+                       ex) 부모태그 span{}
+                           부모태그 안에 중복되는 여러개의 태그가 있는 경우,모든 태그를 선택하는 기능도 수행함
+                 -. 부모선택자 자손선택자  
+        
+       7. 구조선택자
+          -. 7-1) 일반 구조 선택자
+                  -. :first-child = 형제 관계 중에서 첫번째에 위치하는 태그 선택
+                  -. :last-child = 형제 관계 중에서 마지막에 위치하는 태그 선택
+                  -. nth-child(n) = 형제 관계 중에서 n번째에 위치하는 태그 선택
+                  ※ 짝수 선택) nth-child(2n)
+                     홀수 선택) nth-child(2n+1)
+          
+          -. 7-2) 형태 구조 선택자
+                  -. :first-of-type = 형제 관계 중에서 첫번째로 등장하는 특정 태그 선택
+                  -. :list-of-type = 형제 관계 중에서 마지막에 등장하는 특정 태그 선택
+                  -. :nth-of-type = 형제 관계 중에서 n번째에 등장하는 특정 태그 선택
+
+       8. 형제선택자
+          -. 8-1) 인접 형제 선택자 (+)
+                  -. 기준선택자 + 형제선택자
+                     -. 두 선택자가 같은 계층에 있을 때 기준 선택자 바로 뒤에 형제 선택자를 선택함
+
+          -. 8-2) 일반 형제 선택자 (~)
+                  -. 기준선택자 ~ 형제선택자
+                     -. 두 선택자가 같은 계층에 있을 때 기준 선택자 뒤에 있는 모든 형제 선택자를 선택함
+       
+       9. 가상선택자
+          -. ::before, ::after   
+          -. html문서 수정 없이 css만으로 디자인적인 요소를 추가할 때 사용
+          -. 코드 가독성을 높이는데 좋음
+             -. 선택자::before{
+                    content:"";
+             }              
+             ※ 특정 선택자의 앞에 요소를 추가할 때 사용
+
+             -. 선택자::after{
+                    content:"";
+             }
+             ※ 특정 선택자의 뒤에 요소를 추가할 때 사용
+             ★★ before, after 가상 선택자 사용시에는 content:""; 필수 (반영할 컨텐츠 없을 경우 포함)
+             
+
+ -->
+
+
+</body>
+</html>

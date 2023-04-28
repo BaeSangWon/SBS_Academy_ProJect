@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게임화면</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Jua&family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrap">
+        <div class="in-box">
+            <h1>Up & Down 숫자맞추기 게임!</h1>
+            <div id="result-area">결과 출력</div>
+            <div id="chance-area">남은 찬스 : 7번</div>
+            <input id="user-input" type="number" placeholder="1 에서 100까지 숫자 중 입력하세요">
+            <div class="buttom_box">
+                <button id="play-button">Go!</button>
+                <button id="reset-button">Reset!</button>
+                <a href="javascript:window.history.back()">
+                    <button class="back-button">Back!</button>  
+                </a>
+            </div>        
+        </div>        
+    </div>
+    <script src="main.js"></script>
+
+    <!-- <div id="text"><span>hello </span>                   world</div>
+    <script>
+        let text = document.getElementById('text').textContent
+        console.log(text)
+
+        let text2 = document.getElementById('text').innerText
+        console.log(text2)
+
+        let text3 = document.getElementById('text').innerHTML
+        console.log(text3)
+    </script> -->
+</body>
+</html>
