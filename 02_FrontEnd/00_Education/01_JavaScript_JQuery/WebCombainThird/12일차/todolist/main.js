@@ -23,6 +23,7 @@ let taskInput = document.getElementById('task-input')
 let addButton = document.getElementById('add-button')
 let tabs = document.querySelectorAll('.task-tabs div')
 // console.log(tabs)
+let underLine = document.getElementById('under-line')
 
 addButton.addEventListener('click' , addTask)
 
@@ -130,11 +131,11 @@ function toggleComplete(id){
             filterList.splice(i,1) 
             break
         }
-
     }
-    render()
+    // render() 
+    filter()   // filter()함수를 호출하여 render()가 실행되도록
     
-    // location.reload(true);
+    // location.reload(true)
     // console.log(taskList)
 }
 
@@ -150,15 +151,16 @@ function deleteTask(id){
             break
         }
     }
-    render()  
+    // render()  
+    filter()
     // filterList 배열의 값과 id가 전달받은 id와 같다면 삭제를 누른 배열 요소 1개 삭제
-    for(let i = 0 ; i < filterList.length ; i++){
-        if(filterList[i].id == id){
-            filterList.splice(i, 1)
-            break
-        }
-    }    
-    render()
+    // for(let i = 0 ; i < filterList.length ; i++){
+    //     if(filterList[i].id == id){
+    //         filterList.splice(i, 1)
+    //         break
+    //     }
+    // }    
+    // render()
 }
 
 // 모두, 진행중, 완료 tab 기능 실행 함수
@@ -166,32 +168,35 @@ function deleteTask(id){
 // 1) if, for문 : mode : 'all, 'ongoing', 'done' 에 따라 할일 리스트를 다르게 보여준다
 // 2) tab을 이동할 때 마다 밑줄 속성이 따라온다 (현재 선택한 탭이 어떤 것인지를 표시해주기 위함)
 function filter(event){
-
     // let filterList = []   
     filterList = []
+    // mode = event.target.id
+    // console.log(mode)
     // console.log(event.target.id)
 
-    // mode : 'all, 'ongoing', 'done' 을 저장
-    mode = event.target.id
+    // if문 : event 값이 존재하면, 즉 최초 '모두'상태에서 '진행중' 상태로 넘어갈 경우 event값이 발생(true)함에 따라 mode = id값을 가져와 if절 실행
+    // event : tabs가 실행될 경우에 발생
+    if(event){
+        // mode : 'all, 'ongoing', 'done' 을 저장
+        mode = event.target.id
 
-    // 'under-line(밑줄)' 의 target 속성 중 너비, 높이 좌표 값 속성을 가지고 와서 탭의 각 항목을 누를때마다 따라가도록 설정
-    // .style.width는 css에 반영해준 값을 그대로 적용한다
-    // offsetWidth : margin을 제외한 padding, border 값까지 계산한 너비 값을 가져온다 
-    document.getElementById('under-line').style.width = event.target.offsetWidth + 'px'  // under-line의 width값을 under-line이 가지는 영역만큼으로 바꾸겠다는 속성
-    document.getElementById('under-line').style.top = '58px'
-    document.getElementById('under-line').style.left = event.target.offsetLeft + 'px'    // offsetLeft : 해당요소의 위치값 만큼 이동하는 속성
-    document.getElementById('under-line').animate({width:['0', '80px']},{durations:500,fill:'forwards',easing:'ease'})
-
+        // 'under-line(밑줄)' 의 target 속성 중 너비, 높이 좌표 값 속성을 가지고 와서 탭의 각 항목을 누를때마다 따라가도록 설정
+        // .style.width는 css에 반영해준 값을 그대로 적용한다
+        // offsetWidth : margin을 제외한 padding, border 값까지 계산한 너비 값을 가져온다
+        underLine.style.width = event.target.offsetWidth + 'px'  // under-line의 width값을 under-line이 가지는 영역만큼으로 바꾸겠다는 속성
+        underLine.style.top = '58px'
+        underLine.style.left = event.target.offsetLeft + 'px'    // offsetLeft : 해당요소의 위치값 만큼 이동하는 속성
+    }
     if(mode == 'all'){
-        render()
+        // render()
         // 'all' , 'ongoing' , 'done' 상태에 따라 밑줄 및 글자 색상 변경
         // all : 밑줄(red), 글자색(white) , ongoing : 밑줄(yellow), 글자색(white)..
-        document.getElementById('under-line').style.backgroundColor = 'red'  
+        underLine.style.backgroundColor = 'red'  
         document.getElementById('all').style.color = 'white'
         document.getElementById('ongoing').style.color = 'black'
         document.getElementById('done').style.color = 'black'
     } else if(mode == 'ongoing'){
-        document.getElementById('under-line').style.backgroundColor = 'yellow'
+        underLine.style.backgroundColor = 'yellow'
         document.getElementById('all').style.color = 'black'
         document.getElementById('ongoing').style.color = 'white'
         document.getElementById('done').style.color = 'black'
@@ -200,9 +205,9 @@ function filter(event){
                 filterList.push(taskList[i])       
             }
         }
-        render()
+        // render()
     } else if(mode == 'done'){
-        document.getElementById('under-line').style.backgroundColor = 'blue'
+        underLine.style.backgroundColor = 'blue'
         document.getElementById('all').style.color = 'black'
         document.getElementById('ongoing').style.color = 'black'
         document.getElementById('done').style.color = 'white'
@@ -214,9 +219,10 @@ function filter(event){
         // '덮어쓰기' : filter 함수 내에서 지역변수로 선언된 filterList의 값을 전역변수에 덮어쓰기를 할 경우
         // 입력된 할일 리스트 값을 빈 배열인 filterList = [] 값으로 덮어쓰기 때문에 filterList는 전역변수로 선언해준다
         // taskList = filterList  --> 이 경우 원래 담고 있는 할일 리스트의 값이 삭제됨(버전관리 x)
-        render()
+        // render()
     }
-    console.log(filterList)
+    render()
+    // console.log(filterList)
 }
 
 // 유일한 ID 값을 반환해주는 함수
@@ -271,12 +277,34 @@ taskInput.value = "" 를 추가하면 추가버튼을 누름과 동시에 내용
 }
 
 7. 삭제 버튼 누르면 바로 삭제 되도록
-=> deleteTask 함수에 for문 추가 
+=> 1) deleteTask 함수에 for문 추가 
 filterList.length 값이 전달받은 id와 같으면 삭제 버튼을 누른 filterList 요소 1개 삭제
 
 for(let i = 0 ; i < filterList.length ; i++){
         if(filterList[i].id == id){
             filterList.splice(i, 1)
+
+
+=> 2) 
+
+2-1) 함수 호출 구문 수정
+ 
+    deleteTask, toggleComplete 함수에서 render() 호출을 filter() 호출로 변경
+    ※ filter() 함수에서도 render() 함수를 호출하기 때문에 바로 render()함수를 호출하는 것 대신
+       filter() 함수 호출 후 filter() 함수에서 render() 함수를 실행하도록 수정
+
+2-2) if문 추가
+
+※ default 값으로 mode가 'all' 상태이다
+   최초 실행시 mode 가 'all' 인 상태이기 때문에 event.target.id 정보를 가져올 수 없기 때문에
+   '모두'상태에서 '진행중' 상태로 넘어갈 경우(탭항목을 클릭했을 때 발생) event값이 발생(true)함에 따라 mode = id값을 가져와 if절 실행
+
+   if(event){
+        mode = event.target.id
+        document.getElementById('under-line').style.width = event.target.offsetWidth + 'px'  
+        document.getElementById('under-line').style.top = '58px'
+        document.getElementById('under-line').style.left = event.target.offsetLeft + 'px'   
+    }
 
 */
 
