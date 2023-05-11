@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 스크롤 이벤트</title>
+    <link rel="stylesheet" href="css/style07.css">
+</head>
+<body>
+    <h1>스크롤 이벤트</h1> 
+    <div class="box1">
+        <p>
+            <img src="img/food02.jpg" alt="food02">
+        </p>
+    </div> 
+    <textarea cols="150" rows="10">
+
+        - 스크롤 이벤트는 스크롤의 현재 위치값을 비교해서 동작을 지정하는 경우가 많다
+        - 스크롤의 이동거리 = 컨텐츠의 이동거리
+        - 스크롤이 오른쪽 방향으로 10px 이동하면 컨텐츠도 왼쪽방향으로 10px 이동되는 것이 연속적으로 발생해서 움직이는 것처럼 보여진다
+
+        - 스크롤의 현재 위치를 저장하는 방법 : scrollTop(), scrollLeft()
+
+        - 실제 사이트 작업시에는 스크롤 이벤트가 발생될 시점의 숫자값을 정확하게 수동으로 입력할 수 없다
+          컨텐츠의 유무에 따라 세로의 거리가 변동될 가능성이 높기 때문이다
+          또는 PC, 테블릿, 노트북, 모바일에 따라서 환경이 변하기 때문에 정확한 숫자값을 알 수가 없다
+        - 그래서 이벤트가 발생될 스크롤의 위치값을 얻기 위해서 특정 태그의 절대 위치값을 활용해야 한다
+          절대 위치값이란? 문서가 시작되는 위치부터 특정 태그까지의 거리
+
+        - 절대 위치값을 저장하는 명령 : offset()
+          offset()      : 가로와 세로의 위치값을 한번에 저장한다
+          offset().top  : 세로의 위치값을 저장한다
+          offset().left : 가로의 위치값을 저장한다
+    </textarea>  
+    <br><br>
+    <div class="box2">
+        <div class="inner">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+    <br>
+    <div class="box3">
+        <div class="inner">
+            <div class="b31">1</div>
+            <div class="b32">2</div>
+            <div class="b33">
+                <span class="b33_icon">
+                    <img src="img/cosmetic01.jpg" alt="cosmetic01">
+                </span>
+            </div>
+            <div class="b34">4</div>
+            <div class="b35">5</div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/s07.js"></script>
+</body>
+</html>

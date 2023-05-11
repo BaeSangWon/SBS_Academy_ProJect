@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 animate 명령</title>
+    <link rel="stylesheet" href="css/style10.css">
+</head>
+<body>
+    <h1>animate 명령</h1>
+    <textarea cols="150" rows="12">
+
+        - 스타일 속성값이 변경되는 것을 움직임으로 만들어주는 명령
+        - 값을 숫자로 표기할 수 있는 속성만 적용가능하다. 오로지 숫자로 되는 값만 사용 가능하다
+        => margin, padding 등. thransform:scale 이런것은 불가능하다
+        
+        - $('셀렉터').animate(스타일, 시간, easing, 콜백함수)
+        - $('셀렉터').animate({스타일 속성: '값'}, 시간, easing, 콜백함수)
+    </textarea>
+    <br>
+    <div class="box1">
+        <button>CLICK</button>
+        <p></p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/s10.js"></script>
+</body>
+</html>

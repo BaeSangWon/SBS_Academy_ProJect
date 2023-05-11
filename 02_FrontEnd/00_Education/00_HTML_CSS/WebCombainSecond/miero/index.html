@@ -4,222 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>미에로화이바</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        ul{
-            list-style: none;
-        }
-
-        a{
-            text-decoration: none;
-            color: initial;
-        }
-        /* ----- 초기화 영역 ------ */
-
-        
-        .inner{
-            width: 90%;
-            height: 100%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            
-        }
-        /* ----- 공통 영역 ----- */
-
-
-        header{
-            width: 100%;
-            height: 200px;
-            position:fixed ;
-            top: 0;
-            left: 0;
-        }
-
-        .inner img{
-            max-width: 100%;
-            height: 50px 
-        }
-
-        .menu_wrap{
-            width: 600px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .menu_wrap a{
-            font-size: 22px;
-            color: #fff;
-            font-weight: 700;
-        }
-
-        .menu_bar{
-            display: none;
-        }
-
-        @media all and (max-width:767px){
-        .menu_wrap{
-             display: none;
-            }
-
-        .menu_bar{
-            width: 50px;
-            height: 50px; 
-            color: #fff;   
-            border: 1px solid #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            }   
-        }
-
-        /* ----- header_end ----- */
-
-        .section_1{
-            width: 100%;
-            height: 900px;
-            background: url(img2/banner1.png) no-repeat center / cover;
-        }
-
-        .side_box{
-            width: 40%;
-            height: 20%;
-            position: relative;
-            top:250px;
-            left: 100px;
-        }
-
-        .side_box dt, .side_box dd{
-            font-size: 60px;
-            color: #fff;
-            font-weight: 700;
-        }
-
-        .img_box{
-            width: 35%;
-            height: 50%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        figure{
-            width: 40px;
-            height: 40px;
-            border: 1px solid #fff;
-            text-align: center;
-            line-height: 50px;
-        }
-
-        /* ----- section_1_end ----- */
-
-        .section_2{
-            width: 100%;
-            height: 600px;
-            margin-top: 100px;
-        }
-
-        .left_wrap{
-            width: 50%;
-            height: 100%;
-            margin-right: 50px;
-        }
-
-        .left_wrap > .main_txt {
-            width: 100%;
-            height: 100px;
-            font-size: 30px; 
-        }
-
-        iframe{
-            width: 100%;
-            height: 60%;
-        }
-        
-        .right_wrap{
-            width: 50%;
-            height: 100%;
-        } 
-
-        .right_wrap dt{
-            width: 100%;
-            height: 100%;
-            font-size: 25px;
-        }
-
-        .right_wrap dd{
-            width: 100%;
-            height: 100%;
-            font-size: 17px;
-            font-weight: 700;
-            opacity: .7;
-        }    
-
-        /* ----- section_2_end ----- */
-        
-        .scetion_3{
-            width: 100%;
-            height: 500px;
-            background-color: gray;
-        }
-
-        .center_left_box{
-            width: 50%;
-            height: 100%;
-            background-color: red;    
-        }
-
-        .center_left_box > p{
-            margin-bottom: 10px;
-        }
-
-        .center_wrap{
-            width: 90%;
-            height: 70px;
-            margin: 0 auto;
-            background-color: gold;
-            display: flex;
-            justify-content: space-between;   
-        }
- 
-        .center_box{
-            height: 70%;
-            color: #fff;
-            text-align: center;
-            line-height: 35px;
-        }
-
-        .center_box:first-child{
-            width: 25%;
-            border: 1px solid orange;
-            background-color: orange;
-        }
-
-        .center_box:nth-child(2){
-            width: 35%;
-            border: 1px solid #000;
-            background-color: #000;
-        }
-
-        .center_box:last-child{
-            width: 36%;
-            border: 1px solid #000;
-            background-color: #000;
-        }
-
-
-           
-            
-
-
-    </style>
+    <title>미에로화이바 클론</title>
+    <script src="https://kit.fontawesome.com/8c36059e36.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="wrap">
@@ -227,27 +18,56 @@
             <div class="inner">
                 <h1 class="logo">
                     <a href="#">
-                        <img src="img2/logo1.png" alt="헤더로고"/>
+                        <img src="img/logo1.png" alt="헤더로고"/>
                     </a> 
                 </h1>
-                <ul class="menu_wrap">
-                    <li>
-                        <a href="#">미에로</a>
-                    </li>
-                    <li>
-                        <a href="#">제품소개</a>
-                    </li>
-                    <li>
-                        <a href="#">미에로 스토리</a>
-                    </li>
-                    <li>
-                        <a href="#">미에로 이벤트</a>
-                    </li>
-                    <li>
-                        <a href="#">공지사항</a>
-                    </li>
-                </ul>
-                <div class="menu_bar">▲</div>
+                <nav class="menu_wrap">
+                    <ul class="drop_menu_1">
+                        <li>
+                            <a href="#">미에로</a>
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <ul class="drop_menus">
+                                <li><a href="#">sub_menu_1</a></li>
+                                <li><a href="#">sub_menu_2</a></li>
+                                <li><a href="#">sub_menu_3</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">제품소개</a>
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <ul class="drop_menus">
+                                <li><a href="#">sub_menu_1</a></li>
+                                <li><a href="#">sub_menu_2</a></li>
+                                <li><a href="#">sub_menu_3</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">미에로 스토리</a>
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <ul class="drop_menus">
+                                <li><a href="#">sub_menu_1</a></li>
+                                <li><a href="#">sub_menu_2</a></li>
+                                <li><a href="#">sub_menu_3</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">미에로 이벤트</a>
+                            <i class="fa-solid fa-chevron-down"></i>
+                            <ul class="drop_menus">
+                                <li><a href="#">sub_menu_1</a></li>
+                                <li><a href="#">sub_menu_2</a></li>
+                                <li><a href="#">sub_menu_3</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">공지사항</a>
+                        </li>
+                    </ul>   
+                </nav>
             </div>
         </header>
         <!-- header_end -->
@@ -255,23 +75,32 @@
         <section class="section_1">
             <div class="side_box">
                 <p class="main_txt">
-                    <dl>
-                        <dt>마시는 식이섬유</dt>
-                        <dd>미에로화이바</dd>
-                    </dl>   
+                    마시는 식이섬유<br>
+                    미에로화이바
                 </p>
                 <div class="img_box">
-                    <figure>
-                        <img src="img2/fSns01.png" alt="페이스북 아이콘">
-                    </figure>
-                    <figure>
-                        <img src="img2/fSns02.png" alt="인스타그램 아이콘">
-                    </figure>
-                    <figure>
-                        <img src="img2/fSns03.png" alt="유튜브 아이콘">
-                    </figure>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="img_box_icon_1"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="img_box_icon_2"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="img_box_icon_3"></span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
+                <div class="slide_arrow_box">
+                    <svg role="img" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" aria-labelledby="chevronLeftIconTitle" stroke="grey" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="grey"> <title id="chevronLeftIconTitle">Chevron Left</title> <polyline points="14 18 8 12 14 6 14 6"/> </svg>
+                    <svg role="img" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" aria-labelledby="chevronRightIconTitle" stroke="grey" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="grey"> <title id="chevronRightIconTitle">Chevron Right</title> <polyline points="10 6 16 12 10 18 10 18"/> </svg>
+                </div>
             </div>
         </section>
         <!-- section_1_end -->
@@ -279,24 +108,30 @@
         <section class="section_2">
             <div class="inner">
                 <div class="left_wrap">
-                    <p class="main_txt"><b>마시는 식이섬유</b><br>
-                    <img src="img2/logo.png" alt="section_2_logo">    
+                    <p class="main_txt">
+                        <b>마시는 식이섬유</b>
+                        <img src="img/logo.png" alt="section_2_logo">    
                     </p>
                     <iframe width="698" height="400" src="https://www.youtube.com/embed/J43gcDsbIKo" title="[미에로화이바] 2022 TVCF 식이섬유를 사랑하는 우리_20&#39;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <div class="right_wrap">
                     <p class="right_txt">
-                        <dl>
-                            <dt>미에로의 새로운 소식을 알려드립니다.</dt>
-                            <dt><span style="font-size: 40px; font-weight: 600;">미에로화이바 News</span></dt>   
-                            <dd><span style="color:red">○</span> “일상 속 미에로화이바가 필요한 순간” 미에로…</dd>
-                            <dd><span style="color:red">○</span> '미에로화이바' 새로운 TV CF 온에어 ♥</dd>
-                            <dd><span style="color:red">○</span> '미에로화이바'와 '삼성헬스' 콜라보 마케팅 …</dd>
-                            <dd><span style="color:red">○</span> '미에로화이바'와 '삼성헬스' 콜라보 마케팅 …</dd>
-                            <dd><span style="color:red">○</span> '미에로화이바'와 '포트리스M' 콜라보 마케팅…</dd>
-                            <dd><span style="color:red">○</span> 국내 최초 식이섬유음료, `미에로화이바` 출시…</dd>
-                            <dd><span style="color:red">○</span> 현대약품, 전소민과 함께한 '미에로화이바' T…</dd>
-                        </dl> 
+                        <span>미에로의 새로운 소식을 알려드립니다.</span><br>
+                        <span class="right_news">미에로화이바 News</span><br>
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" aria-labelledby="circleIconTitle" stroke="coral" stroke-width="3.6" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="orange"> <title id="circleIconTitle">Circle</title> <circle cx="12" cy="12" r="8"/> </svg>
+                        <span>“일상 속 미에로화이바가 필요한 순간” 미에로…</span><br>
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" aria-labelledby="circleIconTitle" stroke="coral" stroke-width="3.6" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="orange"> <title id="circleIconTitle">Circle</title> <circle cx="12" cy="12" r="8"/> </svg>
+                        <span>'미에로화이바' 새로운 TV CF 온에어 ♥</span><br>
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" aria-labelledby="circleIconTitle" stroke="coral" stroke-width="3.6" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="orange"> <title id="circleIconTitle">Circle</title> <circle cx="12" cy="12" r="8"/> </svg>
+                        <span>'미에로화이바'와 '삼성헬스' 콜라보 마케팅 …</span><br>
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" aria-labelledby="circleIconTitle" stroke="coral" stroke-width="3.6" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="orange"> <title id="circleIconTitle">Circle</title> <circle cx="12" cy="12" r="8"/> </svg>
+                        <span>'미에로화이바'와 '삼성헬스' 콜라보 마케팅 …</span><br>
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" aria-labelledby="circleIconTitle" stroke="coral" stroke-width="3.6" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="orange"> <title id="circleIconTitle">Circle</title> <circle cx="12" cy="12" r="8"/> </svg>
+                        <span>'미에로화이바'와 '포트리스M' 콜라보 마케팅…</span><br>
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" aria-labelledby="circleIconTitle" stroke="coral" stroke-width="3.6" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="orange"> <title id="circleIconTitle">Circle</title> <circle cx="12" cy="12" r="8"/> </svg>
+                        <span>국내 최초 식이섬유음료, `미에로화이바` 출시…</span><br>
+                        <svg role="img" xmlns="http://www.w3.org/2000/svg" width="17px" height="17px" viewBox="0 0 24 24" aria-labelledby="circleIconTitle" stroke="coral" stroke-width="3.6" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="orange"> <title id="circleIconTitle">Circle</title> <circle cx="12" cy="12" r="8"/> </svg>
+                        <span>현대약품, 전소민과 함께한 '미에로화이바'…</span>
                     </p>
                 </div>   
             </div>   
@@ -306,26 +141,159 @@
         <section class="scetion_3">
             <div class="inner">
                 <div class="center_left_box">
-                    <p class="main_txt">당신이 몰랐던 식이섬유</p>    
+                    <p class="main_txt">당신이몰랐던식이섬유</p>    
                     <div class="center_wrap">
                         <div class="center_box">식이섬유란?</div>
                         <div class="center_box">식이섬유 기능</div>
-                        <div class="center_box">식이섬유를 섭취하려면</div>
+                        <div class="center_box">식이섬유를 섭취하려면?</div>
                     </div>  
                     <p class="bottom_txt">
-                        식이섬유란?
-                        사람의 소화효소로 분해되지 않는 성분, 몸 속의 과다한 양분흡수를 막아주고, 장의 리듬을 조절하며,음식물이 장 속에 머무는 시간을 단축시키는 등 현대 식생활에 꼭 필요한 물질로 제 7의 영양소로 주목 받고 있음
-                        
-                        
-                        ※ 출처 : 파워푸드 슈퍼푸드 사전
+                        <span>식이섬유란?</span><br>
+                        <span>사람의 소화효소로 분해되지 않는 성분, 몸 속의 과다한 양분흡수를 막아주고 장의 리듬을 조<br><br>절하며,음식물이 장 속에 머무는 시간을 단축시키는 등 현대 식생활에 꼭 필요한 물질로 제 7<br><br>의 영양소로 주목 받고 있음</span><br><br>
+                        <span>※ 출처 : 파워푸드 슈퍼푸드 사전</span>
                     </p>
                 </div>
+                <div class="center_ringt_box"></div>
             </div>
         </section>
         <!-- section_3_end -->
-        
+        <section class="scetion_4">
+            <div class="inner">
+                <div class="main_txt_wrap">
+                    <h3 class="main_txt">Miero Fiber</h3>  
+                    <h3 class="main_txt"></h3>  
+                </div>
+                   
+                <div class="section_4_icon_box">
+                    <div class="section_4_icon"></div>
+                    <div class="section_4_icon"></div>
+                    <div class="section_4_icon"></div>
+                    <div class="section_4_icon"></div>
+                </div>
+                <div class="section_4_icon_text">
+                    <h3>미에로화이바</h3>
+                    <h3>미에로화이바<br>스파클링제로</h3>
+                    <h3>헬씨올리고</h3>
+                    <h3>헬씨올리고<br>프로바이오틱스</h3>
+                </div>
+                <div class="section_4_text_box">
+                    <p class="section_4_text">식이섬유가 함유된 몸매관리에 도움을 주는<br><br>국민 식이섬유 음료</p>
+                    <p class="section_4_text">식이섬유가 함유된 몸매관리에 도움을 주는<br><br>국민 식이섬유 음료</p>
+                    <p class="section_4_text">올리고당을 함유하고 있어, 내몸속의 비피<br><br>더스 균을 직접 키워주는 장 건강 지킴이</p>
+                    <p class="section_4_text">우수한 내산성으로 장내에 잘 정착하여 유산<br><br>균 증식 및 유해균 억제·배변활동 원활에 도<br><br>움을 줄 수 있는 제품</p>
+                </div>
+            </div>
+        </section>
+        <!-- section_4_end -->
 
-    </div> 
+        <section class="section_5">
+            <div class="inner">
+                <div class="main_txt">
+                    <h3>미에로화이바 Event</h3>
+                    <h3></h3>
+                </div>
+                <div class="event_icon_box">
+                    <svg role="img" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" aria-labelledby="chevronLeftIconTitle" stroke="black" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="grey"> <title id="chevronLeftIconTitle">Chevron Left</title> <polyline points="14 18 8 12 14 6 14 6"/> </svg>
+                    <div class="event_img"></div>
+                    <div class="event_txt">
+                        <span>종료</span>
+                        <span>[미에로화이바 이모지 이벤트]</span>
+                        <span>2023.04.18 ~ 2023.04.24</span>     
+                    </div>
+                    <svg role="img" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" aria-labelledby="chevronRightIconTitle" stroke="black" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="grey"> <title id="chevronRightIconTitle">Chevron Right</title> <polyline points="10 6 16 12 10 18 10 18"/> </svg>
+                </div>
+            </div>
+        </section>
+        <!-- section_5_end -->
+
+        <section class="section_6">
+            <div class="inner">
+               <div class="main_txt">
+                    <h3>미에로화이바 Girl스토리</h3>
+                    <h3></h3>
+               </div>
+               <div class="grid_wrap">
+                    <div class="section_6_container">
+                        <a href="https://youtu.be/J43gcDsbIKo">
+                            <div class="container_item container_item_1"></div>
+                        </a>
     
+                        <a href="https://youtu.be/Swj0E25YkqI">
+                            <div class="container_item container_item_2"></div>
+                        </a>
+    
+                        <a href="http://miero.co.kr/bbs/board.php?bo_table=gallery&wr_id=56">
+                            <div class="container_item container_item_3"></div>
+                        </a>
+    
+                        <a href="http://miero.co.kr/bbs/board.php?bo_table=gallery&wr_id=55">
+                            <div class="container_item container_item_4"></div>
+                        </a>
+    
+                        <a href="http://miero.co.kr/bbs/board.php?bo_table=gallery&wr_id=54">
+                            <div class="container_item container_item_5"></div>
+                        </a>
+    
+                        <a href="https://youtu.be/-kZC2F7gIao">
+                            <div class="container_item container_item_6"></div>
+                        </a>
+    
+                        <a href="https://youtu.be/59TqZlbo3MI">
+                            <div class="container_item container_item_7"></div>
+                        </a>
+    
+                        <a href="http://miero.co.kr/bbs/board.php?bo_table=promotion&wr_id=16">
+                            <div class="container_item container_item_8"></div>
+                        </a>             
+                   </div> 
+                   <div class="sub"></div>
+               </div>
+            </div>
+        </section>
+        <!-- section_6_end -->
+
+        <footer>
+            <div class="inner">
+                <ul class="footer_menu">
+                    <li><a href="#">미에로</a></li>
+                    <li><a href="#">브랜드 스토리</a></li>
+                    <li><a href="#">식이섬유 스토리</a></li>
+                </ul>
+                <ul class="footer_menu">
+                    <li><a href="#">제품소개</a></li>
+                    <li><a href="#">미에로화이바</a></li>
+                    <li><a href="#">헬씨올리고</a></li>
+                    <li><a href="#">헬씨올리고<br>프로바이오틱스</a></li>
+                </ul>
+                <ul class="footer_menu">
+                    <li><a href="#">미에로 스토리</a></li>
+                    <li><a href="#">TV광고</a></li>
+                    <li><a href="#">인쇄광고</a></li>
+                    <li><a href="#">프로모션</a></li>
+                </ul>
+                <ul class="footer_menu">
+                    <li><a href="#">미에로 이벤트</a></li>
+                    <li><a href="#">진행중인 이벤트</a></li>
+                    <li><a href="#">당첨자 발표</a></li>
+                </ul>
+                <ul class="footer_menu">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">News&Notice</a></li>
+                </ul>
+                <ul class="footer_menu">
+                    <li><a href="#">현대약품</a></li>
+                </ul>
+                <div class="footer_icon_box">
+                    <h3>Connect With us</h3>
+                    <div class="footer_icon">
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div> 
+    <script src="https://kit.fontawesome.com/8c36059e36.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

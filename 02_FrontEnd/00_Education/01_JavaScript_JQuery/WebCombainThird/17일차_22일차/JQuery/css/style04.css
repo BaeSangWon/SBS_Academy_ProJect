@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+.box1{
+    display: flex;
+}
+
+.box1 p{
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    background-color: lavenderblush;
+}
+
+.box1 .p11{
+    display: none;
+}
+
+.box1 .on{
+    border: 5px solid #000;
+}

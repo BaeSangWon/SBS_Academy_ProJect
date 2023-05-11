@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.box{
+    width: 300px;
+    margin: 0 auto;
+}
+
+.box .photo li{
+    display: none;
+}
+
+.box .photo li:first-child{
+    display: block;
+}
+
+.box .btn ul{
+    display: flex;
+    justify-content: center;
+}
+
+.box .btn li{
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #ccc;
+    /* 텍스트를 요소의 가장 뒤로 보내는 속성 */
+    text-indent: -99999px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.box .btn .on{
+    background-color: lightblue;
+}

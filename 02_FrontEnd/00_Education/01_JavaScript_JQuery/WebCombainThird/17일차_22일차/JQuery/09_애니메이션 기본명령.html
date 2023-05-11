@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 애니메이션 기본명령</title>
+    <link rel="stylesheet" href="css/style09.css">
+</head>
+<body>
+    <h1>애니메이션 기본명령</h1>
+    <textarea cols="150" rows="10">
+
+        - $('셀렉터').애니메이션명령(시간의 양)
+
+        - 시간의 양은 1초를 1000으로 표기한다
+        - 시간의 양이 적으면 빨라지고, 많으면 느려진다
+        - 시간의 양이 움직이는 속도를 나타낸다
+
+        - show(), hide(), toggle()              : 너비, 높이, 투명도를 변경해서 움직임을 만든다
+        - slideDown(), slideUp(), slideToggle() : 높이값을 해서 움직임을 만든다
+        - fideIn(), fideOut(), fideToggle()     : 투명도를 변경해서 움직임을 만든다
+        
+        - 위의 9가지 기본명령은 애니메이션이 완료된 후 태그의 display 상태값을 block 또는 none로 만들어준다
+        
+        - 애니메이션 명령 사용시 시간값을 생략할 수 있다
+        - 제이쿼리 공식문서에 애니메이션 명령에 대한 시간값이 600으로 입력되어 있어서 시간값을 생략할 수 있다
+        - 단, show(), hide(), toggle()의 경우 시간값을 생략해서 사용하면 속도값이 0으로 인식된다 (동작 발생 즉시 원상태로 바뀐다는 이야기)
+    </textarea>
+    <br><hr><br>
+    <div class="box1">
+        <div class="bth">
+            <button class="bt1">show</button>
+            <button class="bt2">hide</button>
+            <button class="bt3">toggle</button>
+            <button class="bt4">slideDown</button>
+            <button class="bt5">slideUp</button>
+            <button class="bt6">slideToggle</button>
+            <button class="bt7">fadeIn</button>
+            <button class="bt8">fadeOut</button>
+            <button class="bt9">fadeToggle</button>
+        </div>
+        <div class="pan"></div>
+    </div>
+    <br><br>
+    <textarea cols="150" rows="10">
+
+        $('셀렉터').애니메이션명령(시간, easing)
+
+        easing  : 가속방식(빠르게, 천천히 -> 빠르게, 같은속도 유지, 제이쿼리에서는 기본적으로 2가지 방식을 가지고 있다)
+        
+        swing   : 점점 빨라진다
+        linear  : 일정한 속도로 움직인다
+    </textarea>
+    <br>
+    <div class="box2">
+        <button>CLICK</button>
+        <div class="b2">
+            <p class="b21">swing</p>
+            <p class="b22">linear</p>
+        </div>
+    </div>
+    <br><hr><br>
+
+    <textarea cols="150" rows="5">
+
+        - $('셀렉터').애니메이션명령(시간, easing, 콜백함수)
+        - 콜백함수란 ? 애니메이션 완료된 후 실행할 함수
+
+    </textarea>
+    <br>
+    <div class="box3">
+        <button>CLICK</button>
+        <div class="b3">
+            <p class="p31"></p>
+            <p class="p32"></p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/s09.js"></script>
+</body>
+</html>

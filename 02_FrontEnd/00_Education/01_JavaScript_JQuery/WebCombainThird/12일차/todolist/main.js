@@ -307,8 +307,3 @@ for(let i = 0 ; i < filterList.length ; i++){
     }
 
 */
-
-
-
-
-
