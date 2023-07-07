@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>시멘틱 태그 semantic</h1>
+    <h2>div 태그 대신에 의미를 전달 할 수 있는 태그</h2>
+    <p>시멘틱 태그들은 기본적으로 블락이다.</p>
+    <p>텍스트, 인라인, 블락 모두 포함가능한 요소들이다.</p>
+    <ul>
+        <li>
+            <mark>header</mark> : html 문서의 헤더영역을 의미하는 태그(제목, 로고, 네비게이션, 검색창 등등이 들어간다.) <br>
+            텍스트, 인라인, 블락 모두 포함가능핟 div와 거의 비슷한 느낌이라고 보면 된다. 또 header안에 header가 들어오거나 footer 태그는 포함 불가능하다. 
+            작동은 할 수 있으나 욕 마니 먹는다. <br>
+            <header style="background-color: pink;">헤더 사용법</header>
+        </li>
+        <!-- header -->
+        <li>
+            <mark>main</mark> : html 문서의 주요내용이 오는 태그 <br>
+            텍스트, 인라인, 블락 모두 포함가능하다. 
+            <main style="background-color: pink;">메인 사용법</main>
+        </li>
+        <li>
+            <mark>footer</mark> : html 문서의 푸터 영역을 의미하는 태그(저작권 정보, 관련문서링크, 패밀리사이트, 주소, 영업시간, 사업자번호, 전화번호 등등이 들어간다.) <br>
+            텍스트, 인라인, 블락 모두 포함가능하다. header 태그나 footer 태그를 다시 들어오는 것은 불가능하다. 작동은 할 수 있으나, 욕 마니 먹는다 ..
+            <footer style="background-color: pink;">푸터 사용법</footer>
+        </li>
+        <!-- footer -->
+        <li>
+            <mark>aside</mark> : 메인 컨텐츠와 직접적으로 관련이 없는 영역을 의미하는 태그, 홈페이지 같은데서 마우스로 스크롤해서 화면 움직일 때 같이 따라다니는
+            작은 창 같은것을 aside 태그에 많이 집어 넣는다. (sns, 최근 본 상품, 광고 배너, 화면상단으로 이동 등등등)
+            <br>
+            보통은 html 문서의 오른쪽이나 왼쪽에 사이드 메뉴나 광고 등의 영역으로 사용한다. 
+            <aside style="background-color: pink;">어사이드 사용법</aside>
+        </li>
+        <!-- aside -->
+        <li>
+            <mark>nav</mark> : html 문서의 메인메뉴나 목차 등을 정의해주는 태그. (보통 해더 내에서 메인메뉴에 사용된다.)
+            <br>
+            <nav style="background-color: pink;">네브 사용법(nav > ul > li > a 태그의 순서로 많이 쓰여진다.)</nav>
+        </li>
+        <!-- nav -->
+        <li>
+            <mark>section</mark> : html 문서 내에서 맥락이 같은 요소들을 주제별로 그룹화 해주는 태그. 
+            <br>
+            텍스트, 인라인, 블락 모두 포함가능하다. 보통 main 태그 안에 많이 사용한다. 
+            <section style="background-color: pink;">섹션 사용법</section>
+        </li>
+        <!-- section -->
+        <li>
+            <mark>article</mark> : html 문서 내에서 독립적으로 배포 또는 재사용이 가능한 게시물, 뉴스기사, 블로그 포스팅을 나타낼 때 사용한다. 
+            <br>
+            텍스트, 인라인, 블락 다 포함가능하다. 
+            <article style="background-color: pink;">아티클 사용법</article>
+        </li>
+        <!-- article -->
+        <li>
+            <mark>address</mark> : footer 내에서 주서, 사업자등록번호, 사업장이름 등등을 나타낼 때 사용한다. (footer 태그가 아니더라도
+            사용할 수 있으나 보통은 footer 내에서 많이 쓰인다.) <br>
+            기본 스타일(p 태그 아래 위로 여백 생기는 것과 같은 느낌을 기본 스타일 이라고 한다.)로 글자 기울어짐이 들어가 있다.
+            <address style="background-color: pink;">어드레스 사용법</address>
+        </li>
+        <!-- address -->
+    </ul>
+</body>
+</html>

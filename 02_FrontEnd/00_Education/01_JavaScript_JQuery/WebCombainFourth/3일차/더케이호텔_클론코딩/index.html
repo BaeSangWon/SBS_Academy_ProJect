@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더케이호텔 클론코딩</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="#">
+                        <svg class="logoSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 315.8 52.17">
+                            <style xmlns="http://www.w3.org/2000/svg" type="text/css">
+                                .logoSvg path {fill:#222222;}
+                                .logoSvg rect {fill:#222222;}
+                            </style>
+                            <g class="cls-1"><path class="cls-3" d="M119.65,40a.88.88,0,0,0-1.17.19,21.2,21.2,0,0,1-33.22,0,.89.89,0,0,0-1.49,1,20.37,20.37,0,0,0,36.19,0,.88.88,0,0,0-.3-1.15" transform="translate(0 0)"/></g><g class="cls-3"><rect class="cls-5" x="80.19" y="14.98" width="8.97" height="8.97"/></g><g class="cls-1"><path class="cls-6" d="M121.89,16.84l10-9.94L125,.1l-11.39,11.4-4,4h0c-2.37,1.73-2.71-.74-2.76-1.39V0h-5c-3.87.08-4.5,4-4.58,4.61v32h9.63V18.32l6.78,6.78L125,36.5l6.81-6.81-10-10a2.13,2.13,0,0,1,0-2.86" transform="translate(0 0)"/><path class="cls-6" d="M39.87,11.37a9.53,9.53,0,0,0-5.05,1.4,1.21,1.21,0,0,1-.91-.09,1,1,0,0,1-.38-.64V2.49H32A3.72,3.72,0,0,0,29,3.6a3.75,3.75,0,0,0-.83,2.68V34.54h5.32v-14c0-3,1.86-4.81,5-4.81s4.91,1.8,4.91,4.81v14h5.33V19.81c0-5.2-3.4-8.44-8.86-8.44m17.06,8.26a5.41,5.41,0,0,1,.53-1.68,5.2,5.2,0,0,1,4.87-2.77,5.11,5.11,0,0,1,4.83,2.77,6.24,6.24,0,0,1,.66,2.88H58a1.12,1.12,0,0,1-1.11-1.2M69.06,28a7.78,7.78,0,0,1-6,2.29c-3.86,0-6.17-2.26-6.23-6.06H69.59A3.3,3.3,0,0,0,73,20.8v0c-.54-6-4.65-9.67-10.72-9.67-6.65,0-10.78,4.48-10.78,11.68,0,9.71,6.22,11.75,11.43,11.75A12.58,12.58,0,0,0,72.47,31l.12-.11L69.15,28ZM0,5.8V7.11H9.71V34.54h5.62V8.43a1.3,1.3,0,0,1,1.22-1.32H25V2.49H3.75C.5,2.51,0,4.81,0,5.8" transform="translate(0 0)"/><path class="cls-6" d="M205.83,16.95c-2.22,0-4.1-2.23-4.1-4.89s1.84-4.85,4.1-4.85,4.1,2.17,4.1,4.85-1.83,4.89-4.1,4.89m0,3.47a7.22,7.22,0,0,0,5.4-2.49,8.89,8.89,0,0,0,0-11.74,7.21,7.21,0,0,0-5.4-2.49c-4.21,0-7.65,3.75-7.65,8.36s3.43,8.36,7.65,8.36" transform="translate(0 0)"/><path class="cls-6" d="M261.67,19.3l.06.08.1,0a18.83,18.83,0,0,0,5.51-2.95,12.24,12.24,0,0,0,3.42-3.66,12.85,12.85,0,0,0,3.62,3.8,18,18,0,0,0,5.33,2.81l.1,0,.06-.09,1.75-2.43.12-.15-.19-.07a17.07,17.07,0,0,1-6.51-4,8.84,8.84,0,0,1-2.32-4.82H280V4.49H261.28v3.3h7.37a8.93,8.93,0,0,1-2,4.54,15.28,15.28,0,0,1-6.72,4.38l-.19.07.12.16Z" transform="translate(0 0)"/><path class="cls-6" d="M149.4,12.67a4.13,4.13,0,0,1,4-4.21,4.08,4.08,0,0,1,4,4.21,4.08,4.08,0,0,1-4,4.21,4.12,4.12,0,0,1-4-4.21m18.2,10.93,0,0h-12.5V20.17a7.71,7.71,0,0,0,6.18-7.36,6.44,6.44,0,0,0-1.79-4.49h4V5.1h-8V1.81h-4.08V5.1h-8.17V8.32h4.19a6.65,6.65,0,0,0-1.8,4.49,7.71,7.71,0,0,0,5.89,7.28v3.45H139.11v3.26h25.16a3.54,3.54,0,0,0,3.33-3.21" transform="translate(0 0)"/><path class="cls-6" d="M183,16.17H172.58V13h6.71V10h-6.71V7.11h8.49V3.88H169v15.4h10.75A3.53,3.53,0,0,0,183,16.17" transform="translate(0 0)"/><path class="cls-6" d="M195,31.83H180.82V29.46h13.53V21.34H176.77v3h13.57v2.2H176.77V35h15A3.54,3.54,0,0,0,195,31.83" transform="translate(0 0)"/><path class="cls-6" d="M225.48,31.9v-.23H210.85V24.84h-3.76V34.92H222.5a3.49,3.49,0,0,0,3-3" transform="translate(0 0)"/><path class="cls-6" d="M285,23.66v-.1H272.53V17.88h-3.86v5.67H256.42v3.26H281.6A3.55,3.55,0,0,0,285,23.66" transform="translate(0 0)"/><path class="cls-6" d="M312.27,26.66a3.59,3.59,0,0,0,3.53-3.17h-29v3.18h25.46Z" transform="translate(0 0)"/><path class="cls-6" d="M253.4,26.85V3h-3.76V30.48a3.81,3.81,0,0,0,3.76-3.63" transform="translate(0 0)"/><path class="cls-6" d="M218.41,21.31V14.14h3.1V25.62a3.79,3.79,0,0,0,3.65-3.55V3h-3.65v7.75h-3.1V3.38H214.9V24.82h0a3.61,3.61,0,0,0,3.47-3.51" transform="translate(0 0)"/><path class="cls-6" d="M194.6,16.45V3h-3.65V20a3.8,3.8,0,0,0,3.65-3.55" transform="translate(0 0)"/><path class="cls-6" d="M184.52,19.81V20h.18A3.61,3.61,0,0,0,188,16.47h0V3.38h-3.51V9.56h-4.18v3.12h4.18Z" transform="translate(0 0)"/><path class="cls-6" d="M311,17.26v-.14H296.39V13.7h13.19v-3H296.39v-3h13.37V4.53H292.46V20.31h15.28a3.54,3.54,0,0,0,3.31-3" transform="translate(0 0)"/><path class="cls-6" d="M247.85,19.93v0h-14V15.18h9.57V4.56H230.08V7.83h9.6v4.31H230v11h14.55a3.53,3.53,0,0,0,3.26-3.2" transform="translate(0 0)"/></g>
+                        </svg>  
+                    </a>
+                </h1>
+                <ul class="menu_wrap">
+                    <li>
+                        <a href="#">로그인</a>
+                    </li>
+                    <li>
+                        <a href="#">예약조회</a>
+                    </li>
+                    <li>
+                        <a href="#">예약하기</a>
+                    </li>
+                    <li>
+                        <a href="#">호텔찾기</a>
+                        <!-- 리스트 메뉴 아이콘 -->
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">KR</a>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+        <!-- header_Mobile 영역 -->
+
+        <!-- header_end -->
+        <div class="inner">
+            <section class="section_1">
+                <figure>
+                    <img class="slide_main_img" src="image/visual_01B.jpg" alt="슬라이드 메인 이미지1">
+                </figure>
+                <div class="inner">
+                    <div class="main_txt_wrap">
+                        <h3>The-K 호텔서울</h3>
+                        <p>최상의 서비스와 자연 예술,문화,컨벤션이 함께 어우러진 고품격 커뮤니티 호텔</p>
+                        <div class="now">
+                            <a href="#">바로가기</a> 
+                        </div>
+                    </div>
+                    <div class="bottom_pager">
+                        <ul>
+                            <li class="active">01</li>
+                            <li>02</li>
+                            <li>03</li>
+                            <li>04</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- section_1_end -->
+
+        <section class="section_2">
+            <div class="inner">
+                <div class="promotion">
+                    <h3>pormotion</h3>
+                    <p>
+                        The-K호텔앤리조트가 준비한<br>
+                        다양한 프로모션과 이벤트들을<br>
+                        만나보세요
+                    </p>
+                    <div class="promotion_chevron">
+                        <a href="#">
+                            <svg role="img" xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24" aria-labelledby="chevronLeftIconTitle" stroke="lightgrey" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="lightgrey"> <title id="chevronLeftIconTitle">Chevron Left</title> <polyline points="14 18 8 12 14 6 14 6"/> </svg>
+                            <svg role="img" xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24" aria-labelledby="chevronRightIconTitle" stroke="lightgrey" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="lightgrey"> <title id="chevronRightIconTitle">Chevron Right</title> <polyline points="10 6 16 12 10 18 10 18"/> </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="promotion_slide_wrap">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="promotion_text">
+                                    <p>서울</p>
+                                    <p>우첼로 겨울 특선 메뉴 출시</p>
+                                    <p>2021. 11. 01 ~ 2022. 02. 28</p>
+                                </div>
+                                <figure>
+                                    <img src="image/promotion_01.jpg" alt="프로모션 이미지1">
+                                </figure>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <div class="promotion_text">
+                                    <p>서울</p>
+                                    <p>우첼로 겨울 특선 메뉴 출시</p>
+                                    <p>2021. 11. 01 ~ 2022. 02. 28</p>
+                                </div>
+                                <figure>
+                                    <img src="image/promotion_02.jpg" alt="프로모션 이미지2">
+                                </figure>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <div class="promotion_text">
+                                    <p>서울</p>
+                                    <p>우첼로 겨울 특선 메뉴 출시</p>
+                                    <p>2021. 11. 01 ~ 2022. 02. 28</p>
+                                </div>
+                                <figure>
+                                    <img src="image/promotion_03.jpg" alt="프로모션 이미지3">
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- section_2_end -->
+        
+        <section class="section_3">
+            <div class="inner">
+                <div class="package_slide_wrap">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="package_text">
+                                    <p>서울</p>
+                                    <p>우첼로 겨울 특선 메뉴 출시</p>
+                                    <p>2021. 11. 01 ~ 2022. 02. 28</p>
+                                </div>
+                                <figure>
+                                    <img src="image/promotion_04.jpg" alt="프로모션 이미지4">
+                                </figure>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <div class="package_text">
+                                    <p>서울</p>
+                                    <p>우첼로 겨울 특선 메뉴 출시</p>
+                                    <p>2021. 11. 01 ~ 2022. 02. 28</p>
+                                </div>
+                                <figure>
+                                    <img src="image/promotion_05.jpg" alt="프로모션 이미지5">
+                                </figure>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <div class="package_text">
+                                    <p>서울</p>
+                                    <p>우첼로 겨울 특선 메뉴 출시</p>
+                                    <p>2021. 11. 01 ~ 2022. 02. 28</p>
+                                </div>
+                                <figure>
+                                    <img src="image/promotion_06.jpg" alt="프로모션 이미지6">
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="package">
+                    <h3>package</h3>
+                    <p>
+                        The-K호텔앤리조트를 보다<br>
+                        현명하게 이용하는 방법! 원하는<br>
+                        구성의 서비스를 최적의 가격으로<br>
+                        이용하실 수 있습니다<br>
+                    </p>
+                    <div class="package_chevron">
+                        <a href="#">
+                            <svg role="img" xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24" aria-labelledby="chevronLeftIconTitle" stroke="lightgrey" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="lightgrey"> <title id="chevronLeftIconTitle">Chevron Left</title> <polyline points="14 18 8 12 14 6 14 6"/> </svg>
+                            <svg role="img" xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24" aria-labelledby="chevronRightIconTitle" stroke="lightgrey" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="lightgrey"> <title id="chevronRightIconTitle">Chevron Right</title> <polyline points="10 6 16 12 10 18 10 18"/> </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section_3_end -->
+
+        <section class="section_4">
+            <div class="inner">
+                <div class="todo">
+                    <figure class="todo_img"> 
+                        <img src="image/todo_title.png" alt="todo_title_img">
+                    </figure>
+                    <a href="#">
+                        <h3>서울</h3>
+                        <h3>지리산</h3>
+                    </a>    
+                </div>
+                <div class="todo_img_wrap">
+                    <a href="#">
+                        <figure class="todo_img"> 
+                            <img src="image/todo_01.jpg" alt="todo_img_1">
+                            <div class="todo_txt">
+                                <h3>성공적인 비지니스</h3>
+                                <p>#MIC행사 #만찬 #연회행사 #의미있는만남</p>
+                            </div>  
+                            <div class="todo_txt">
+                                <h3>성공적인 비지니스</h3>
+                                <p>#MIC행사 #만찬 #연회행사 #의미있는만남</p>
+                            </div>  
+                        </figure>
+                                           
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- section_4_end -->
+
+        <section class="section_5">
+            <div class="inner">
+                <div class="overview_grid_container">
+                    <div class="overview_grid_item_1">
+                        <figure>
+                            <img src="image/overview_sub1_01.jpg" alt="overview_sub_1">
+                        </figure>
+                        <a href="#">
+                            <p>The-K호텔서울</p>
+                            <p>크리스탈볼룸 웨딩홀</p>
+                        </a>
+                    </div>
+
+                    <div class="overview_grid_item_2">
+                        <figure>
+                            <img src="image/overview_sub1_02.jpg" alt="overview_sub_2">
+                        </figure>
+                        <a href="#">
+                            <p>The-K호텔서울</p>
+                            <p>크리스탈볼룸 웨딩홀</p>
+                        </a>
+                    </div>
+
+                    <div class="overview_grid_item_3">
+                        <figure>
+                            <img src="image/overview_sub1_03.jpg" alt="overview_sub_3">
+                        </figure>
+                        <a href="#">
+                            <p>The-K호텔서울</p>
+                            <p>크리스탈볼룸 웨딩홀</p>
+                        </a>
+                    </div>
+
+                    <div class="overview_grid_item_4">
+                        <figure>
+                            <img src="image/overview_sub1_04.jpg" alt="overview_sub_4">
+                        </figure>
+                        <a href="#">
+                            <p>The-K호텔서울</p>
+                            <p>크리스탈볼룸 웨딩홀</p>
+                        </a>
+                    </div>
+
+                    <div class="overview_grid_item_5">
+                        <figure>
+                            <img src="image/overview_sub1_04.jpg" alt="overview_sub_5">
+                        </figure>
+                        <a href="#">
+                            <p>The-K호텔서울</p>
+                            <p>크리스탈볼룸 웨딩홀</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="overview">
+                    <h3>overview</h3>
+                    <p>
+                        도심 속의 휴식, 휴양지로의 여행, 연회와 미식까지! <br>
+                        당신이 원하는 LIFE STYLE을 The-K 호텔앤리조트와 함께하세요  
+                    </p>
+                    <div class="underline"></div>
+                    <div class="overview_chveron">
+                        <a href="#">
+                            <svg role="img" xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24" aria-labelledby="chevronLeftIconTitle" stroke="lightgrey" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="lightgrey"> <title id="chevronLeftIconTitle">Chevron Left</title> <polyline points="14 18 8 12 14 6 14 6"/> </svg>
+                            <svg role="img" xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24" aria-labelledby="chevronRightIconTitle" stroke="lightgrey" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="lightgrey"> <title id="chevronRightIconTitle">Chevron Right</title> <polyline points="10 6 16 12 10 18 10 18"/> </svg>
+                        </a>
+                    </div>
+                    <figure class="overview_main_img">
+                        <img src="image/overview_main_01.jpg" alt="overview_main_1">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <!-- section_5_end -->
+
+        <section class="section_6">
+            <div class="inner">
+                <div class="about_wrap">
+                    <h2>About The-K HOTEL&amp;RESORT</h2>
+                </div>
+                <div class="about_txt_wrap">
+                    <h3>아름다운 자연 속에서 진정한 휴식</h3>
+                    <div class="about_txt">
+                        <p>
+                            한국교직원공제회가 전액 출자한 The-K호텔앤리조트는 특급호텔인 The-K호텔서울, The-K호텔경주를<br> 
+                            비롯하여 수려한 자연경관에 위치한 The-K지리산가족호텔, The-K설악산가족호텔을 운영하고 있어<br>
+                            자연이 주는 여유로움을 만끽할 수 있습니다.
+                        </p>
+                        <div class="about_more">
+                            <a href="#">자세히 보기</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="about_list">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="image/about_01.jpg" alt="">
+                                </figure>
+                                <p>경주</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="image/about_02.jpg" alt="">
+                                </figure>
+                                <p>서울</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="image/about_03.jpg" alt="">
+                                </figure>
+                                <p>지리산</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="image/about_04.jpg" alt="">
+                                </figure>
+                                <p>설악</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- section_6_end -->
+
+        <section class="section_7">
+            <div class="inner">
+                <h2>location</h2>
+                <div class="location_menu_wrap">
+                    <ul>
+                        <li class="on">
+                            <a href="#">The-K호텔서울</a>
+                        </li>
+
+                        <li>
+                            <a href="#">The-K호텔경주</a>
+                        </li>
+
+                        <li>
+                            <a href="#">The-K지리산가족호텔</a>
+                        </li>
+
+                        <li>
+                            <a href="#">The-K설악산가족호텔</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="location_map_wrap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.7437032568077!2d127.03024087738079!3d37.46677287206449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1293fd1e98d%3A0xe7873a59ea23f6af!2z7ISc7Jq47Yq567OE7IucIOyEnOy0iOq1rCDrsJTsmrDrq7zroZwxMuq4uCA3MA!5e0!3m2!1sko!2skr!4v1684210563800!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="location_map_info">
+                        <figure>
+                            <img src="image/logo_branch_seoul.svg" alt="location_logo">
+                        </figure>    
+                        <div class="location_address">
+                            <p>ADDRESS</p>
+                            <p>
+                                서울특별시 서초구 바우뫼로<br>
+                                12길 70
+                            </p>
+                            <p>TEL</p>
+                            <p>02-571-8100</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="newsletter_wrap">
+                <figure>
+                    <img src="image/f_newsletter.png" alt="newletter_img">
+                    <p>뉴스레터를 신청하시면 더케이호텔의 각종 최신정보를 받아보실 수 있습니다.</p>
+                </figure>
+                <div class="newsletter_input">
+                    <form>
+                        <input type="text" placeholder="이메일 주소를 입력해주세요.">
+                        <button>신청</button>
+                    </form> 
+                </div>
+            </div>
+        </section>
+        <!-- section_7_end -->
+
+        <footer class="footer">
+            <div class="inner">
+                <div class="footer_info_wrap">
+                    <ul>
+                        <li>
+                            <a href="#">호텔소개</a>
+                        </li>
+                        <li>
+                            <a href="#">이용약관</a>
+                        </li>
+                        <li>
+                            <a href="#">개인정보처리방침</a>
+                        </li>
+                        <li>
+                            <a href="#">영상정보처리기기운영관리지점</a>
+                        </li>
+                    </ul>
+                    <div class="footer_info">
+                        <span>더케이호텔앤리조트(주)</span>
+                        <span>서울특별시 서초구 바우뫼로 12길 70</span><br>
+                        <span>사업자등록번호 : 222-81-20585</span>
+                        <span>통신판매신고번호 : 서초0438호</span>
+                        <span>대표 : 진재호, 정병걸</span><br>
+                        <span>COPY RIGHT The-K HTEL&amp;RESORT. ALL RIGHTS RESERVED.</span>
+                    </div>
+                    <div class="footer_branch">
+                        <h4>The-K HOTEL&amp;RESORT</h4><span></span>
+                        <ul>
+                            <li><a href="#"><img src="image/logo_branch_seoul.svg" alt="branch_seoul_logo"></a></li>
+                            <li><a href="#"><img src="image/logo_branch_gyeongju.svg" alt="branch_gyeongju_logo"></a></li>
+                            <li><a href="#"><img src="image/logo_branch_seorak.svg" alt="branch_seorak_logo"></a></li>
+                            <li><a href="#"><img src="image/logo_branch_jiri.svg" alt="logo_branch_jiri_logo"></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_family_site">
+                        <h4>FAMILY SITE</h4><span></span>
+                        <ul>
+                            <li><a href="#"><img src="image/family_site_1.png" alt=""></a></li>
+                            <li><a href="#"><img src="image/family_site_2.png" alt=""></a></li>
+                            <li><a href="#"><img src="image/family_site_3.png" alt=""></a></li>
+                            <li><a href="#"><img src="image/family_site_4.png" alt=""></a></li>
+                            <li><a href="#"><img src="image/family_site_5.png" alt=""></a></li>
+                            <li><a href="#"><img src="image/family_site_6.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+             
+        </footer>
+
+    </div>
+</body>
+</html>

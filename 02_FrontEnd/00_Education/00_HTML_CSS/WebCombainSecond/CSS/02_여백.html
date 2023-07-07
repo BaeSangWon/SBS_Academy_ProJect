@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin / padding</title>
+</head>
+<body>
+    <div>
+        <h1>margin : 요소의 바깥 여백</h1>
+        <p>단위 : px, %, auto</p>
+        <div style="width: 200px; height: 200px; background-color: slateblue; margin: 100px;">
+            <p style="width: 50px; height: 50px; background-color: salmon; margin: 20px;">box1</p>
+            <!-- 태그 안에 포함되어진 첫번째 자식요소는, 부모요소와 같이 상단 마진값을 가진다. -->
+        </div>
+    </div>
+    <!-- margin -->
+    <div>
+        <h1>padding: 요소의 안쪽 여백</h1>
+        <p>단위: px, %, auto</p>
+        <div style="width: 200px; height: 200px; background-color: magenta; padding: 50px;">
+            <p style="width: 250px; background-color:antiquewhite;"> box2 </p>
+        </div>
+    </div>
+    <!-- padding -->
+    <div>
+        <h2>margin-top / margin-bottom / margin- left / margin-right</h2>
+        <p style="width: 200px; height: 100px; background-color: aqua; margin-top: 50px; margin-bottom: 30px; margin-left: 100px; margin-right: 20px;">
+            200 x 100 / 위 50 아래 30 왼 100 오른 20</p>
+        <br>
+        <h2>padding-top / padding-bottom / padding-left / padding-right</h2>
+        <p style="width: 200px; height: 100px; background-color: limegreen; padding-top: 30px; padding-bottom: 80px; padding-left: 50px; padding-right: 200px;">
+        200 x 100 / 위 30 아래 80 왼 50 오른 200</p>
+    </div>
+    <div>
+        <h2>마진 겹침 현상</h2>
+        <p>마진은 옆으로 또는 위, 아래로 값이 겹쳐질 경우에 마진값들이 합쳐지는게 아니라, 더 큰 쪽의 마진값이 적용된다.</p>
+        <br>
+        <div>
+            <p style="width: 300px; height: 100px; background-color: cornflowerblue; margin: 100px;">box3</p>
+            <p style="width: 300px; height: 100px; background-color: lightsalmon; margin: 300px;">box4</p>
+        </div>
+    </div>
+    <div>
+        <h2>margin / padding 속기법</h2>
+        <p>margin이나 padding에 값을 1개 초과해서 주면, 값을 주는 만큼 해당되는 방향으로 여백이 생긴다.</p>
+        <p>margin / padding : Npx; → 사방으로 Npx만큼 여백이 들어옴</p>
+        <p>margin / padding : Npx Npx; → 위/아래 왼오른</p>
+        <p>margin / padding : Npx Npx Npx; → 위/아래 왼오른 아래</p>
+        <p>margin / padding : Npx Npx Npx Npx; → 위 오른 아래 왼</p>
+        <br>
+        <p style="width: 200px; height: 100px; background-color: crimson; padding: 30px 50px 80px 100px"> box01</p>
+        <!-- 200 x 100 / padding 위 30 오른 50 아래 80 왼 100 -->
+        <div style="background-color: darkblue;">box02</div>
+    </div>
+    <div>
+        <p>p 태그에 생기는 기본 여백을 없애려면 margin 속성의 속성값을 0을 주면 된다.</p>
+        <p>a 태그, span 태그와 같이 인라인에는 너비와 높이 값이 적용되지 않는다. margin / padding 은 적용된다</p>
+        <div style="width: 80%; height: 300px; background-color: lightslategray; margin: 100px 0 200px 0;">
+            80% x 300 / 위 100 아래 200
+            <span style="width: 100px; height: 100px; background-color: lightgoldenrodyellow; padding: 30px; margin-left: 30px;">
+            100 x 100 / 왼 30</span>
+            <a href="#" style="width: 100px; height: 100px; background-color: lavenderblush; margin-left: 50px;">
+            100 x 100 / 왼 50</a>
+            <div style="width: 100px; height: 50px; background-color: lightskyblue;"> 100 x 50</div>
+            <div style="width: 100px; height: 50px; background-color: lightgreen;">100 x 50</div>
+            <p style="width: 100px; height: 50px; background-color: lightsalmon; margin: 0;">100 x 50 <br> 여백없음 </p>
+        </div>
+        <div>
+            <h1><mark>margin: 0 auto</mark></h1>
+            <p>너비값이 정해진 요소를 화면상(띄워진 창의 크기에서 ..) 또는 내 부모요소에서 중간정렬을 하기 위한 값</p>
+            <p>매번 너비가 바뀌므로 정확하게 수치상으로 계산하는 것은 비효율적이다. 반응형의 기초! 많이 사용되어진다.</p>
+            <p>글자만 중간에 보내고 싶다고 박스 안만들고 그냥 하면 안됩니다. 글자 정렬은 다른게 있으므로, 무조건 박스를 만들어서 기본
+            너비 값을 넣어주고 사용해야한다.</p>
+            <p>나중에 작은 여백값이 더 우선순위로 적용된다.</p>
+            <p>위에서 언급한 속기법이랑 비슷한 느낌으로 사용한다. margin: Npx auto; 라고 입력하면, N픽셀만큼, 좌우는 정렬된다.</p>
+            <p style="width: 130px; height: 80px; background-color: lime; margin: 100px auto; margin-bottom: 50px;">중간정렬</p>
+            <p style="width: 50%; height: 200px; background-color: green; margin: 0 auto;">Box</p>
+        </div>
+    </div>
+</body>
+</html>

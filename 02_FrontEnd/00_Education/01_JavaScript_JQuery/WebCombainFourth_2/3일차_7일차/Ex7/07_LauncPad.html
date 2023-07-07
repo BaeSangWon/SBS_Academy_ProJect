@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex07. LaunchPad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pad">
+        <img src="images/Launchpad 2020 Logo.png" width="200" height="70">
+        <button id="play-btn">
+            <img src="images/play2.png" width="60" height="60">
+        </button>
+        <button id="stop-btn">
+            <img src="images/pausd1.png" width="60" height="60">
+        </button>
+
+        <div class="cell-container">
+            <div class="cell green" id="cell1">
+                <div class="key">1</div>
+                <div class="instrument">Bass<br>KickDrum</div>
+            </div>
+            <!-- cell1_end -->
+
+            <div class="cell blue" id="cell2">
+                <div class="key">2</div>
+                <div class="instrument">Closed<br>Hi-hat</div>
+            </div>
+            <!-- cell2-end -->
+
+            <div class="cell blue" id="cell3">
+                <div class="key">3</div>
+                <div class="instrument">Open<br>Hi-hat</div>
+            </div>
+            <!-- cell3_end -->
+
+            <div class="cell red" id="cell4">
+                <div class="key">4</div>
+                <div class="instrument">Clap</div>
+            </div>
+            <!-- cell4_end -->
+
+            <div class="cell red" id="cell5">
+                <div class="key">5</div>
+                <div class="instrument">Snap</div>
+            </div>
+            <!-- cell5_end -->
+
+            <div class="cell blue" id="cell6">
+                <div class="key">6</div>
+                <div class="instrument">Crash<br>cymbal</div>
+            </div>
+            <!-- cell6_end -->
+
+            <div class="cell green" id="cell7">
+                <div class="key">7</div>
+                <div class="instrument">Mid<br>Tom</div>
+            </div>
+            <!-- cell7_end -->
+
+            <div class="cell green" id="cell8">
+                <div class="key">8</div>
+                <div class="instrument">Hi<br>Tom</div>
+            </div>
+            <!-- cell8_end -->
+
+            <div class="cell blue" id="cell9">
+                <div class="key">9</div>
+                <div class="instrument">Tambourine</div>
+            </div>
+            <!-- cell9_end -->
+        </div>
+        <!-- cell-container_end -->
+
+    </div>
+    <!-- pad_end -->
+
+
+<!--
+    - 구글크롬에서는 기본적으로 미디어플레이어에 대한 AutoPlay(자동재생) 속성을 지원하지 않는다
+      src : 재생할 음원 파일의 경로를 설정(mp3, wav, ogg, ....)
+      autoplay : 자동 재생 여부 설정(브라우저에 html 파일이 로드되면 음악파일이 재생됨)
+      loop : 반복 재생 여부 설정
+      controls : 컨트롤 판넬 노출 여부
+      muted : 음소거 설정
+
+      생성, 재생, 정지
+      Audio 객체 이벤트
+      - canplaythrough : 음원 파일이 모드 로드되어 재생 가능할 때
+      - play : 재생이 시작될 때
+      - playing : 재생 중일 때
+      - pause : 일시 정지되었을 때
+      - ended : 재생이 완료되었을 때
+      - volumechasge : 볼륨이 변경될 때
+
+      Audio 객체의 메소드와 프로퍼티
+      1) 메소드
+      play() : 재생
+      pause() :  일시정지
+      addTextTrack() : 새로운 트랙을 추가
+      canPlayType() : 브라우저가 해당 오디오 타입에 대한 재생 가능 여부 체크
+      load() : 오디오 객체를 리로드
+
+      2) 프로퍼티
+      src : 파일 경로
+      volume : 볼륨
+      loop : 반복여부(true, false)
+      autoplay : 자동재생여부(true, false)
+      muted : 음소거 여부(true, false)
+      paused : 일시정지 여부(true, false)
+      ended : 재생완료 여부(true, false)
+      duration : 음원의 전체 길이(초 단위)
+      currentTime : 음원의 현재 재생 위치(초 단위)
+
+  -->
+<!-- <audio src="Queencard.mp3" controls></audio>
+
+<input type="text" id="input"> -->
+
+
+<script src="js/jquery-3.7.0.min.js"></script>
+<!-- <script src="js/Ex07.js"></script> -->
+<script>
+    // 각 키값에 해당하는 오디오 파일을 담기위한 배열 생성
+    let audioFiles = []    
+    audioFiles.push(new Audio('audio/Bass-Drum-1.wav')) 
+    audioFiles.push(new Audio('audio/Bass-Drum-2.wav'))
+    audioFiles.push(new Audio('audio/Bass-Drum-3.wav'))
+    audioFiles.push(new Audio('audio/Bass-Drum-4.wav'))
+    audioFiles.push(new Audio('audio/Bass-Drum-5.wav'))
+    audioFiles.push(new Audio('audio/Bass-Drum-6.wav'))
+    audioFiles.push(new Audio('audio/Bass-Drum-7.wav'))
+    audioFiles.push(new Audio('audio/Bass-Drum-8.wav'))
+    audioFiles.push(new Audio('audio/Bass-Drum-9.wav'))
+
+
+    // 오디오 객체 생성
+    let loop = new Audio("Alan_Walker - The_Drum.mp3")
+
+    // play 버튼 클릭 시 음원 재생
+    $('#play-btn').on('click' , function(){
+    loop.play();
+    })   
+        
+    // stop 버튼 클릭 시 음원 멈춤 -> 다시 play 버튼을 눌렀을 때 처음부터 재생되도록 
+    $('#stop-btn').on('click' , function(){
+    loop.pause();
+    loop.currentTime = 0;
+    })
+
+    // 키보드로 눌러진 키값에 해당하는 box에 playing 클래스 추가 후 css 스타일 변경
+    $(document).on('keydown' , function(e){
+        // console.log(e.key)
+
+        // 눌러진 키가 1~9 외 키일 경우 내부의 실행 구문 동작 x
+        if((e.key) >= 1 && (e.key) <= 9){
+            $('#cell'+ e.key).addClass('playing');
+            // Number : 가져오는 값이 문자인지 숫자인지 명확하지 않을 경우 변환해주기위해 사용
+            // 키보드로 눌러진 키값에 해당하는 box에 audioFiles 배열에 담겨 있는 요소(소리파일) 0번째부터 가져오기
+            let cur = audioFiles[Number(e.key) - 1];
+            // 새로운 값이 입력됨과 동시에 값을 초기화(연속성으로 키보드를 누를 때 소리가 즉시 끊기지 않는 문제 해결)
+            cur.currentTime = 0;
+            cur.play()
+            // console.log(cur);
+        }    
+    })
+
+    // 눌러진 키보드에 손을 떼면 키값에 해당하는 box에 playing 클래스 삭제 후 css 스타일 변경
+    $(document).on('keyup', function(){
+    $('.cell').removeClass('playing')
+    })
+</script>
+</body>
+</html>

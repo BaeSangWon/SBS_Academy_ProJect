@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+/* reset */
+
+#wrap {
+    position: relative;
+    width: 100%;
+    min-width: 1220px;
+}
+
+#header {
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    z-index: 500;
+}
+
+.h_in {
+    position: relative;
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: aliceblue;
+    z-index: 100;
+}
+
+.gnb {
+    position: absolute;
+    top: 40px;
+    right: 0;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu:hover .d1 .sub{
+    height: 400px;
+}
+
+.menu .d1{
+    position: relative;
+   
+}
+
+.menu .d1 .main {
+    display: block;
+    padding: 0 50px 20px 50px;
+    font-size: 17px;
+    font-weight: 700;
+    background-color: cyan;
+}
+
+.gnb .sub {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: #eee;
+    height: 0;
+    overflow: hidden;
+    transition: all 3s;
+}
+
+.gnb .sub ul {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.gnb .sub li {
+    padding: 4px 0;
+}
+
+.gnb .sub li a {
+    font-size: 15px;
+    color: #444;
+}
+
+/* .gnbBg {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 385px;
+    background-color: lightblue;
+} */
+
+/* 마우스 hover 효과 */
+/* .gnb:hover .sub{
+    animation: slideDown 2s linear infinite alternate;
+}
+
+@keyframes slideDown {
+    to{
+        height: 380px;
+    }
+    
+}
+
+.gnb:not(:hover) .sub{
+    transition: all 2s ease-out;
+} */
+
+/* gnbBg의 경우 gnb의 상위 요소 즉, inner(h_in)의 형제요소임
+   상위선택자에게 효과를 적용할 수 없음  
+*/
+/* .gnb:hover  .gnbBg{
+  
+} */
+

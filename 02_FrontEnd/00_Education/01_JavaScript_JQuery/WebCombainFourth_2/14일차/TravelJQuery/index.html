@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Website</title>
+  <meta charset="utf-8">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <img id="logo" src="images/logo.png" width="165" height="58">
+  <div id="menu">
+    <a id="home">Home</a>
+    <a id="seoul">Seoul</a>
+    <a id="tokyo">Tokyo</a>
+    <a id="paris">Paris</a>
+  </div>
+  <img id="photo" src="images/home.png" width="90%">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+/*       $('#home').on('click', clickHome);
+      $('#seoul').on('click', clickSeoul);
+      $('#tokyo').on('click', clickTokyo);
+      $('#paris').on('click', clickParis); */
+
+      $('#menu a').on('click', selectMenu);
+
+      // $(document).on('keydown', processKeyEvent);
+      $(document).on('keydown', selectMenu);
+
+      // mouse hover 효과 이벤트
+      $('#photo').on('mouseenter', mouseEnterPhoto);
+      $('#photo').on('mouseleave', mouseLeavePhoto);
+
+      // 키보드 1,2,3,4 key와 매칭되는 이미지 전환
+      function selectMenu(e){
+        /* console.log(event)
+        console.log(event.currentTarget.id) */
+
+        let targetId = '';
+        if(e.type === 'click'){
+          targetId = e.currentTarget.id;
+        }
+        else if(e.type = 'keydown'){
+          if(e.key === '1'){
+            targetId = 'home';
+          }
+          else if (e.key === '2'){
+            targetId = 'seoul';
+          }
+          else if (e.key === '3'){
+            targetId = 'tokyo'
+          }
+          else if (e.key === '4'){
+            targetId = 'paris'
+          }
+        }
+
+        // 선택된 요소와 매칭된 이미지 변경
+        $('#photo').attr('src', 'images/'+ targetId + '.png');
+
+        // 메뉴의 a태그 모두 폰트 굵기 '보통' 상태로 변경
+        $('#menu a').css('font-weight', 'normal');
+
+        // 선택한 요소만 폰트 굵기 '굵게' 상태로 변경
+        $('#' + targetId).css('font-weight', 'bold')
+
+      }
+
+/*     function clickHome() {
+      $('#photo').attr('src', 'images/home.png');
+      $('#home').css('font-weight','bold');
+      $('#seoul').css('font-weight','normal');
+      $('#tokyo').css('font-weight','normal');
+      $('#paris').css('font-weight','normal');
+    }
+    
+    function clickSeoul() {
+      $('#photo').attr('src', 'images/seoul.png');
+      $('#seoul').css('font-weight','bold');
+      $('#home').css('font-weight','normal');
+      $('#tokyo').css('font-weight','normal');
+      $('#paris').css('font-weight','normal');
+    }
+
+    function clickTokyo() {
+      $('#photo').attr('src', 'images/tokyo.png');
+      $('#tokyo').css('font-weight','bold');
+      $('#home').css('font-weight','normal');
+      $('#seoul').css('font-weight','normal');
+      $('#paris').css('font-weight','normal');
+    }
+
+    function clickParis() {
+      $('#photo').attr('src', 'images/paris.png');
+      $('#paris').css('font-weight','bold');
+      $('#home').css('font-weight','normal');
+      $('#tokyo').css('font-weight','normal');
+      $('#seoul').css('font-weight','normal');
+    } */
+
+    // 마우스 hover 시 boxt 그림자 효과
+    function mouseEnterPhoto() {
+      $('#photo').css('box-shadow', '5px 10px');
+    }
+
+    function mouseLeavePhoto() {
+      $('#photo').css('box-shadow', 'none');
+    }
+
+/*     function processKeyEvent(event) {
+      if (event['key'] === '1') {
+        clickHome();
+      }
+      else if (event['key'] === '2') {
+        clickSeoul();
+      }
+      else if (event['key'] === '3') {
+        clickTokyo();
+      }
+      else if (event['key'] === '4') {
+        clickParis();
+      }
+    } */
+    </script>
+</body>
+</html>

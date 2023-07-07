@@ -1,0 +1,114 @@
+<body>
+    <div class="trip">
+        <h1>고객님만을 위한 추천여행</h1>
+        <ul class="con">
+            <li>
+                <a href="#">
+                    <p class="img">
+                        <img src="./img/hana01.jpg" alt="괌">
+                    </p>
+                    <!-- .img -->
+                    <div class="text">
+                        <span class="type">패키지</span>
+                        <h3>괌 5일 #두짓타니 #디럭스오션프론트룸 #호텔 조식 #시내관광 #벽화투어 #돌핀크루즈</h3>
+                        <p class="price">1,499,000<small>원~</small></p>
+                    </div>
+                    <!-- .text -->
+                </a>
+            </li>
+            <!-- 1 li -->
+            <li>
+                <a href="#">
+                    <p class="img">
+                        <img src="./img/hana02.jpeg" alt="사이판">
+                    </p>
+                    <!-- .img -->
+                    <div class="text">
+                        <span class="type">패키지</span>
+                        <h3>[PCR 음성이라면,떠나자] 사이판 8일 #켄싱턴 5박 #월드 2박 #250불 여행지원금</h3>
+                        <p class="price">1,499,000<small>원~</small></p>
+                    </div>
+                    <!-- .text -->
+                </a>
+            </li>
+            <!-- 2 li -->
+            <li>
+                <a href="#">
+                    <p class="img">
+                        <img src="./img/hana03.jpg" alt="섬">
+                    </p>
+                    <!-- .img -->
+                    <div class="text">
+                        <span class="type">패키지</span>
+                        <h3>[김포출발] 제주 3일 #특1급 #노옵션 #노팁 #가을여행 #카멜리아힐 #산굼부리억새 #유람선</h3>
+                        <p class="price">1,499,000<small>원~</small></p>
+                    </div>
+                    <!-- .text -->
+                </a>
+            </li>
+            <!-- 3 li -->
+            <li>
+                <a href="#">
+                    <p class="img">
+                        <img src="./img/hana04.png" alt="사이판">
+                    </p>
+                    <!-- .img -->
+                    <div class="text">
+                        <span class="type">패키지</span>
+                        <h3>[PCR 음성이라면,떠나자] 사이판 8일 #켄싱턴 5박 #월드 2박 #250불 여행지원금</h3>
+                        <p class="price">1,499,000<small>원~</small></p>
+                    </div>
+                    <!-- .text -->
+                </a>
+            </li>
+            <!-- 4 li -->
+        </ul>
+    </div>
+    <!-- .trip -->
+    <div class="notice">
+        <h2>공지사항</h2>
+        <a href="#" class="more">더보기</a>
+        <ul class="con">
+            <li>
+                <a href="#">
+                    <span class="tit">[항공권소식] [공지사항] 해외항공 전화상담 중단안내 입니다.</span>
+                    <span class="date">2021.12.14</span>
+                </a>
+            </li>
+            <!-- 1 li -->
+            
+            <li>
+                <a href="#">
+                    <span class="tit">[항공권소식] [해외항공 이용 변경 안내] 코로나 19로 인한 이용변경안내</span>
+                    <span class="date">2021.12.14</span>
+                </a>
+            </li>
+            <!-- 2 li -->
+            
+            <li>
+                <a href="#">
+                    <span class="tit">[항공권소식] 노랑풍선 포인트 유효기간 연장 안내.</span>
+                    <span class="date">2021.12.14</span>
+                </a>
+            </li>
+            <!-- 3 li -->
+            
+            <li>
+                <a href="#">
+                    <span class="tit">[항공권소식] [아시아나항공] 타이페이 노성 이용 변경안내.</span>
+                    <span class="date">2021.12.14</span>
+                </a>
+            </li>
+            <!-- 4 li -->
+            
+            <li>
+                <a href="#">
+                    <span class="tit">[항공권소식] (CX) 케세이퍼시픽 '무제한 항공권 무료 이벤트'</span>
+                    <span class="date">2021.12.14</span>
+                </a>
+            </li>
+            <!-- 5 li -->
+        </ul>
+    </div>
+    <!-- .notice -->
+</body>

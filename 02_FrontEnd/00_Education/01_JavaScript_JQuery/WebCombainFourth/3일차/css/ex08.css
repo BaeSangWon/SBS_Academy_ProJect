@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+#wrap{
+    width: 600px;
+    /* 인라인태그의 경우 display:block, 블럭요소의 경우 width값 필수 */
+    margin: 50px auto;
+}
+
+.photo{
+    position: relative;
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+    background-color: antiquewhite;
+}
+
+.photoBox{
+    position: absolute;
+    top: -100%;
+    left: 0;
+}
+
+.photoBox:first-child{
+    top: 0;
+}
+
+.pager{
+    margin-top: 20px;
+}
+
+.pager ul{
+    display: flex;
+    justify-content: center;
+}
+
+.pager li {
+    width: 15px;
+    height: 15px;
+    margin: 0 8px;
+    background-color: #ccc;
+    border-radius: 50%;
+    /* 글자 들여쓰기 속성 */
+    text-indent: -9999px;
+}
+
+.pager .active{
+    background-color: lightblue;
+}

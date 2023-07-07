@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex12</title>
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        
+        /* box1 style */
+        .box1 {
+            margin: 30px 10px;
+        }
+        .box1 h3 {
+            margin-bottom: 20px;
+        }
+        .box1 p {
+            padding: 30px;
+            line-height: 2em;
+            border: 2px solid green;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px #666;
+        }
+
+        /* box2 style */
+        .box2 {
+            width: 300px;
+            margin: 20px;
+            padding: 30px;
+            border: 2px solid #999;
+            border-radius: 15px;
+        }
+        .box2 .info {
+            margin: 8px 0;
+            padding: 8px 0;
+            font-size: 14px;
+            line-height: 2em;
+            border-top: 1px solid #bbb;
+            border-bottom: 1px solid #bbb;
+        }
+        .box2 .go {
+            font-size: 14px;
+            text-decoration: underline;
+            text-align: right;
+            color: blue;
+        }
+
+        /* box3 style */
+        .box3 {
+            margin: 50px 10px;
+        }
+        .box3 h3{
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 10px solid lightsalmon;
+        }
+        .box3 ul {
+            padding: 30px;
+            list-style: disc;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #eee;
+        }
+        .box3 ul li:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <h3>박스 모델이란?</h3>
+        <p>
+            웹 페이지에 있는 모든 HTML 요소는 사각형 형태를 가지는 박스로 생각할 수 있다. CSS에서는 이러한 박스를 기반으로 하여 요소에
+            경계선을 그릴 수 있으며 여백을 조정하여 요소를 화며에 배치할 수 있게 한다.
+        </p>
+    </div>
+    <!-- box1 -->
+    <br><br>
+    <div class="box2">
+        <h3>HTML/CSS 강좌</h3>
+        <p class="info">
+            HTML/CSS를 이용하면 텍스트, 이미지, 비디오, 오디오 등으로 홈페이지를 제작할 수 있어요^^
+        </p>
+        <p class="go">
+            <a href="#">바로가기 >></a>
+        </p>
+    </div>
+    <!-- box2 -->
+    <br><br>
+    <div class="box3">
+        <h3>우대 정보</h3>
+        <ul>
+            <li>
+                연령에 따른 우대 (나이 확인이 가능한 신분증 또는 서류 제시) <br>
+                - 경로 : 만 65세 ~ <br>
+                - 청소년 : 만 13세 ~ 만 18세
+            </li>
+            <li>
+                장애인 우대 (장애인등록증 제시) 우대가격 <br>
+                - 1일 이용권 우대가로 구입 가능 <br>
+                - 장애의 정도가 심한 장애인 : 본인 + 동반 1인
+            </li>
+            <li>
+                국가유공자 우대 (증빙서류 제시) 파크 이용권 가격 보기 <br>
+                - 본인 + 동반 1인, 1일 이용권 50% 우대가로 구입 가능
+            </li>
+        </ul>
+    </div>
+    <!-- box3 -->
+</body>
+</html>

@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* 기본값 - 모바일 화면 기준 */
+.wrap {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.box1 .pc {
+    display: none;
+}
+.box2 {
+    margin-top: 30px;
+}
+.box2 li {
+    margin-top: 5px;
+}
+.box3 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.box3 ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+.box3 li {
+    width: 50%;
+    padding: 0 5px;
+    margin-top: 10px;
+}
+/* 모바일 서비스 끝 */
+/* 태블릿 화면 시작 */
+@media (min-width: 768px) {
+    .box1 .mo {
+        display: none;
+    }
+    .box1 .pc {
+        display: block;
+    }
+    .box2 {
+        margin-top: 40px;
+    }
+    .box2 ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+    .box2 li {
+        width: 50%;
+        padding: 0 5px;
+        margin-top: 10px;
+    }
+    .box3 {
+        margin-top: 35px;
+        margin-bottom: 40px;
+    }
+    .box3 ul {
+        padding: 0 17px;
+    }
+    .box3 li {
+        width: 33.33%;
+        padding: 0 8px;
+        margin-top: 15px;
+    }
+}
+/* 768px 태블릿 끝 */
+/* pc 사이즈 시작 */
+@media (min-width: 1240px) {
+    .box1 {
+        max-width: 1920px;
+        margin: 0 auto    
+    }
+    .box2 {
+        width: 1280px;
+        margin: 90px auto 1080px auto;
+    }
+    .box3 {
+        width: 1280px;
+        margin: 90px auto 100px auto;
+    }
+}

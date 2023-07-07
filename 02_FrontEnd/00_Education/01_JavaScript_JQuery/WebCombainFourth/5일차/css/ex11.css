@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    /* img 태그는 기본적으로 block 요소로 감싸고 해당 block의 width, height 옵션 적용
+       img 태그는 절대 직접적으로 효과를 주지 말것 */
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+}
+
+h1{
+    width: 600px;
+    margin: 20px auto;
+    font-size: 20px;
+    /* 폰트사이즈가 20px이 넘어가면 line-height를 최소 1.2em이상 사용할것 */
+    line-height: 1.2em;
+}
+
+.slide{
+    position: relative;
+    width: 600px;
+    margin: 0 auto 50px;
+}
+
+.s04Box{
+    box-sizing: border-box;
+    padding: 0 5px;
+}

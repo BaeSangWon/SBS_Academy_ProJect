@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키보드 이벤트 예시코드</title>
+</head>
+<body>
+    <input type="text" id="input">
+</body>
+
+<script>
+    let myInput = document.querySelector('.#input');
+    myInput.addEventListener('keydown', onkeyDown);
+
+    function onkeyDown(e){
+        // 누르는 키보드에 키에 대한 keyCode값 전달
+        console.log(`키 : ${e.keyCode}`);
+    }
+</script>
+</html>

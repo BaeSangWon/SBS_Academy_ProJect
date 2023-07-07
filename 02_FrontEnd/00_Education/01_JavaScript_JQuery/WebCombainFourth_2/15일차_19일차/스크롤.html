@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤</title>
+    <style>
+        body{
+            font-family: "맑은 고딕", "고딕", "굴림";
+            height: 2000px;
+        }
+
+        .top{
+            display: inline-block;
+            background-color: skyblue;
+            height: 200px;
+            width: 100vw;
+            text-align: center;
+            font-size: 42px;
+            line-height: 200px;
+            vertical-align: middle;
+        }
+
+        button{
+            position: fixed;
+            left: 1000px;
+            top: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        인생은 아름다워~!
+    </div>
+
+    <button class="go-to-top">Top</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        // 스크롤을 내릴 때마다 'opacity(투명도)' 조절 
+        $(window).on('scroll', function(){
+            $('.top').css('opacity', 1 - $(window).scrollTop() / $('.top').height())
+        })  // 1 - 0 / 200 = 1 - 0 = 1
+            // 100일 경우 :  1 - 100 / 200 = 1 - 0.5 = 0.5 반투명
+
+        // 'Top' 버튼 클릭 시 0.5초에 걸쳐 페이지 상단으로 스크롤 이동
+        $('.go-to-top').on('click', function(){
+            $('html, body').animate({
+                scrollTop:0
+            }, 500)
+            // $(window).scrollTop(0)
+        })
+    </script>
+</body>
+</html>

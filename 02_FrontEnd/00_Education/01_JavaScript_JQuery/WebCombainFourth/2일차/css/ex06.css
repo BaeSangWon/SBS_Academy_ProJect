@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* reset */
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 100px auto;
+}
+
+.btns > div{
+    cursor: pointer;
+}
+
+/* 가상선택자로 '닫기' 버튼 만들기 1-1(버튼영역) */
+.btns .line span,
+.btns .line::before,
+.btns .line::after{
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #333;
+}
+
+.btns .line::before,
+.btns .line::after{
+    content: "";
+}
+
+.btns .line span{
+    margin: 6px 0;
+}
+
+.sideB, .sideL, .sideR, .sideT{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+}
+
+.sideT{
+    top: -100%;
+    left: 0;
+    background-color: cyan;
+}
+
+.sideB{
+    bottom: -100%;
+    left: 0;
+    background-color: magenta;
+}
+
+.sideL{
+    left: -100%;
+    top: 0;
+    background-color: yellow;
+}
+
+.sideR{
+    right: -100%;
+    top: 0;
+    background-color: skyblue;
+}
+
+.close{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 30px;
+    background-color: #333;
+    cursor: pointer;
+}
+
+/* 가상선택자로 '닫기' 버튼 만들기 1-2(버튼내부 x 아이콘) */
+.close::before,
+.close::after{
+    position: absolute;
+    top: 18px;
+    left: 5px;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+}
+
+.close::before{
+    transform: rotate(45deg);
+}
+
+.close::after{
+    transform: rotate(-45deg);
+}

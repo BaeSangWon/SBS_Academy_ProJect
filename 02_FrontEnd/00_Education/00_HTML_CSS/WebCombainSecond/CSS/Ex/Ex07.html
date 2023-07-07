@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex07</title>
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;/* 부모요소에서 상속 */    
+        }
+        /* style */
+        ul {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        ul::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        ul li {
+            float: left;
+            width: 320px;
+            background-color: #f1f1f1;
+        }
+        ul li:not(:last-child) {
+            margin-right: 20px;
+        }
+        ul li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        ul li a .text {
+            padding: 10px 0;
+            text-align: center;
+        }
+        ul li a .text h3 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="ul1">
+            <li>
+                <a href="#">
+                    <img src="./img/wallet.png" alt="지갑">
+                    <div class="text">
+                        <h3>머니 플랜</h3>
+                        <p>은행, 보험, 증권, 신용카드, 채권 <br> 모든 금융정보를 한 눈에</p>
+                    </div>
+                    <!-- text area -->
+                </a>
+            </li>
+            <!-- 1번 li -->
+            <li>
+                <a href="#">
+                    <img src="./img/coin.png" alt="동전">
+                    <div class="text">
+                        <h3>머니 플랜</h3>
+                        <p>은행, 보험, 증권, 신용카드, 채권 <br> 모든 금융정보를 한 눈에</p>
+                    </div>
+                    <!-- text area -->
+                </a>
+            </li>
+            <!-- 1번 li -->
+            <li class="last">
+                <a href="#">
+                    <img src="./img/calculator.png" alt="계산기">
+                    <div class="text">
+                        <h3>머니 플랜</h3>
+                        <p>은행, 보험, 증권, 신용카드, 채권 <br> 모든 금융정보를 한 눈에</p>
+                    </div>
+                    <!-- text area -->
+                </a>
+            </li>
+            <!-- 3번 li -->
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex20</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* box style */
+        .box {
+            overflow: hidden;
+            width: 800px;
+            background-color: #aaa;
+        }
+        .a {
+            float: left;
+            width: 191px;
+            height: 90px;
+            margin-bottom: 12px;
+            background-color: orange;
+        }
+        .box .box1 .box2 p {
+            float: right;
+            width: 70px;
+            height: 40px;
+            margin: 50px 0 12px 20px;
+            background-color: lightgreen;
+        }
+        .box .box3 p {
+            float: left;
+            width: 191px;
+            height: 150px;
+            margin-right: 12px;
+            background-color: hotpink;
+        }
+        .box .box3 p:nth-child(4) {
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+            <p class="a">가</p>
+            <div class="box2">
+                <p>나1</p>
+                <p>나2</p>
+                <p>나3</p>
+                <p>나4</p>
+                <p>나5</p>
+                <p>나6</p>
+            </div>
+        </div>
+        <div class="box3">
+            <p>다1</p>
+            <p>다2</p>
+            <p>다3</p>
+            <p>다4</p>
+        </div>
+    </div>
+</body>
+</html>

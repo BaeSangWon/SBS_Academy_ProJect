@@ -1,0 +1,88 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+
+.slide {
+    position: relative;
+    min-width: 1240px;
+}
+.sImg {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+}
+.sImgBox {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+}
+.sImgBox a {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -960px;
+}
+.sPager {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.sPager ul {
+    display: flex;
+}
+.sPager li {
+    width: 50px;
+    height: 5px;
+    margin: 0 10px;
+    text-indent: -99999px;
+    cursor: pointer;
+    background-color: #ccc;
+}
+.sPager .active {
+    background-color: skyblue
+}
+.sPrev, .sNext {
+    position: absolute;
+    top: 180px;
+    width: 60px;
+    height: 60px;
+    border-top: 4px solid #555;
+    border-left: 4px solid #555;
+    cursor: pointer;
+}
+.sPrev {
+    left: 100px;
+    transform: rotate(-45deg);
+}
+.sNext {
+    right: 100px;
+    transform: rotate(135deg);
+}
+.sPrev span, .sNext span, .sPlay span, .sStop span {
+    display: block;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+.sPlay, .sStop {
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.sPlay {
+    display: none;
+    background-image: url(../../../23일차/Ex/img/btn_play.png);
+}
+.sStop {
+    background-image: url(../../../23일차/Ex/img/btn_pause.png);
+}

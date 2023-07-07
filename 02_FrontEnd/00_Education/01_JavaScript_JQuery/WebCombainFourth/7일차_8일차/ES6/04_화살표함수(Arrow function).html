@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 화살표 함수</title>
+</head>
+<body>
+    <h1>화살표 함수(Arrow function)</h1>
+    <textarea cols="30" rows="100">
+
+        1. 함수 표현식을 화살표 함수로 표현할 수 있다.
+        2. 화살표 함수가 추가되어 함수를 간결하게 나타낼 수 있게 되어 가독성 및 유지 보수성이 올라갔다.
+        3. 만약 함수의 본문에 return만 있는 경우 화살표 함수는 return과 {}를 생략할 수 있다. 단 둘을 같이 생략해야 한다.
+        4. return문에서 소괄호는 사용 가능하다
+        5. ES6에서 가장 크고 중요한 핵심 문법이라고 할 수 있다
+
+        [ES5]
+        function foo(){
+            consol.log('곰돌이 푸우~')
+        }
+
+        [ES6] 
+        let foo = () => {
+            console.log("곰돌이 푸우~")
+        }
+       
+        - 큰 차이가 없어보이지만 엄청난 차이를 가지고 있다
+
+        [ES5]
+        function foo(){
+            return "HAHAHA"
+        }
+
+        [ES6]
+        let foo = () => "HAHAHA"
+        - 위 방법처럼 함수의 내용이 한줄 뿐이라면 리턴 키워드의 생략이 가능하고, 중괄호 생략도 가능하다
+
+        👀주의사항
+        - 새로운 방식이 생겨났다고 해서 항상 과거의 방식이 완전히 없어지지는 않는다
+        - 화살표 함수가 편리하긴 하지만 100% 일반 function을 대체할 수 없기 때문이다
+        - 그 차이점 중 가장 큰 차이점이 this 이다
+
+        let age = 30
+        let person = {
+            name : "JiHun",
+            age : 20,
+            getInfo : function(){
+                console.log(age)
+            }
+        }
+        person.getInfo()라고 쓴다면 출력 결과는 무엇일까?
+
+        - this는 나, 나 자신을 가리키는 말이라고 생각하면 쉽다
+        - 좀 더 정확하게 말하면 함수를 부르는 객체가 바로 this가 되는 것이다
+        - 화살표 함수는 이 this를 사용하지 못한다
+        - 일반 함수는 나를 불러낸 객체를 나 자신으로 인식하게끔 생성이 되어지는데, 화살표 함수는 이를 생성하지 못한다
+        - 화살표 함수가 표현하는 this는 나 자신이 아니라 나를 불러낸 범위가 속해있는 곳을 this로 인식하게 된다
+        - 이것을 렉시컬 스코프(lexical scope)라고 한다
+
+        - 화살표 함수는 선언시기와 호출의 시기도 매우 중요하다
+        - 호이스팅 대상에 포함되어지지 않는다는 이야기다
+
+    </textarea>
+</body>
+</html>

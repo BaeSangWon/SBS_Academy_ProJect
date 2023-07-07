@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수의 종류</title>
+</head>
+<body>
+    <button id="btnStart">시작</button>
+    <script>
+        // 1. 함수 리터럴
+
+        // 변수에 함수를 저장하는 경우
+        function hi(name){
+            document.write(name + "님 환영합니다.");
+        }
+        hi("홍길동");
+
+        var fhi = hi;       // 함수 리터럴 
+        fhi("임꺽정");
+
+        // 변수에 익명함수를 저장하는 경우 (변수가 함수명처럼 사용되는 느낌)
+        var func = function(){
+            document.write("함수 리터럴");
+        }
+        func();
+
+        // 2. 함수를 매개변수로 이용
+        function hi1(){
+            alert("안녕하세요");
+        }
+
+        function hi2(){
+            alert("반갑습니다");
+        }
+        
+        function exec(func){        // func = hi1; , func = hi2;와 동일
+            func();
+        }
+
+        exec(hi1);
+        exec(hi2);
+
+
+        // 3. return 값으로 함수 이용
+        $(document).ready(function(){
+            function hi(){
+                document.write("안녕하세요. 반갑습니다.!");
+            }
+            // 버튼 클릭 시 hi 함수 실행
+            $('#btnStart').click(hi);
+        })
+
+
+        // 4. 객체방식의 함수 정의 (실무에서 잘 사용되지 않는다)
+        var hi = new Function("name", "document.write(name + '님 환영합니다.')");
+        hi("홍길동")
+
+        // 익명함수의 확장으로 함수 정의
+        // 재사용 목적이 아닌 함수끼리의 충돌을 방지하기 위함
+        (function(name){
+            document.write(name + "님 환영합니다.");
+        })("홍길동")
+    </script>
+</body>
+</html>

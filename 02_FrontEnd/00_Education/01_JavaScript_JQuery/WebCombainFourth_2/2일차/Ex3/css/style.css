@@ -1,0 +1,285 @@
+@charset "UTF-8";
+
+.wrap{
+    width: 100%;
+    height: 100vh;
+    min-width: 1600px;
+    min-height: 1600px;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid #999;
+}
+
+.gnb ul{
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gnb .mainnav{
+    display: block;
+    font-size: 16px;
+    color: #666;
+}
+
+header > .join{
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* header_end */
+
+.main{
+    width: 100%;
+    height: 700px;
+}
+
+.main > ul{
+    width: 100%;
+    height: 100%;
+}
+
+.main > ul > li{
+    width: 100%;
+    height: 100%;
+    background: url(../images/mainV.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.main a{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    left: 250px;
+    line-height: 80px;
+}
+
+.main p{
+    font-size: 40px;
+}
+
+.main h2{
+    font-size: 60px;
+    font-weight: normal;
+}
+
+.main .keyword{
+    color:#F25797;
+    font-weight: bold;
+}
+
+.main .small{
+    font-weight: bold;
+    font-size: 25px;
+}
+/* main_end */
+
+.contents{
+    width: 100%;
+}
+
+.contents > .bwrap{
+    width: 100%;
+    height: 360px;
+    background-color: #eee;
+    position: relative;
+}
+
+.bwrap > .banner{
+    width: 100%;
+    height: 100%;
+    background-color: #ededed;
+}
+
+.banner > ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    position: absolute;
+    bottom: 100px;
+}
+
+.banner > ul > li{
+    background-color: #fff;
+}
+
+.banner a{
+    width: 400px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner a > .banner_txt{
+    padding: 20px 0;
+    text-align: center;
+}
+
+.banner_txt > h4{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+/* bwrap_end */
+
+.cwrap{
+    width: 100%;
+    height: 700px;
+    background: url(../images/contact_bg.jpg) no-repeat center / cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cwrap > h2{
+    color: #fff;
+    font-size: 60px;
+}
+
+.cwrap > p{
+    color: #fff;
+    font-size: 25px;
+    padding: 20px 0;
+}
+
+.user_info_wrap > h4{
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.user_info_wrap > p{
+    padding: 20px;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 25px;
+}
+
+.user_info_wrap > .info{
+    float: right;
+    font-size: 25px;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.user_info_wrap > .info > input{
+    width: 18px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.user_info_wrap > .user_info_box{
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    
+}
+
+.user_info_box > .user_info{
+    width: 82%;
+    height: 40px;
+}
+
+.user_info > .user_name{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.user_name > input{
+    width: 100%;
+    height: 100%;
+   
+}
+
+.user_info > .phone_number{
+    width: 100%;
+    height: 40px;
+}
+
+.phone_number > input{
+    width: 31.42%;
+    height: 40px;
+}
+
+.user_info_box a{
+    display: block;
+    width: 17%;
+    height: 90px;
+    background-color: navy;
+    text-align: center;
+    line-height: 90px;
+}
+/* content_end */
+
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+
+footer > h2{
+    font-size: 40px;
+}
+
+footer > h2 > span{
+    font-weight: normal;
+}
+
+footer ul{
+    display: flex;
+    gap: 20px;
+}
+
+footer > .policy{
+   padding: 20px 0;
+   font-size: 25px;
+}
+
+footer > .address, .office_info{
+    font-size: 22px;
+}
+
+.address a::after, .office_info a::after{
+    content: "|";
+    font-size: 18px;
+    position: relative;
+    top: -2px;
+    left: 10px;
+}
+
+.address .last::after, .office_info .last::after{
+    display: none;
+}
+
+footer p{
+    font-size: 25px;
+    padding: 15px 0;
+}
+

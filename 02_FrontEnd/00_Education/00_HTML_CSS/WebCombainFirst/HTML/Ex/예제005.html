@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제5</title>
+</head>
+<body>
+    <h2>회원가입</h2>
+    <form>
+        아이디 <input type="text"> <br>
+        이름 <input type="text"> <br>
+        비밀번호 <input type="password"> <br>
+        비밀번호 확인 <input type="password"> <br>
+        전화번호 <input type="tel" placeholder="010-1234-1234"> <br>
+        이메일 <input type="email" required> @ 
+        <select>
+            <option selected> 이메일주소를 입력하세요</option>
+            <option>naver.com</option>
+            <option>gmail.com</option>
+        </select>
+        <br>
+        문자수신 여부 예<input type="radio" value="예" name="ans" checked> 
+        아니오<input type="radio" value="아니오" name="ans"> <br>
+        가입경로 
+        <input type="checkbox" value="친구소개" name="in"> 친구소개
+        <input type="checkbox" value="인터넷 검색" name="in"> 인터넷 검색
+        <input type="checkbox" value="블로그" name="in"> 블로그
+        <input type="checkbox" value="기타" name="in"> 기타
+        <br>
+        <button>확인</button>
+    </form>
+    <form>
+        <h2>전화번호 입력</h2>
+        이름 : <input type="text">
+        전화번호 : <input type="tel"> 
+        <br> <br>
+        <button>저장하기</button> <button>중복확인</button> <input type="reset" value="다시쓰기">
+    </form>
+    <form>
+        <h2>체크 박스</h2>
+        <p>TV에서 즐겨보는 분야는?</p>
+        <input type="checkbox" value="뉴스" name="cate" checked>뉴스 
+        <input type="checkbox" value="드라마" name="cate"checked>드라마
+        <input type="checkbox" value="스포츠" name="cate">스포츠
+        <input type="checkbox" value="엔터테인먼트" name="cate" checked>엔터테인먼트
+        <input type="checkbox" value="기타" name="cate">기타
+    </form>
+    <form>
+        <h2>라디오 버튼</h2>
+        이메일 수신 : <input type="radio" value="예" name="answ"> 예 <input type="radio" value="아니오" name="answ"> 아니오
+    </form>
+</body>
+</html>

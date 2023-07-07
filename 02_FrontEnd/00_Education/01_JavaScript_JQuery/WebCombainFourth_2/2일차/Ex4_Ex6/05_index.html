@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex05. 주어진 배열에서 특정조건에 맞는 값을 찾아 출력하는 프로그램</title>
+</head>
+<body>
+
+
+<script>
+/* 
+    기본 Logic
+    1. 주어진 11개의 문자열(생년월일 8자리, 이름 제공)
+    2. 이중에서 미성년자만 골라서 출력
+    - 상세 조건 : 2022년 기준으로 03년생까지 성인, 04년생부터 미성년자
+*/
+
+var birthdayDate = [
+    '20050309지수', '19960828제니' , '20061112로제' , '19960209리사' , '20060719안유진' , '19981216가을' , 
+    '19971201레이' , '20061204장원영' , '20061204리즈' , '19951218이서' , '20080803손예진'
+]
+
+function printGirl(arr){
+    console.log("미성년자 명단")
+    for(let i = 0; i < arr.length ; i++){
+        // 주어진 배열에서 0번째 ~ 3번째까지 총 4자리(즉, 태어난 년도값 반환)
+        // console.log(arr[i].substr(0,4))
+
+        // 주어진 문자열 값을 조건년도(숫자값)와 비교하기 위한 형변환 필요
+        if(Number(arr[i].substr(0, 4) > 2005)){
+            console.log(arr[i]);
+        }
+    }
+}
+
+printGirl(birthdayDate);
+
+</script>
+</body>
+</html>

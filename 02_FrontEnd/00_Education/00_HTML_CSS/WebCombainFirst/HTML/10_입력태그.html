@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력태그 input</title>
+</head>
+<body>
+    <h1>input</h1>
+    <p>input 태그는 type 속성에 따라 다양한 폼을 생성한다.</p>
+    <p>placeholder 이라는 속성에 값을 입력하면 input 박스 안에 입력내용에 대한 힌트가 나타난다. 내용이 입력되면 사라진다.</p>
+    <br>
+    <ol>
+        <li>
+            <h2><mark>text</mark></h2>
+            <p><input type="text" placeholder="아이디 이름 쓰는 자리다.."></p>
+            <!-- 로그인하면서 아이디를 적거나, 회원가입하면서 글자 입력하는 경우에 쓰이는 경우 type="text"를 사용한다. -->
+        </li>
+        <li>
+            <h2><mark>password</mark></h2>
+            <p><input type="password" placeholder="비밀번호 넣는 자리다.."></p>
+        </li>
+        <li>
+            <h2><mark>search</mark></h2>
+            <p><input type="search" placeholder="검색어 넣는 자리다.."></p>
+        </li>
+        <li>
+            <h2><mark>email</mark></h2>
+            <p><input type="email" placeholder="이메일 주소 넣는 자리다.."></p>
+        </li>
+        <li>
+            <h2><mark>tel</mark></h2>
+            <p><input type="tel" placeholder="전화번호 넣는 자리다.."></p>
+        </li>
+        <li>
+            <h2>color</h2>
+            <p><input type="color"></p>
+            <!-- 색상 선택하는 박스 -->
+        </li>
+        <li>
+            <h2>number</h2>
+            <p><input type="number" value="20" min="5" max="30"></p>
+            <!-- 최소값(min)과 최대값(30), 초기값(value)을 설정하는 속성, 숫자를 선택할 수 있는 박스 -->
+        </li>
+        <li>
+            <h2>range</h2>
+            <p><input type="range" min="20" max="100" value="60"></p>
+            <!-- range는 수치 범위를 막대로 속성이다. -->
+        </li>
+    </ol>
+    <ol>
+        <li>
+            <h2><mark>checkbox</mark></h2>
+            <div>
+                <input type="checkbox" value="강아지" name="pet" checked>강아지
+                <!-- checked 속성은 미리 체크 되어지게금 만드는 속성이다. -->
+                <input type="checkbox" value="고양이" name="pet">고양이
+                <input type="checkbox" value="호랑이" name="pet">호랑이
+                <input type="checkbox" value="병아리" name="pet">병아리
+                <!-- value 속성을 넣어서 선택한 박스의 내용을 표시해야 한다. -->
+                <!-- name 속성을 넣어서 같은 카테고리의 선택지라는 것을 표시해야 한다. -->
+                <!-- name 속성은 한글 안됨.. 무조건 영어로.. -->
+                <!-- 글자가 먼저 오고 체크박스를 뒤로 보내고 싶으면 .. 글자를 input 태그 앞으로 옮기면 된다. -->
+                <!-- input 태그는 인라인 요소이다. -->
+                <input type="checkbox" value="치킨" name="food">치킨
+                <input type="checkbox" value="피자" name="food">피자
+                <input type="checkbox" value="족발" name="food">족발
+                <input type="checkbox" value="보쌈" name="food">보쌈
+            </div>
+            <p>다중 선택이 가능 / value에 전송값을 입력 / name에 같은 카테고리로 묶음 / checked라는 값을 넣으면 해당 항목이 선택되어진 상태로 나타나게 된다.</p>
+        </li>
+        <li>
+            <h2><mark>radio</mark></h2>
+            <div>
+                <input type="radio" value="강아지" name="pett">강아지
+                <input type="radio" value="고양이" name="pett">고양이
+                <input type="radio" value="호랑이" name="pett" checked>호랑이
+                <!-- checked 속성으로 먼저 체크되어있게 만들어준다. -->
+                <input type="radio" value="병아리" name="pett">병아리
+                <!-- 글자를 체크박스 앞으로 보내고 싶으면 글자의 위치를 input태그 앞으로 옮기면 된다. -->
+                <input type="radio" value="치킨" name="foodd">치킨
+                <input type="radio" value="피자" name="foodd">피자
+                <input type="radio" value="보쌈" name="foodd">보쌈
+                <input type="radio" value="족발" name="foodd">족발
+            </div>
+            <p> 다중선택 불가능 / value에 전송값을 입력 / name에 같은 카테고리로 묶어야 같은 카테고리 안에서 하나만 선택이 가능해진다. / checked라는 속성을
+                넣으면 해당 항목이 선택되어진 상태로 나타난다. </p>
+        </li>
+    </ol>
+    <ol>
+        <li>
+            <h2><mark>submit</mark></h2>
+            <p><input type="submit" value="누르는 버튼"></p>
+            <!-- 마지막에 제출 같은 .. 느낌의 버튼이다. -->
+            <!-- 통상적을 버튼이 필요하면 이거보다는 button 태그를 많이 쓰긴 한다. -->
+            <!-- value 속성값으로 버튼에 나오는 글자를 넣을 수 있다. -->
+        </li>
+        <li>
+            <h2><mark>button</mark></h2>
+            <p><input type="button" value="p 태그 안에 input 태그 타입 button"></p>
+            <button>버튼 태그 단독</button>
+            <!-- 보통은 p 태그 안에 input 태그 타입 button 속성 보다는 그냥 button 태그 단독으로 많이 사용한다. -->
+            <!-- value 속성값에 버튼에 나오는 글자를 넣을 수 있다. -->
+        </li>
+        <li>
+            <h2>reset</h2>
+            <p><input type="reset" value="취소"></p>
+            <!-- form 태그 안에 있으면 리셋기능 사용가능하다. 전부 리셋 시키는 속성값 -->
+            <!-- value 속성값에 버튼에 나오는 글자를 넣을 수 있다. -->
+        </li>
+        <li>
+            <h2>file</h2>
+            <p><input type="file"></p><!-- 파일을 선택하는 속성값 -->
+        </li>
+        <li>
+            <h2>date</h2>
+            <p><input type="date"></p> <!-- 날짜를 선택하는 속성값 -->
+        </li>
+    </ol>
+    <br><br><br><br><br>
+    <div>
+        <h2><mark>form</mark></h2>
+        <p>form 태그는 입력양식을 만들기 위한 태그다. 입력양식에 사용하는 태그들은 form 태그에 작성을 해주면 된다.</p>
+        <form>
+            아이디<input type="text" placeholder="ID">
+            비밀번호 <input type="password" placeholder="Password">
+            <input type="submit" value="로그인">
+        </form>
+        <!-- 줄바꿈을 일으키려면 아이디와 비밀번호 각각의 p 태그나 div 태그로 묶던지, br 태그로 줄바꿈을 해주면 된다. -->
+    </div>
+    <div>
+        <h2><mark>label</mark> / required</h2>
+        <p>label : label은 속성이 아니라 태그, 입력태그들에 대한 제목을 정의하는 <b>태그</b></p>
+        <p>required : 항목에 내용이 비었을 경우 경고메세지 표시하는 <b>속성</b></p>
+        <br><br>
+        <form>
+            <label for="aa">아이디</label>
+            <input type="text" id="aa" required>
+            <br>
+            <label for="bb">비밀번호</label>
+            <input type="password" id="bb" required>
+            <br>
+            <input type="submit" value="로그인">
+            <!-- label의 for 속성값과 input의 id 속성값이 같으면 태그 어디를 클릭해도 활성화가 된다. -->
+        </form>
+    </div>
+    <div>
+        <h2><mark>textarea</mark></h2>
+        <p>textarea 태그는 여러줄의 글을 입력할 수 있는 텍스트 상자다. textarea 태그는 인라인 요소이다.</p>
+        <textarea></textarea>
+        <textarea cols="30" rows="10"></textarea>
+    </div>
+</body>
+</html>

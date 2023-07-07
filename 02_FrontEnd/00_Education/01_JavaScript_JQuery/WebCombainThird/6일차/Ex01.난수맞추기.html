@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex01. 난수를 발생시켜 맞추는 게임</title>
+</head>
+<body>
+   <script>
+        let low = 0;                // 범위의 최소값
+        let high = 0;               // 범위의 최고값
+        let card = 0;               // 정답을 저장할 변수
+
+        // 정답 유추를 위한 무한 루프
+        while(true){
+            let count = 0;          // 사용자의 시도 횟수
+            low = 0;
+            high = 99;
+            Math.floor(Math.random() * 100)     // 0 ~ 99까지의 난수 발생
+            alert("수를 결정하였습니다. 맞춰보세요.")
+
+            // 내부 루프의 경우는 정해진 난수를 맞출때까지 무한 반복
+            while(true){
+                let n = 0;
+                alert(low + " - " + high)       // 값의 범위를 출력
+                count++
+                alert("시도횟수 : " + count + "번째");
+
+                n = prompt("숫자를 입력하세요!")    // 사용자로부터 숫자를 입력 받음
+                n = parseInt(n)     // 입력받은 숫자를 정수로 변환
+
+                if(n > high || n < low){
+                    alert("값의 범위를 벗어났어요")
+                } else {
+                    // 정상적인 범위의 수가 입력된 경우
+                    if(n === card){
+                        alert("정답입니다. 짝짝짝!!")
+                        break
+                    // 입력된 값이 정답보다 높은 수..
+                    } else if(n > card){
+                        alert("정답은 더 낮은 수 입니다.")
+                        high = n    // 범위 재지정을 위한 값 대입
+
+                    // 입력된 값이 정답보다 낮은 수라면..    
+                    } else{
+                        alert("정답은 더 높은 수입니다.")
+                        low = n     // 범위 재지정을 위한 값 대입
+                    }
+                }   
+            }
+            // 내부루프 종료
+
+            alert("시도횟수는" + count + "입니다")
+
+            let con =  confirm("다시 게임을 하시겠습니까")
+            if(con == false){
+                break
+            }
+        }
+   </script> 
+</body>
+</html> 

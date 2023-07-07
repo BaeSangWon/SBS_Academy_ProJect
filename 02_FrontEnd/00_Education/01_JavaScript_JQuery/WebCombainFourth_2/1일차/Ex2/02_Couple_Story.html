@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex02. 커플 이벤트 데이</title>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="images/logo.png" id="logo" width="157">
+    </div>
+    <!-- navbar_end -->
+
+    <div class="main">
+        <div class="container">
+            <h2>만난지 <span id="day-count">00</span> 일째</h2>
+    
+            <div class="img-row">
+                <img src="images/female.png" width="148">
+                <img src="images/dot.png" width="8">
+                <img src="images/dot.png" width="8">
+                <img src="images/heart.png" width="16">
+                <img src="images/dot.png" width="8">
+                <img src="images/dot.png" width="8">
+                <img src="images/male.png" width="148">
+            </div>
+            <!-- img-row_end -->
+
+            <!-- 시작일자 달력 삽입 -->
+            <div class="date-row">
+                <label for="start">시작일</label>
+                <input type="date" name="start" id="start">
+            </div>
+            <!-- date-row_end -->
+            <button id="calculate">결과확인</button>
+        </div>
+        <!-- container_end -->
+    </div>
+    <!-- main_end -->
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/Ex02.js"></script>
+</body>
+</html>

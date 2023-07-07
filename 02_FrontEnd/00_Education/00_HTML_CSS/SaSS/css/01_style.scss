@@ -1,0 +1,45 @@
+// x : 변수
+$x:300px;
+
+section{
+    // height: 300px;
+    height: $x;
+    // & : 현재의 중괄호(스코프) 밖의 대상(즉, section)을 가르킴
+    // section:hover{border-color:blue;} 와 같은 표현
+    &:hover{
+        border-color: blue;
+    }
+
+    // secton:nth-of-type(1){border-color:gold} 와 같은 표현
+    &:nth-of-type(1){
+        border-color: gold;
+    }
+
+    border: 10px solid green;
+
+    div{
+        border: 10px solid red;
+        margin: 10px;
+
+        // 후손선택자
+        span{
+            display: inline-block;
+            width: 30%;
+            height: 50px;
+            background-color: green;
+            margin: 10px;
+        }
+    }
+
+    // section의 자식요소 선택
+    & > div{
+        background-color: yellow;
+    }
+}
+
+.b{
+    border: 10px solid green;
+    // $x = 300px , $x + 100px = 400px;
+    height: $x + 100px;
+}
+  

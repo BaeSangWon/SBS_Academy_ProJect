@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex16</title>
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* style */
+        .wrap div {
+            padding-top: 150px;
+            font-size: 120px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .wrap div:not(:nth-child(4)) {
+            width: 100%;
+            height: 100vh;
+        }
+        .d1 {
+            background-color: blueviolet;
+        }
+        .d2 {
+            background-image: url(../img/bg-airplane.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+        .d3 {
+            background-color: lightcoral;
+        }
+        .d4 {
+            width: 100%;
+            height: 50vh;
+            background-image: url(../img/flower.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+        .d5 {background-color: antiquewhite;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="d1">1</div>
+        <div class="d2">2</div>
+        <div class="d3">3</div>
+        <div class="d4">4</div>
+        <div class="d5">5</div>        
+    </div>
+</body>
+</html>

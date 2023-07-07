@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex06. 이메일정보 수집 프로그램</title>
+</head>
+<style>
+    #submit-btn{
+        background: #9b9b9b;
+    }
+</style>
+<body>
+
+    <input id="email-input" type="email" placeholder="이메일">
+    <input id="submit-btn" type="submit" value="Send">
+
+<script src="jquery-3.7.0.min.js"></script>
+<script>
+/*
+기본 Logic 
+1. 이메일에는 @가 포함되어 있어야 한다.
+2. @ 뒤에는 최소 1개 이상의 .이 포함되어 있어야 한다
+3. 1번과 2번 조건이 모두 충족되었을 때 보내기(send) 버튼 활성화
+    1번과 2번 조건 중 하나라도 충족되지 않을 경우 보내기(send) 버튼 비활성화
+*/
+
+    $('#email-input').on('input', validateCheck);
+
+    function validateCheck(){
+
+        // 입력된 이메일 정보에서 '@' 문자 위치를 담는 변수 
+        let atPos = $('#email-input').val().indexOf('@');
+        console.log(atPos)
+
+        // '@'의 위치정보를 찾기위한 변수
+        // - @이후에 입력되는 문자를 추가하여 저장하는 변수
+        let emailPos = $('#email-input').val().substr(atPos);
+        console.log(emailPos)
+
+        // 입력된 이메일에 @와 .이 있다면 '보내기(send) 버튼 활성화'
+        if(atPos !== -1 && emailPos.indexOf('.') !== -1){
+            $('#submit-btn').css('background-color', 'blue');
+        } else{
+            $('#submit-btn').css('background-color', '#9b9b9b');
+        }
+    }
+</script>
+</body>
+</html>

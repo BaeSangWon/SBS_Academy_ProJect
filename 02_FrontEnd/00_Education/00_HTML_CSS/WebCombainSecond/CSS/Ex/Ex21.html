@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex21</title>
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* box style */
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            border: 3px dotted #ccc;
+            background-color: #eee;
+        }
+        .box p {
+            position: absolute;
+        }
+        .day {
+            top: 0;
+            right: 20px;
+            font-size: 120px;
+            line-height: 120px;
+        }
+        .month {
+            bottom: 10px;
+            left: 35px;
+            font-size: 50px;
+            letter-spacing: 20px;
+        }
+        .year {
+            bottom: 25px;
+            right: -5px;
+            font-size: 22px;
+            transform: rotate(90deg);
+        }
+        .week {
+            bottom: 90px;
+            left: -66px;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: serif;
+            letter-spacing: 5px;
+          transform: rotate(-90deg);  
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="day">06</p>
+        <p class="month">FEB</p>
+        <p class="year">2013</p>
+        <p class="week">WEDNESDAY</p>
+    </div>
+</body>
+</html>

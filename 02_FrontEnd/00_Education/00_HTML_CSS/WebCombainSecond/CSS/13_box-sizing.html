@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing</title>
+    <style>
+        div {
+            width: 300px;
+            height: 80px;
+            margin-bottom: 20px;
+            background-color: lightblue;
+        }
+        .box1 {
+            padding: 20px;
+            box-sizing: content-box;
+            /* content-box는 디폴트(기본)값이므로 따로 적용을 안시켜도 된다. */
+        }
+        .box2 {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .box3 {
+            border: 10px solid #444;
+        }
+        .box4 {
+            border: 10px solid #444;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>box-sizing : 박스의 크기를 결정하는 방식(내가 지정한 너비, 높이 안에 padding과 border를 포함할거냐 말거냐 하는 방식)</h1>
+    <p>속성값 content-box : 지정한 요소의 크기에 padding, border를 미포함(기본값)</p>
+    <p>속성값 border-box : 지정한 요소의 크기에 padding, border를 포함</p>
+    <br><br>
+    <div class="box1">
+        300*80px <br>
+        padding : 20px<br>
+        content-box
+    </div>
+    <div class="box2">
+        300*80px <br>
+        padding : 20px<br>
+        border-box
+    </div>
+    <div class="box3">
+        300*80px <br>
+        border<br>
+        content-box
+    </div>
+    <div class="box4">
+        300*80px <br>
+        border<br>
+        border-box
+    </div>
+</body>
+</html>

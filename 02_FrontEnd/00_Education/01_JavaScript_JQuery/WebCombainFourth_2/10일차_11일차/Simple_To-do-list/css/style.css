@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.wrap{
+    width: 300px;
+    margin: 40px;
+    background-color: #fcfcfc;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+    border-radius: 8px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.title{
+    color: #ff6eed;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 15px auto;
+}
+
+#to-do-list{
+    width: 200px;
+    margin: 0 auto 15px;
+    padding: 0;
+    list-style: none;
+}
+
+#to-do-list li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 40px;
+    margin: 8px auto 15px;
+    border-bottom: 1px solid #ff6eed;
+}
+

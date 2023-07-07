@@ -21,10 +21,7 @@
 
 .inner{
     max-width: 1340px;
-    /* max-width 기준은 별도로 없음 */
     width: 100%;
     padding: 0 20px;        
-    /* 브라우저에 딱 붙는 것을 방지하기 위함  */
-    
     margin: 0 auto;
 }

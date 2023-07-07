@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <h1>background-color: 배경색상</h1>
+            <p>속성값 : 색상값(red,green,blue 등등), 색상코드값(#aaaa11, #000, #fff 등등), rgba값
+            (N, N, N, 0~1), rgb값(N, N, N), transparent(투명, 기본값)</p>
+            <!-- 예시 -->
+            <div style="padding: 10px 0; background-color:greenyellow;">배경색 넣어보기</div>
+            <div style="padding: 10px 0; background-color:#416fd7;">배경색 넣어보기</div>
+            <div style="padding: 10px 0; background-color:#555;">배경색 넣어보기</div>
+            <div style="padding: 10px 0; background-color:rgba(80,190,215,0.50);">배경색 넣어보기</div>
+            <div style="padding: 10px 0; background-color:rgba(80, 190, 215);">배경색 넣어보기</div>
+        </li>
+        <!-- background-color -->
+        <li>
+            <h1>background-image: 배경 이미지</h1>
+            <p>background-image: url(경로/이미지이름.확장자);</p>
+            <p>배경이미지를 넣을 때는 너비와 높이값이 있어야 적용 가능하다. 안그러면 글자 크기로 생긴 만큼만 
+            사진이 보여진다. 내용은 없더라도 너비랑 높이값이 있어야 사진이 나온다.</p>
+            <!-- 예시 -->
+            <div style="width: 600px; height: 600px; background-image: url(./img/city.jpg);">배경이미지 넣기</div>
+        </li>
+        <!-- background-image -->
+        <li>
+            <h1>background-size</h1>
+            <ol>
+                <li>background-size: 80px 60px;(가로 80px, 세로 60px)</li>
+                <li>background-size: 50% 100%;(원본 사이즈로 계산하는게 아니라, 지정된 사이즈의 가로 50%, 세로 100%)</li>
+                <li>background-size: auto;(원본사이즈의 비율 유지, 남는 공간은 비워둔다.)</li>
+                <li>background-size: 100% auto; (가로는 100% 채우고, 세로는 원본비율 유지해서 나타난다.
+                억지로 늘어나는게 아니라 가로만 늘어나고 세로는 그에 맞춰서 비율 맞게 들어온다. 반대로도 가능하다.)</li>
+                <li>background-size: auto 200px; (세로는 200px로 가로는 비율 유지해서 나타난다.)</li>
+                <li>background-size: contain; (이미지를 지정된 사이즈 안에서 원본비율을 유지해서 잘리지 않도록 배치한다.)</li>
+                <li>background-size: cover; (이미지를 지정된 사이즈 안에서 원본비율을 유지해서 꽉 차도록 배치한다. 
+                넘치는 이미지의 부분은 잘려나간다.)</li>
+            </ol>
+            <!-- 예시 -->
+            <div style="width: 500px; height: 500px; background-color: lime; background-image: 
+            url(./img/city.jpg); background-size: cover;">배경이미지 사이즈</div>
+        </li>
+        <!-- background-size -->
+        <li>
+            <h1>background-repeat: 배경이미지의 반복</h1>
+            <p>속성값 : no-repeat, repeat, repeat-x(가로축만 반복시킴), repeat-y(세로축만 반복시킴), space, round</p>
+            <!-- 예시 -->
+            <div style="width: 380px; height: 500px; background-color: antiquewhite; background-image: url(./img/city.jpg);
+            background-size: 120px auto; background-repeat: no-repeat;">배경이미지 반복</div>
+        </li>
+        <!-- background-repeat -->
+        <li>
+            <h1>background-position: 배경이미지의 위치</h1>
+            <p>background-position: 가로위치 세로위치;</p>
+            <p>가로위치 : left, right, center, px, % (위치의 기준은 요소의 왼쪽 라인)</p>
+            <p>세로위치 : left, right, center, px, % (위치의 기준은 요소의 윗쪽 라인)</p>
+            <!-- 예시 -->
+            <div style="width: 380px; height: 500px; background-color: coral; background-image: url(./img/city.jpg);
+            background-repeat: no-repeat; background-size: cover; background-position: -500px 0;">배경이미지의 위치</div>
+        </li>
+        <!-- background-position -->
+    </ul>
+</body>
+</html>

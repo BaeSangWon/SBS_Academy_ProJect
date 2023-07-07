@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생활계획표</title>
+</head>
+<body>
+    <h1>오늘 생활계획표</h1>
+    <ol id="today">
+        <li>친구와 게임하기</li>
+        <li>쇼핑 하러 가기</li>
+        <li>맛있는 저녁 만들어 먹기</li>
+    </ol>
+    <h1>내일 생활계획표</h1>
+    <ol id="tomorrow">
+        <li>놀이동산 가기</li>
+        <li>독서 하기</li>
+        <li>청소 하기</li>
+    </ol>
+
+    <div id="element">이곳은 DIV 엘리먼트 입니다.</div>
+
+    <script>
+        // let today =  document.querySelector('#today');
+
+        // 요소의 첫번째에 추가
+        // today.innerHTML = '<li>처음</li>' + today.innerHTML;
+
+        // 요소의 마지막에 추가
+        // today.innerHTML = today.innerHTML + '<li>마지막</li>';
+
+        // 선택된 태그 외부(바깥쪽)에 추가 (즉, h1과 today(ol) 태그 사이에 요소 추가)
+        // today.outerHTML = '<p>이전</p>' + today.outerHTML;
+
+        // 오류구문 : outerHTML의 경우 최초 실행 시 원본을 완전히 바꾸기 때문에 후속 실행되는 구문에 오류가 발생할 수 있다
+        // today.outerHTML = today.outerHTML + '<p>마지막</p>'
+
+        // 오류구문 해결 방법
+        // let newToday = document.querySelector('#today');
+        // newToday.outerHTML = today.outerHTML + '<p>마지막</p>'
+
+        let tomorrow = document.querySelector('#tomorrow');
+
+        // 1) 요소 노드 생성
+        let first = document.createElement('li')
+
+        // 2) 요소 노드 꾸미기
+        first.textContent = '처음';
+
+        // 3) 요소 노드 추가
+        tomorrow.prepend(first);
+
+        let last = document.createElement('li'); 
+        last.textContent ='마지막';
+        tomorrow.append(last);
+
+        let prev = document.createElement('p')
+        prev.textContent = '이전'
+        tomorrow.before(prev)
+
+        let next = document.createElement('p')
+        next.textContent = '다음'
+        tomorrow.after(next)
+
+        // 4) 요소 노드 삭제
+        tomorrow.children[2].remove;
+
+        // 5) 요소 노드 이동
+        // prepend, append, before, after
+        let today = document.querySelector('#today');
+        
+        today.append(tomorrow.children[1]);
+
+        // 오늘생활계획표(today) 의 2번째 자식요소(쇼핑하러가기)를 내일 계획표(tomorrow) 2번째 자식요소로 넣기
+        tomorrow.children[1].after('#today'.children[1]);
+
+        tomorrow.lastElementChild.before('#today'.children[1]);
+
+        let element = document.getElementById('element');
+        // 클래스 추가
+        element.classList.add('active');
+
+        // 클래스 삭제
+        element.classList.remove('active');
+
+        // 선택요소에 'active' 클래스 존재 여부 확인 후 없다면 클래스 추가
+        element.classList.toggle('active')
+
+        // 선택요소에 'active' 클래스 존재 여부 확인 후 있다면 true, 없다면 false 반환
+        element.classList.contains('active')
+    </script>
+</body>
+</html> 

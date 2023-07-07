@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 더 선택하기</title>
+    <style>
+        box{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            max-width: 23rem;
+            border: 2px solid #f6774f;
+        }
+
+        button{
+            border: none;
+            color: white;
+            margin: 1rem;
+            width: 150px;
+            height: 40px;
+        }
+
+        .color-1{
+            background-color: #426fc5;
+        }
+
+        .color-2{
+            background-color: #00897b;
+        }
+
+        .color-3{
+            background-color: #f6774f;
+        }
+
+        .color-4{
+            background-color: #e94043
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1">
+        <button class="color-1"></button>
+        <button class="color-2"></button>
+        <button class="color-3"></button>
+        <button class="color-4"></button>
+    </div>
+    <div class="box" id="box-2">
+        <button class="color-1"></button>
+        <button class="color-2"></button>
+        <button class="color-3"></button>
+        <button class="color-4"></button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
+</html>

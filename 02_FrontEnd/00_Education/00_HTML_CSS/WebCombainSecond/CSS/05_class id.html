@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class / id</title>
+    <style>
+        h1 {
+            color: limegreen;
+        }
+        .ccc {
+            font-size: 10px;
+        }
+        p {
+            font-size: 20px;
+        }
+        .rose {
+            color: red;
+        }
+        .Rose {
+            color: blue;
+        }
+        .tul {
+            font-weight: 700;
+            margin-bottom: 50px;
+        }
+        .fruit {
+            color: purple; font-weight: 900;
+        }
+        #baby {
+            color: red;
+        }
+        .ddd {
+            font-size: 30px; 
+            color: cornflowerblue;
+        }
+        #sun {
+            color: gold;
+        }
+        #flower {
+            font-size: 30px;
+            color: tomato;
+            font-weight: 700;
+        }
+        #baby2 {
+            color: slateblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>class : 태그에 이름을 줄 때 사용한다. 여러개의 태그에 같은 이름을 사용할 수 있다. 띄어쓰기로 하나에 태그에
+    여러개의 클래스 이름을 사용할 수 있다.</h1>
+    <h1 class="ccc">id : 태그에 이름을 줄 때 사용한다. 여러개의 태그에 같은 이름을 사용할 수 없다. 
+    (유일한 이름이 되어야 한다.) 아이디와 클래스는 이름이 중복되어도 사용할 수 있다.</h1>
+    <p>클래스나 아이디의 값은 영어로 써야한다. 대/소문자 구분 해야한다. 시작자리에 기호는 ""밖에 못들어간다. 
+    기호는 영어 먼저 쓰고난 다음에 -(대시)나 ~(물결)이나 _(언더바) 같은 것들을 사용한다. 
+    가급적이면 내용과 관련있는 영문명으로 사용하는게 좋다</p>
+    <p>헤드태그의 타이틀 밑에서 시작한다. {} 중괄호를 사용한다. 클래스는 . 아이디는 # 으로 불러온다. 
+    나중에 작성한 값이 우선순위로 적용된다. class 보다 id가 우선순위로 적용된다.</p>
+    <br><br>
+    <p id="sun">해바라기</p>
+    <p class="rose">장미</p>
+    <p class="Rose">데이지</p>
+    <p class="tul">튤립</p>
+    <p class="ddd" id="baby baby2">안개꽃</p>
+    <p id="flower">수선화</p>
+
+    <p class="fruit">포도</p>
+    <p class="fruit">딸기</p>
+    <p class="fruit ddd">사과</p>
+</body>
+</html>

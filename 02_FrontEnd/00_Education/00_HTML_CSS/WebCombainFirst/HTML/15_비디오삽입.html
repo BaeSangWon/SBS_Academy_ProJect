@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오 삽입</title>
+    <style>
+        .ex02{
+            width: 400px;
+            height: 400px;
+            margin-top: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .ex02 video{
+            height: 600px;
+            margin-left: -450px;
+        }
+    </style>
+</head>
+<body>
+    <h1>video / source</h1>
+    <ol>
+        <li>4k 비디오 다운로드 프로그램을 이용</li>
+        <li>유튜브 등 비디오가 있는 사이트의 링크를 복사(화면 최상단의 링크 주소 등등)</li>
+        <li>4k 비디오에서 링크복사 버튼 클릭 > 다운로드 (용량과 화질을 고려해서.. 저화질은 용량이 작지만 화질이 나쁘고, 고화질은 화질은 좋아지지만 용량이 커진다.)</li>
+        <li>video 태그를 열고 닫기</li>
+        <li>video 태그 안에 source 태그 열기 > src=""으로 경로 저장</li>
+        <li>
+            <mark>video 태그의 속성</mark>
+            <ul>
+                <li>controls : 컨트롤 패널을 표시해주는 속성(재생, 일시정지 등등 같은 것들 ..)</li>
+                <li>width / height : 영상의 가로 / 세로 사이즈를 정해주는 속성</li>
+                <li>autoplay : 자동재생 시켜주는 속성</li>
+                <li>muted : 음소거 시키는 속성</li>
+                <li>Ex : 켜자마자 자동재생되는 영상만 나오는경우(정지도 안되고 그냥 영상만 계속 재생되는 경우) : autoplay와 muted를 함께 사용한다.</li>
+                <li>loop : 반복재생 시켜주는 속성</li>
+            </ul>
+        </li>
+    </ol>
+    <!-- ex01 -->
+    <div class="ex01" style="height: 50vh; overflow: hidden;">
+        <video autoplay muted loop style="width: 400px;">
+            <source src="./img/Bar. Julian Kim - Insta Live.mp4">
+        </video>
+    </div>
+    <!-- ex02 -->
+    <div class="ex02">
+        <video autoplay loop muted>
+            <source src="./img/Bar. Julian Kim - Yeon.mp4">
+        </video>
+    </div>
+    <br><br>
+    <h1>iframe</h1>
+    <ol>
+        <li>영상의 html 문서 주소를 넣어서 사용한다.</li>
+        <li>
+            <textarea cols="105" rows="1">
+                < iframe src="영상주소" title="설명" width="너비" height="높이"></ iframe>
+            </textarea>
+        </li>
+        <li>동영상에 오른쪽 클릭해서 소스 복사 클릭해서 옮기면 iframe까지 잘해가지고 복사된다.</li>
+        <li>간혹 어디다가 끌어쓰지 못하게 막혀있는 영상들이 있으니, 안되면 다운받아서 사용해야한다.</li>
+    </ol>
+    <!-- 예시 -->
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/IQFcZ-zMKlw" 
+    title="[뮤뱅 원테이크 4K] (여자)아이들((G)I-DLE) 'Nxde' 4K Bonus Ver. @뮤직뱅크(Music Bank) 221021" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</html>

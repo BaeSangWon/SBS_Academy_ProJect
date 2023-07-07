@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover05</title>
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        /* header */
+        header {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        /* nav */
+        .nav {
+            width: 90%;
+            margin: 50px auto;
+        }
+        .nav .u1 {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 40px;
+            color: steelblue;
+            background-color: lightcyan;
+        }
+        .nav .u1 > li {
+            position: relative;
+            width: 25%;
+        }
+        .nav .u1 > li > a {
+            display: block;
+            line-height: 40px;
+            text-align: center;
+        }
+        .nav .u2 {
+            display: none;
+            width: 100%;
+            padding: 20px 0;
+            background-color: khaki;
+        }
+        .nav .u2 li {
+            line-height: 2em;
+            font-size: 15px;
+            font-weight: 400;
+            text-align: center;
+            color: #3a3a3a;
+        }
+        /* hover */
+        .nav .u1 > li::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: dodgerblue;
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transition: all 1.5s;
+        }
+        .nav .u1 > li:hover:after {
+            transform: scalex(1);
+        }
+        .nav .ul > li:hover .u2 {
+            display: block;
+        }
+        .nav .u2 > li:hover {
+            font-weight: 700;
+            color: #171819;
+        }
+        /* all hover */
+        .d1 {
+            display: flex;
+            justify-content: space-between;
+
+            width: 90%;
+            margin: 0 auto;
+        }
+        .d1 > li {
+            width: 25%;
+        }
+        .d1 h3 {
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 18px;
+            color: steelblue;
+            background-color: lightcyan;
+        }
+        .d1 h3 a {
+            display: block;
+        }
+
+        .type .d1 h3::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background-color: coral;
+            transition: all 1.5s;
+        }
+        .type .d1 >li:hover h3::after {
+            width: 100%;
+        }
+        .d2 {
+            display: none;
+            height: 230px;
+            padding: 20px 0;
+            text-align: center;
+            background-color: khaki;
+        }
+        .d2 li {
+            line-height: 2em;
+        }
+        .type .d1:hover > li .d2 {
+            display: block;
+        }
+        .d2 li:hover {
+            font-weight: 700;
+            color: #171819;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <ul class="u1">
+                <li>
+                    <a href="#">교통정보센터 소개</a>
+                    <ul class="u2">
+                        <li><a href="#">센터소개</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">유관기관</a></li>
+                        <li><a href="#">사이트맵 </a></li>
+                    </ul>
+                </li>
+                <!-- 1번 li -->
+                <li>
+                    <a href="#">교통 스마트시티</a>
+                    <ul class="u2">
+                        <li><a href="#">교통정보시스템</a></li>
+                        <li><a href="#">자율협력주행시스템</a></li>
+                        <li><a href="#">긴급차량우선신호</a></li>
+                        <li><a href="#">C-ITS단발 보급현황</a></li>
+                        <li><a href="#">AR/VR 시스템</a></li>
+                    </ul>
+                </li>
+                <!-- 2번 li -->
+                <li>
+                    <a href="#">교통정보</a>
+                    <ul class="u2">
+                        <li><a href="#">소통정보</a></li>
+                        <li><a href="#">CCTV정보</a></li>
+                        <li><a href="#">돌발정보</a></li>
+                        <li><a href="#">주차장정보</a></li>
+                        <li><a href="#">자율주행현황</a></li>
+                        <li><a href="#">긴급차량현황</a></li>
+                    </ul>
+                </li>
+                <!-- 3번 li -->
+                <li>
+                    <a href="#">통계 및 분석</a>
+                    <ul class="u2">
+                        <li><a href="#">소통통계</a></li>
+                        <li><a href="#">도로통계</a></li>
+                        <li><a href="#">교통수요분석</a></li>
+                        <li><a href="#">교통흐름분석</a></li>
+                        <li><a href="#">OPEN API 신청</a></li>
+                    </ul>
+                </li>
+                <!-- 4번 li -->
+            </ul>
+        </nav>
+    </header>
+    <br><br><br><br><br><br><br>
+    <div class="type">
+        <ul class="d1">
+            <li>
+                <h3><a href="#">교통정보센터 소개</a></h3>
+                <ul class="d2">
+                    <li><a href="#">센터소개</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">유관기관</a></li>
+                    <li><a href="#">사이트맵 </a></li>
+                </ul>
+            </li>
+            <li>
+                <h3><a href="#">교통스마트 시티</a></h3>
+                <ul class="d2">
+                    <li><a href="#">교통정보시스템</a></li>
+                    <li><a href="#">자율협력주행시스템</a></li>
+                    <li><a href="#">긴급차량우선신호</a></li>
+                    <li><a href="#">C-ITS단발 보급현황</a></li>
+                    <li><a href="#">AR/VR 시스템</a></li>
+                </ul>
+            </li>
+            <li>
+                <h3><a href="#">교통정보</a></h3>
+                <ul class="d2">
+                        <li><a href="#">소통정보</a></li>
+                        <li><a href="#">CCTV정보</a></li>
+                        <li><a href="#">돌발정보</a></li>
+                        <li><a href="#">주차장정보</a></li>
+                        <li><a href="#">자율주행현황</a></li>
+                        <li><a href="#">긴급차량현황</a></li>
+                </ul>
+            </li>
+            <li>
+                <h3><a href="#">통계 및 분석</a></h3>
+                <ul class="d2">
+                        <li><a href="#">소통통계</a></li>
+                        <li><a href="#">도로통계</a></li>
+                        <li><a href="#">교통수요분석</a></li>
+                        <li><a href="#">교통흐름분석</a></li>
+                        <li><a href="#">OPEN API 신청</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

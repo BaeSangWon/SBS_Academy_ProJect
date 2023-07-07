@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자관련 스타일1</title>
+</head>
+<body>
+    <h1>문자관련 스타일</h1>
+    <ul>
+        <li>
+            <h2>font-size: 글자 크기 조정</h2>
+            <p>단위: px, %, em, rem</p>
+            <p>em은 부모요소의 사이즈를 기준으로 곱한다고 생각하면 된다.</p>
+            <p><a href="#" target="_blank">em, rem 더 알아보기 ..</a></p>
+            <!-- 예시 -->
+            <p style="font-size: 20px;">
+            <span style="font-size: 1.5em;">휴대폰 UI/UX 기획자 </span> 
+                휴대폰의 편리한 사용자 인터페이스를
+                제공하기위하여 사용자의 요구사항을 분석한다. 
+                하드웨어 특성을 고려한 UI/UX의 기능을 분석하여
+                UI/UX 디자인을 검토한다 
+            </p>
+            <!-- span 태그의 부모요소인 p 태그의 폰트사이즈가 20px이므로 1em은 20px, 즉 1.5em은 30px이 된다 -->
+        </li>
+        <!--  font size -->
+        <li>
+            <h2>font-family : 글자체 조정</h2>
+            <p>font-family: dotum; → 영문 글자체 이름을 쓰는 경우에는 속성값에 영문 글자체명을 적어주면 된다.</p>
+            <p>font-family: '돋음'; → 한글 글자체 이름을 쓰는 경우에는 속성값에 '' 작은 따옴표로 묶어서 글자체명을 적어주면 된다.</p>
+            <p style="font-size: 20px; font-family: '궁서';">
+                <span style="font-size: 1.5em; font-family: '맑은고딕';">휴대폰 UI/UX 기획자</span>
+                휴대폰의 편리한 사용자 인터페이스를
+                제공하기위하여 사용자의 요구사항을 분석한다. 
+                하드웨어 특성을 고려한 UI/UX의 기능을 분석하여
+                UI/UX 디자인을 검토한다
+            </p>
+        </li>
+        <!-- font family -->
+        <li>
+            <h2>font-weight : 글자 두께 조정</h2>
+            <p>속성값 : normal, bold, bolder, lighter, 별도의 단위 없이 100부터 100단위로 500까지 사용가능하다.</p>
+            <p>normal이 4~500 정도, 그 이상은 bold, 그 이하는 light 라고 생각하면 된다.</p>
+            <p style="font-size: 20px; font-weight: bold;">
+                <span style="font-size: 1.5em; font-weight: 400px;">휴대폰 UI/UX 기획자</span>
+                휴대폰의 편리한 사용자 인터페이스를
+                제공하기위하여 사용자의 요구사항을 분석한다. 
+                하드웨어 특성을 고려한 UI/UX의 기능을 분석하여
+                UI/UX 디자인을 검토한다
+            </p>
+        </li>
+        <!-- font weight -->
+        <li>
+            <h2>line-height : 행간(줄과 줄 사이 간격) 조정</h2>
+            <p>단위 : px, %, em</p>
+            <p>글자 크기가 클수록 더 크게 줘야한다. 글자 크기보다 작으면 글자가 겹치는 현상이 생긴다.</p>
+            <p>통상 작성되는 본문의 행간은 1.4~ 1.6em 정도가 적당한 듯 싶다.(절대적인 것 아님 ..)</p>
+            <p>줄이 1줄일때는 행간 값이 하단 높이값이다.<mark>그래서 글자가 1줄만 있을때는 높이값 없이 line-height 값을 높이 값으로 주면
+            가로 가운데 정렬이 이루어진다.</mark></p>
+            <p style="line-height: 2.6em;">
+                <span style="font-size: 1.5em;">휴대폰 UI/UX 기획자</span>
+                휴대폰의 편리한 사용자 인터페이스를
+                제공하기위하여 사용자의 요구사항을 분석한다. 
+                하드웨어 특성을 고려한 UI/UX의 기능을 분석하여
+                UI/UX 디자인을 검토한다
+            </p>
+        </li>
+        <!-- line height -->
+        <li>
+            <h2>color : 글자 색상을 조정, 배경색은 background-color이다.</h2>
+            <p>색상명(red, green, blue 등등) 정확한 영문 색상명이 들어가야 한다. 색상코드(#000000, #ffffff 등등)도 사용할 수 있다.
+            색상코드는 앞에 꼭 #을 붙여야 한다. 색상코드에서 6개의 동일한 숫자 또는 알파벳이 반복되는 경우에는 3개를 생략하여 사용할 수 있다. 
+            (#000000 → #000, #ffffff → #fff) RGBA(N, N, N, 0~1 사이의 소수점)(R 수치, G 수치, B 수치, 오퍼시티) (여기에 사용되는 수치는
+            0 ~ 255까지 사용가능하다.)도 사용할 수 있다. RGB는 RGBA에서 오퍼시티 수치가 빠진 것이다.</p>
+            <p style="font-size: 25px; font-weight: bold; color: lightgreen; background-color: lightpink;">글자색 변경(색상명)</p>
+            <p style="font-size: 25px; font-weight: bold; color: #9925c9; background-color: lightpink;">글자색 변경(색상코드)</p>
+            <p style="font-size: 25px; font-weight: bold; color: #fff; background-color: lightpink;">글자색 변경(색상코드 6개)
+            반복 → 3개 줄임</p>
+            <p style="font-size: 25px; font-weight: bold; color: rgba(30, 129, 217, 0.5); background-color: lightpink;">
+            글자색 변경(RGBA)</p>
+        </li>
+        <!-- color -->
+        <li>
+            <h2>letter-spacing : 자간 조정</h2>
+            <p>단위 : px, em</p>
+            <p>음수로 들어오면 자간이 줄어든 것이다.</p>
+            <p style="font-size: 30px; font-weight: bold; letter-spacing: 20px;">자간조절하기</p>
+        </li>
+        <!-- letter spacing -->
+        <li style="text-align: center;">
+            <h2>text-align : 글자 정렬</h2>
+            <p>속성값 : left(기본값), right(오른쪽), center(중간), justify(맞춤)</p>
+        </li>
+        <!-- text align -->
+    </ul>
+</body>
+</html>

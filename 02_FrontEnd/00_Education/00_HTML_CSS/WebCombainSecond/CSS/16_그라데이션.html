@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 그라데이션</title>
+    <style>
+        .ex p {
+            width: 600px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+        .linear .ex p:nth-child(1) {
+            background-image: linear-gradient(orange, blue);
+        }
+        .linear .ex p:nth-child(2) {
+            background-image: linear-gradient(to right, orange, blue);
+        }
+        .linear .ex p:nth-child(3) {
+            background-image: linear-gradient(to right top, orange, blue);
+        }
+        .linear .ex p:nth-child(4) {
+            background-image: linear-gradient(80deg, green, orange, blue);
+        }
+        .linear .ex p:nth-child(5) {
+            background-image: linear-gradient(80deg, green, orange 8%, blue 80%);
+        }
+        .linear .ex p:nth-child(6) {
+            background-image: repeating-linear-gradient(80deg, green, orange 8%, blue 80%);
+        }
+
+        .radial .ex p:nth-child(1) {
+            background-image: radial-gradient(ellipse, orange, blue);
+        }
+        .radial .ex p:nth-child(2) {
+            background-image: radial-gradient(circle, orange, blue);
+        }
+        .radial .ex p:nth-child(3) {
+            background-image: radial-gradient(closest-side at 30% 30% orange, blue);
+        }
+        .radial .ex p:nth-child(4) {
+            background-image: radial-gradient(closest-corner at 30% 30%, orange, blue);
+        }
+        .radial .ex p:nth-child(5) {
+            background-image: radial-gradient(farthest-side at 30% 30%, orange, blue);
+        }
+        .radial .ex p:nth-child(6) {
+            background-image: repeating-radial-gradient(circle at 30% 30%, orange, blue);
+        }
+        .radial .ex p:nth-child(7) {}
+    </style>
+</head>
+<body>
+    <div class="linear">
+        <h1>선형 그라데이션 : linear-gradient</h1>
+        <p>background-image : linear-gradient (방향, 색상 값);</p>
+        <p>방향값 : to right, to left, to top, to bottom / to bottom right(두개 섞어서..) / 각도값 : 0 ~ 360 deg</p>
+        <!-- 예시 -->
+        <div class="ex">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+</body>
+    <div class="radial">
+        <h1>원형 그라데이션 : radial-gradient</h1>
+        <p>background-image : radial-gradient (방향, 색상 값);</p>
+        <p>방향값 : to right, to left, to top, to bottom / to bottom right(두개 섞어서..) / 각도값 : 0 ~ 360 deg</p>
+        <p>모양값 : circle, ellipse</p>
+        <p>
+            중심점 위치 <br>
+            closest-side at N% N% <br>
+            closest-corner at N% N% <br>
+            farthest-side at N% N% <br>
+            farthest-corner at N% N%
+        </p>
+        <br>
+        <!-- 예시 -->
+        <div class="ex">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+</body>
+</html>

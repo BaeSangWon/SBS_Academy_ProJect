@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex10</title>
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;    
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* box1 style */
+        .box {
+            margin: 20px 0 0 20px;
+        }
+        .box h1 {
+            margin-bottom: 15px;
+            font-size: 20px;    
+        }
+        .box ul {
+            width: 450px;
+            padding: 20px;
+            border: 1px solid gray;
+        }
+        .box ul li {
+            line-height: 40px;
+            border-bottom: 1px dashed #999;
+        }
+        .box ul li:last-child {
+            border-bottom: none;
+        }
+        .box ul li a span {
+            float: right;
+            font-size: 14px;
+            color: #999;
+        }
+        /* box3 style */
+        .box3 > p {
+            margin: 0 0 20px 10px;
+            width: 550px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 30px;
+            font-weight: 700;
+        }
+        .box3 > p:first-child {
+            border-top:  3px solid #000;
+        }
+        .box3 > p:nth-child(2) {
+            border-left: 10px solid red;
+        }
+        .box3 > p:last-child {
+            border: 3px solid cyan;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>공지사항</h1>
+        <ul>
+            <li>
+                <a href="#">
+                    방학맞이~ 한여름 동물원 대탐험~~~
+                    <span>2019.08.11</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    방학맞이~ 한여름 동물원 대탐험~~~
+                    <span>2019.08.11</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    방학맞이~ 한여름 동물원 대탐험~~~
+                    <span>2019.08.11</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <br><br>
+    <div class="box3">
+        <p class="p1">도심 속 생태문화공원 서울대공원</p>
+        <p class="p2">도심 속 생태문화공원 서울대공원</p>
+        <p class="p3">도심 속 생태문화공원 서울대공원</p>
+    </div>
+</body>
+</html>

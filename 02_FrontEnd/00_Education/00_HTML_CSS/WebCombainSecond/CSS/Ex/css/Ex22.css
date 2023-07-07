@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.inner {
+    width: 1130px;
+    margin: 0 auto;
+}
+/* header */
+header {
+    height: 150px;
+    background-color: lightskyblue;
+}
+.hTop {
+    height: 60px;
+    background-color: lightyellow;
+}
+.hTop h1 {
+    float: left;
+    width: 20%;
+    height: 50px;
+    margin-top: 5px;
+    background-color: magenta;
+}
+.hTop .search {
+    float: right;
+    height: 40px;
+    margin-top: 10px;
+    line-height: 40px;
+ }
+ .hTop .search input {
+    width: 300px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 1px solid #555;
+    background-color: transparent;
+}
+
+nav {
+    margin-top: 20px;
+}
+nav ul li {
+    float: left;
+    width: 15%;
+    height: 30px;
+    margin-right: 2%;
+    line-height: 30px;
+    text-align: center;
+    background-color: orange;
+}
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+main {
+    margin: 70px 0;
+}
+main .inner::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.main {
+    float: left;
+    width: 66%;
+    height: 400px;
+    background-color: pink;
+}
+aside {
+    float: right;
+    height: 30%;
+    height: 400px;
+    background-color: powderblue;
+}
+
+footer {
+    height: 150px;
+    padding-top: 20px;
+    background-color: #ddd;
+    text-align: center;
+}

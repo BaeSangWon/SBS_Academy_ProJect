@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.hello{
+    background: url(../../Ex0/images/gigu.png) no-repeat center / contain;
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.hello .text{
+    bottom: 0;
+    color: brown;
+    font-family: Verdana !important;
+    font-size: 40pt !important;
+    font-weight: bold;
+    position: absolute;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex15</title>
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* wrap */
+        .wrap {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: lightpink;
+        }
+        .wrap .bbox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -400PX 0 0 -400PX;
+            width: 800px;
+            height: 800px;
+            background-color: skyblue;
+        }
+        .wrap p {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            font-size: 50px;
+            font-weight: 700;
+            color: #fff;
+            background-color: blueviolet;
+        } 
+        .mbox2 {
+            top: 0;
+            left: 50%;
+        }
+        .mbox3 {
+            top: 25%;
+            left: 25%;
+        }
+        .mbox4 {
+            top: 25%;
+            left: 75%;
+        }
+        .mbox4 {
+            top: 25%;
+            left: 75%;
+        }
+        .mbox5 {
+            top: 50%;
+            left: 0%;
+        }
+        .mbox6 {
+            top: 50%;
+            left: 50%;
+        }
+        .mbox7 {
+            top: 75%;
+            left: 25%;
+        }
+        .mbox8 {
+            top: 75%;
+            left: 75%;
+        }
+        .mbox1 span {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            color: #000;
+            background-color: beige;
+        }
+        .sbox1 {
+            top: 0;
+            left: 25px;
+        }
+        .sbox2 {
+            top: 0;
+            left: 100px;
+        }
+        .sbox3 {
+            top: 50px;
+            left: 50px;
+        }
+        .sbox4 {
+            top: 50px;
+            left: 125px;
+        }
+        .mbox1 .sbox5 {
+            top: 50%;
+            left:50%;
+            margin: -25px 0 0 -25px;
+            background-color: greenyellow;
+        }
+        .sbox6 {
+            top: 100px;
+            right: 0;
+        }
+        .sbox7 {
+            bottom: 0;
+            left: 0;
+        }
+        .sbox8 {
+            bottom: -50px;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="bbox">
+            <p class="mbox1">
+                <span class="sbox1">1.</span>
+                <span class="sbox2">2.</span>
+                <span class="sbox3">3.</span>
+                <span class="sbox4">4.</span>
+                <span class="sbox5">5.</span>
+                <span class="sbox6">6.</span>
+                <span class="sbox7">7.</span>
+                <span class="sbox8">8.</span>
+            </p>
+            <p class="mbox2">2</p>
+            <p class="mbox3">3</p>
+            <p class="mbox4">4</p>
+            <p class="mbox5">5</p>
+            <p class="mbox6">6</p>
+            <p class="mbox7">7</p>
+            <p class="mbox8">8</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정렬 정리</title>
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style: none;
+        }
+        /* margin 0 auto */
+        .s1 .ex1 {
+            width: 200px;
+            height: 50px;
+            margin: 20px auto;
+            background-color: bisque;
+        }
+        .s1 .ex2 {
+            width: 430px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .s1 .ex2 li {
+            float: left;
+            width: 100px;
+            height: 50px;
+            background-color: orange;
+        }
+        .s1 .ex2 li:not(:last-child) {
+            margin-right: 10px;
+        }
+        /* display: inline-block */
+        .s2 {
+            margin-top: 100px;
+        }
+        .s2 .ex1 {
+            text-align: center;
+            font-size: 0;
+        }
+        .s2 .ex1 li {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            margin: 0 10px;
+            background-color: violet;
+        }
+        /* <!--  position absolute; left: 50%;, margin-left: -Npx --> */
+        .s3 {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            margin-top: 100px;
+            background-color: lightyellow;
+        }
+        .s3 .ex1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 30px;
+            margin-top: -15px;
+            margin-left: -100px;
+            background-color: blueviolet;
+        }
+        .s3 .ex2 {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -215px;
+        }
+        .s3 .ex2 li {
+            float: left;
+            width: 100px;
+            height: 50px;
+            background-color: magenta;
+        }
+        .s3 .ex2 li:not(:last-child) {
+            margin-right: 10px;
+        }
+        /* postion:absolute; left: 50%; transform */
+        .s4 {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background-color: bisque;
+        }
+        .s4 .ex1 {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            width: 60%;
+            overflow: hidden;
+            transform: translateX(-50%);/* 내 너비값 기준의 -50% */
+            background-color: aqua;
+        }
+        .s4 .ex1:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .s4 .ex1 li {
+            float: left;
+            width: 22%;
+            height: 50px;
+            background-color: mediumorchid;
+        }
+        .s4 .ex1 li:not(:last-child) {
+            margin-right: 4%;
+        }
+    </style>
+</head>
+<body>
+    <div class="s1">
+        <h2>1. margin: 0 auto;</h2>
+        <p>width가 정해진 요소에 margin 0 auto;를 이용해서 중간정렬</p>
+
+        <div class="ex1">box</div>
+
+        <ul class="ex2">
+            <li>100*50</li>
+            <li>100*50</li>
+            <li>100*50</li>
+            <li>100*50</li>
+        </ul>
+    </div>
+    <!-- margin 0 auto -->
+    <div class="s2">
+        <h2>2. display: inline-block;</h2>
+        <p>블락요소를 인라인요소의 속성을 주어 가로로 정렬 > 상위 요소에 text-align: center;를 적용시켜 중간정렬</p>
+        <ul class="ex1">
+            <li>100*50</li>
+            <li>100*50</li>
+            <li>100*50</li>
+            <li>100*50</li>
+        </ul>
+    </div>
+    <!-- display: inline-block -->
+    <div class="s3">
+        <h1>3.postion: absolute; left: 50%;</h1>
+        <p>position: absolute; left: 50%;로 요소의 왼쪽라인을 중간에 위치시킨 후 지정너비의 변만큼 margin-left: -Npx;</p>
+
+        <p class="ex1">box</p>
+
+        <ul class="ex2">
+            <li>100*50</li>
+            <li>100*50</li>
+            <li>100*50</li>
+            <li>100*50</li>
+            <li>100*50</li>
+        </ul>
+    </div>
+    <!-- position absolute; left: 50%;, margin-left: -Npx -->
+    <div class="s4">
+        <h2>4. postion:absolute; left: 50%;</h2>
+        <p>position: absolute; left: 50%;로 요소의 왼쪽라인을 중간에 위치시킨 후 지정너비의 반만큼 transform:(-50%, -50%); <br>
+        너비가 정확한 px로 계산이 불가능한 상황일 때 사용한다.</p>
+        
+        <ul class="ex1">
+            <li>22%*50</li>
+            <li>22%*50</li>
+            <li>22%*50</li>
+            <li>22%*50</li>
+        </ul>
+    </div>
+    <!-- postion:absolute; left: 50%; transform -->
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex04. 주어진 단어에 특정 알파벳 갯수 카운트 프로그램</title>
+</head>
+<body>
+    
+<script>
+    // 주어진 단어에 알파벳 'E', 'X'가 몇번 들어간지 카운트하는 함수
+    function countCharacter(word, findStr){
+        // 결과값을 담을 변수
+        let count = 0;
+        // console.log(word.length)
+
+        // 주어진 단어의 0번째 값부터 찾는 값과 일치여부 순차적 비교
+        for(let i = 0; i < word.length; i++){
+            // 주어진 단어를 대문자로 변경 후 0번째부터 순차적 비교
+            //a     E
+            if(word[i].toUpperCase() === findStr.toUpperCase()){
+                // 주어진 단어의 0번째부터 찾는 값과 순차적으로 비교하여 일치하면 카운트 증가
+                count++;
+            }
+        }
+        return count;
+    }
+
+    // 주어진 단어에 알파벳 'A'가 몇개 들어간지 카운트하는 함수
+    function countA(finStr){
+        // countA 함수가 실행되면 countCharacter 함수를 호출
+        return countCharacter(finStr, 'A');
+
+/*      let count = 0;
+        for(let i = 0; i < finStr.length; i++){
+            if(finStr[i].toUpperCase() === 'A'){
+                count++;
+            }
+        }
+        return count; */
+    }
+
+    console.log(countCharacter('AbaCedEA', 'E')); // 들어간 횟수 카운트
+    console.log(countCharacter('AbaCedEA', 'X'));
+    console.log(countA('AbaCedEA')); // 단어 A가 몇번 들어갔는지?
+
+</script>
+</body>
+</html>

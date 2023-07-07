@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex24</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* box style */
+    .box p {
+        float: left;
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 25px;
+        text-align: center;
+        background-color: #eee;
+    }
+    .box p:hover {
+        color: #fff;
+        background-color: #333;
+    }
+    .box p:first-child {
+        border-radius: 10px 0 0 10px;
+    }
+    .box p:last-child {
+        border-radius: 0 10px 10px 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>Home</p>
+        <p>HTML5</p>
+        <p>CSS3</p>
+        <p>JQuery</p>
+        <p>Mobile</p>
+        <p>Profile</p>
+    </div>
+</body>
+</html>

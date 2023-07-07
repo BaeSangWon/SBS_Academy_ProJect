@@ -1,0 +1,29 @@
+section {
+  height: 300px;
+  border: 10px solid green;
+}
+section:hover {
+  border-color: blue;
+}
+section:nth-of-type(1) {
+  border-color: gold;
+}
+section div {
+  border: 10px solid red;
+  margin: 10px;
+}
+section div span {
+  display: inline-block;
+  width: 30%;
+  height: 50px;
+  background-color: green;
+  margin: 10px;
+}
+section > div {
+  background-color: yellow;
+}
+
+.b {
+  border: 10px solid green;
+  height: 400px;
+}/*# sourceMappingURL=01_style.css.map */

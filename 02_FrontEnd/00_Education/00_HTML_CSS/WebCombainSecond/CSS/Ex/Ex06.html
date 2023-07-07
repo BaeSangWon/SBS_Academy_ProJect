@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex06</title>
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        /* style */
+        .ex {
+            width: 430px;
+            height: 200px;
+            background-color: lightpink;
+        }
+        .ex::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .ex li {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: #fff;    
+        }
+        .ex li:not(:last-child) {
+            margin-right:10px ;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="ex">
+            <li>box1</li>
+            <li>box2</li>
+            <li>box3</li>
+            <li>box4</li>
+        </ul>
+    </div>
+</body>
+</html>

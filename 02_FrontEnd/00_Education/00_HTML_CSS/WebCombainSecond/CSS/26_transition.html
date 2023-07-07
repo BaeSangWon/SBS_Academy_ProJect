@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        .t0 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .t0:hover {
+            width: 300px;
+            color: #fff;
+            background-color: chartreuse;
+            transition: all 5s;
+        }
+        /* duration */
+        .du {
+            padding: 20px 0;
+            background-color: antiquewhite;
+        }
+        .du .d1 {
+            width: 200px;
+            height: 100px;
+            background-color: orange;
+            transition-property: all;
+            transition-duration: 2s;
+        }
+        .du:hover .d1 {
+            margin-left: 100px;
+            transform: rotate(30deg);
+        }
+        .du .d2 {
+            width: 200px;
+            height: 100px;
+            background-color: darkgreen;
+            transition-property: all;
+            transition-duration: 5s;
+        }
+        .du .d2:hover {
+            margin-left: 100px;
+            transform: rotate(30deg);
+        }
+        /* timing-function */
+        .timing {
+            padding: 20px 0;
+            background-color: lightcyan;
+        }
+        .timing p {
+            width: 200px;
+            height: 50px;
+            background-color: pink;
+            transition: all 5s;
+        }
+        .timing:hover p {
+            width: 800px;
+        }
+        .timing .t1 {
+            transition-timing-function: ease;
+        }
+        .timing .t2 {
+            transition-timing-function: linear;
+        }
+        .timing .t3 {
+            transition-timing-function: ease-in;
+        }
+        .timing .t4 {
+            transition-timing-function: ease-out;
+        }
+        .timing .t5 {
+            transition-timing-function: ease-in-out;
+        }
+        .timing .t6 {
+            transition-timing-function: step-end;
+        }
+        .timing .t7 {
+            transition-timing-function: step-start;
+        }
+        .timing .t8 {
+            transition-timing-function: steps(5,end);
+        }
+        .timing .t9 {
+            transition-timing-function: cubic-bezier(0,1,1,0);
+        }
+        /* delay */
+        .delay {
+            padding: 20px 0;
+            background-color: silver;
+        }
+        .delay p {
+            width: 200px;
+            height: 100px;
+            background-color: tomato;
+            transition: all 3s;
+        }
+        .delay:hover p {
+            margin-left: 200px;
+        }
+        .delay .de1 {
+            transition-delay: 2s;
+        }
+        .delay .de2 {
+            transition-delay: 3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>transition : 시작에서 종료까지의 변화를 시각화</h1>
+    <p>transition: all 0s;(property duration)</p>
+    <p>
+        <mark>속기법</mark><br>
+        transition: properyduration timing-function;
+    </p>
+    <p>트랜지션은 마우스를 올리고 내릴 때 시각화 되어야 하므로 거의 :hover 랑 같이 쓰게 된다. :hover 전에 쓰는지 후에 쓰는지에
+    따라 효과의 차이가 있다. </p>
+    <p>마우스를 올리고 내릴 때 모두 시각화 하고 싶다면 :hover 사용하기 전 상태에서 트랜지션을 적용해주면 된다.</p>
+    <ol>
+        <li>transition-property: 트랜지션을 적용할 css 속성 이름;</li>
+        <li>transition-duration: 트랜지션이 일어나는 지속시간(0s);</li>
+        <li>transition-timing-function: 속성의 중간값을 계산;</li>
+        <li>transition-delay: 대기시간, 속성이 변한 시점과 트랜지션이 실제로 시작하는 사이에 기다리는 시간(0s);</li>
+    </ol>
+    <br><br>
+    <!-- 예시 -->
+    <p class="t0">transition</p><!-- transition -->
+    <div class="du">
+        <h3>transition-duration</h3>
+        <p class="d1">d1</p>
+        <p class="d2">d2</p>
+    </div>
+    <!-- duration -->
+    <div class="timing">
+        <h3>transition-timing-function</h3>
+        <p class="t1">ease : 느리게 시작하다가 빠르다가 느리게 끝</p>
+        <p class="t2">linear : 시작부터 끝까지 동일한 속도로 진행</p>
+        <p class="t3">ease-in : 느리게 시작</p>
+        <p class="t4">ease-out : 느리게 끝</p>
+        <p class="t5">ease-in-out : 느리게 시작해서 느리게 끝</p>
+        <p class="t6">step-end : 단계</p>
+        <p class="t7">step-start : 단계</p>
+        <p class="t8">steps(N,end) : N단계</p>
+        <p class="t9">cubic-bezier(N,N,N,N) : 직접그래프로 지정</p>
+    </div>
+    <!-- timing-function -->
+    <div class="delay">
+        <h3>transition-delay</h3>
+        <p class="del">de1</p>
+        <p class="de2">de2</p>
+    </div>
+    <!-- delay -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

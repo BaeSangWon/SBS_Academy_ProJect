@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+        /* block 예시 (스타일시트 안에서 주석은 슬러시 별표로 나온다. 단축키는 동일하다.) */
+        .block1 span {
+            display: block;
+            margin-bottom: 30px;
+            width: 100px;
+            height: 30px;
+            background-color: sandybrown;
+        }
+        /* 원래 인라인 요소는 너비, 높이값이 안들어간다. 디스플레이 블락이 들어갔기 때문에 너비랑 높이 줄바꿈이 일어나게 된다. */
+        .block2 span {
+            margin-bottom: 10px;
+            background-color: seagreen;
+        }
+        .span2 {
+            display: block;
+            width: 80px;
+            height: 30px;
+        }
+        /* 블락 앞뒤로 인라인이 와도 블락의 앞뒤로 줄바꿈이 일어난다. 너비 높이를 작게 줘도 줄바꿈은 일어난다. */
+
+        /* inline 예시 */
+        .inline p {
+            display: inline;
+            width: 100px; 
+            height: 30px;
+            background-color: lightcoral;
+        }
+
+        /* inline-block 예시 */
+        .inlineB1 p {
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            background-color: chartreuse;
+        }
+        .inlineB2 span {
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <h1>display</h1>
+    <p>inline-block / block / inline / none</p>
+    <br><br>
+    <div>
+        <h2>display : block;</h2>
+        <p>인라인요소를 블락으로 변경시켜준다. 또는 보이지 않는 요소를 보이게 할 때 사용한다.
+        줄바꿈이 일어난다.</p>
+        <!-- 예시 -->
+        <div class="block1">
+            <span>box1</span>
+            <span>box2</span>
+            <span>box3</span>
+            <span>box4</span>
+        </div>
+        <div class="block2">
+            <span>box1</span>
+            <span class="span2">box2</span>
+            <span>box3</span>
+            <span>box4</span>
+        </div>
+        <!-- block 예시2 -->
+    </div>
+    <!-- block -->
+    <br><hr><br>
+    <div>
+        <h2>display : inline;</h2>
+        <p>블락을 인라인 요소로 변경시켜준다. 인라인이므로 줄바꿈이 안일어난다.</p>
+        <!-- 예시 -->
+        <div class="inline">
+            <p>box1</p>
+            <p>box2</p>
+            <p>box3</p>
+            <p>box4</p>
+        </div>
+    </div>
+    <!-- inline -->
+    <br><hr><br>
+    <div>
+        <h2>display : inline-block;</h2>
+        <p>인라인이나 블락을 inline-block으로 변경시켜준다. 인라인을 가지고 있기 때문에 줄바꿈이 일어나지 않는다. 
+        근데 width / height / text-align 등등 블락에서만 사용할 수 있는 속성을 사용할 수 있다.</p>
+        <p>inline-block 값을 준 요소의 상위태그에 text-align값을 적용시키면 나열된 요소의 그룹이 정렬된다.</p>
+        <!-- 예시 -->
+        <div class="inlineB1">
+            <p>box1</p>
+            <p>box2</p>
+            <p>box3</p>
+            <p>box4</p>
+        </div>
+        <!-- block → inline-block -->
+        <div class="inlineB2">
+            <span>box1</span>
+            <span>box2</span>
+            <span>box3</span>
+            <span>box4</span>
+        </div>
+        <!-- inline → inline-block -->
+    </div>
+</body>
+</html>

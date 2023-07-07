@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript</title>
+</head>
+<body>
+    <h2>진행과정</h2>
+    <ul id="doing-list">
+        <li>인터렉티브 자바스크립트</li>
+        <li>프로그래밍 언어</li>
+        <li>프로그래머의 세계</li>
+        <li>소프트웨어 이해하기</li>
+    </ul>
+
+    <h2>완료과정</h2>
+    <ul id="done-list">
+        <li>프로그래밍 시작하기</li>
+        <li>프로그래밍 핵심개념</li>
+        <li>프로그래밍과 데이터</li>
+        <li>HTML/CSS 시작</li>
+        <li>HTML/CSS 핵심</li>
+        <li>반응형 웹퍼블리싱</li>
+    </ul>
+<script>
+    let myTag = document.querySelector('#done-list')
+    console.log(myTag.innerHTML)
+    console.log(myTag.outerHTML)
+
+
+    myTag.innerHTML = '<li>프로그래밍 핵심개념<li>'
+    console.log(myTag)    
+
+    myTag.innerHTML += '<li>자바스크립트 기초개념<li>'
+    console.log(myTag)
+
+    myTag.outerHTML = '<ul id = "new-list"><li>제이쿼리 기초</li></ul>'
+
+    let stand = document.querySelector('body')
+
+    // ex1) li('인터렉티브 자바스크립트')  선택방법
+
+    /* ※ <h2>진행과정</h2> : body의 children[0] */
+    
+    // 1) body > #doing-list > li:firstchild의 형제요소 노드 중 이전(좌측) 요소 선택 ('인터렉티브 자바스크립트' 이전 요소가 존재하지 않음)
+    let a = stand.children[1].children[0].nextElementSibling.previousElementSibling
+    console.log(a)
+
+     // 2) body > #doing-list > li:firstchild 선택
+    let b = stand.children[1].children[0];
+    console.log(b)
+
+    // 3) body h2:nth-child(2)의 형제요소 노드 중 이전(좌측) 요소 중 0번째
+    let c = stand.children[2].previousElementSibling.children[0]
+    console.log(c)
+
+    // 4) body h2:firstchild의 형제요소 노드 중 다음(우측) 요소 중 첫번째
+    let d = stand.firstElementChild.nextElementSibling.firstElementChild
+    console.log(d)
+
+
+    // ex2) li('소프트웨어 이해하기') 선택방법
+    let doingList = document.querySelector('#doing-list')
+    let doneList = document.querySelector('#done-list')
+
+    // 1) #doingList의 마지막 자식 요소 
+    let e = doingList.lastElementChild
+    console.log(e)
+
+    // 2) #doingList의 3번째 자식 요소
+    let f =  doingList.children[3]
+</script>
+</body>
+</html>

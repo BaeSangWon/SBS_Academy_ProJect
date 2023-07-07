@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        /* reset */
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        /* left */
+        .left {
+            background-color: aqua;
+        }
+        .left::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .left li {
+            float: left; /* 나열을 시킬 그 요소에다가 float 값을 줘야 한다. */
+            width: 80px;
+            height: 30px;
+            margin: 0 10px 0 0;
+            text-align: center;
+            line-height: 30px;
+            background-color: darkorange;
+        }
+        .right {
+            background-color: chartreuse;
+        }
+        .right ::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .right li{
+            float: right;
+            width: 80px;
+            height: 30px;
+            margin: 0 0 0 10px;
+            text-align: center;
+            line-height: 30px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>float : 가로정렬을 시켜주는 스타일</h1>
+    <p>속성값 : left, right, none</p>
+    <p>옆으로 나열을 시킬 요소에 float값을 적용해야 한다. float값을 주면 부모요소의 영역이 다 사라진다.</p>
+    <p>
+        float속성을 준 부모요소에 반드시 추가 :
+        <br>
+        <strong>
+            부모요소에 ::after {content : "", display: block; clear: both;}
+            <!-- 이유없음 .. 그냥 공식이다 생각하고 머링 ㅔ집어 넣어둬야합니다.. -->
+        </strong>
+    </p>
+    <br><br>
+    <ul class="left">
+        <li>box1</li>
+        <li>box2</li>
+        <li>box3</li>
+        <li>box4</li>
+        <li>box5</li>
+    </ul>
+    <!-- left 예시 -->
+    <ul class="right">
+        <li>box1</li>
+        <li>box2</li>
+        <li>box3</li>
+        <li>box4</li>
+        <li>box5</li>
+    </ul>
+    <!-- right 예시 -->
+</body>
+</html>
